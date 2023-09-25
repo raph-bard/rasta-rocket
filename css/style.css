@@ -15,9 +15,29 @@
 }
 
 .categories-container{
-    margin-right: 10px;
-    margin-left: 10px;
-    margin-bottom: 1rem;
+    margin : 1rem 10px;
+}
+
+.categories-container .categories-hero .btn{
+    padding: 3px 15px;
+    border-radius: 3px;
+    border: 1px solid gainsboro;
+    background-color: white;
+    font-weight: 500;
+
+}
+
+.categories-container .categories-hero .btn.active{
+
+    background-color: var(--second-color);
+    color: white;
+    border: 1px solid var(--second-color);
+    
+}
+
+.categories-container .categories-hero{
+    display: flex;
+    justify-content: space-between;
 }
 
 .categories-container .categories-list{
@@ -42,7 +62,7 @@
 .categories-container span.category::after{
     content :"";
     height: 8px;
-    background-color: #ca5501;
+    background-color: var(--second-color);
     width: 0px;
     
     border-radius: 10px;
@@ -56,4 +76,31 @@
 .categories-container span.category:hover::after{
     width: 70%;
     left:0%;
+}
+
+@media screen and (min-width: 576px) {
+    .categories-container{
+        margin: 1rem auto;
+        max-width: 540px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .categories-container{
+        max-width: 720px;
+    }
+}
+@media screen and (min-width: 992px) {
+    .categories-container{
+        max-width: 960px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .categories-container{
+        max-width: 1140px;
+    }
+}
+@media screen and (min-width: 1400px) {
+    .categories-container{
+        max-width: 1320px;
+    }
 }
