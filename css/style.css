@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Poppins:ital,wght@0,400;0,500;1,700&display=swap');
 :root {
    --main-color: #413c58;
+   --second-color:#ca5501;
+   --grey-color: #807979;
 }
 
 
@@ -11,6 +13,15 @@
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
 }
+
+
+
+
+/*nav */
+
+
+
+
 header{
     display: flex;
     background-color: var(--main-color);
