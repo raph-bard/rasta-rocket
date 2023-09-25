@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Poppins:ital,wght@0,400;0,500;1,700&display=swap');
+:root {
+   --main-color: #413c58;
+   --second-color:#ca5501;
+   --grey-color: #807979;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.categories-container{
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 1rem;
+}
+
+.categories-container .categories-list{
+    margin-top: .8rem;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.categories-container .category{
+    color: var(--grey-color);
+    font-weight: 600;
+    margin-right: 30px;
+    position: relative;
+    
+}
+
+.categories-container span.category.active,
+.categories-container span.category:hover{
+    color:black;
+}
+
+.categories-container span.category::after{
+    content :"";
+    height: 8px;
+    background-color: #ca5501;
+    width: 0px;
+    
+    border-radius: 10px;
+    position: absolute;
+    bottom: -10px;
+    right: 0%;
+    transition: .3s;
+}
+
+.categories-container span.category.active:after,
+.categories-container span.category:hover::after{
+    width: 70%;
+    left:0%;
+}
