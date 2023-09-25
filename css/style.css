@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Poppins:ital,wght@0,400;0,500;1,700&display=swap');
+:root {
+   --main-color: #413c58;
+   --second-color:#ca5501;
+   --grey-color: #807979;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*         PARTIE COUP DE COEUR           */
+
+.coupdecoeur {
+    max-width: 100%;
+    width: 0 auto;
+}
+
+.imagecoeur {
+    background-image: url(https://images.unsplash.com/photo-1543007630-9710e4a00a20?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60);
+
+    height: 200px;
+    }
