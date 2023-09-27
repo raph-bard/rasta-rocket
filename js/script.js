@@ -13,8 +13,10 @@ import {bars, createCardMobile} from './data.mjs'
 
 const burger = document.querySelector('.burger');
 const menu = document.querySelector('.menu');
+const body = document.querySelector('body');
 
 burger.addEventListener('click', function() {
   menu.classList.toggle('active');
   burger.classList.toggle('active');
+  body.classList.toggle('noscroll');
 });
