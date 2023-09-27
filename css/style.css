@@ -1,3 +1,6 @@
+
+
+ 
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Poppins:ital,wght@0,400;0,500;1,700&display=swap');
 :root {
    --main-color: #413c58;
@@ -147,6 +150,31 @@ main {
 }
 
 
+/*************** Coup de coeur **************/
+
+.coeur-container {
+    max-width: 100%;
+    margin: 20px;
+    width: 95%;
+    
+
+}
+
+.coeur-container h2 {
+    text-align: left;
+    width: 100%;
+}
+.imagecoeur-container {
+    background-image: url(https://images.unsplash.com/photo-1543007630-9710e4a00a20?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60); 
+
+    width: 100%;
+    height: 230px;
+    margin-top: .7rem;
+    background-size: cover;
+    border-radius: 5px;
+    background-position: center;
+  }
+
 
 
 
@@ -185,7 +213,13 @@ main {
         max-width: 40%;
         margin-right: 2em;
     }
-
+  /*  coup de coeur   */
+.imagecoeur-container{
+        margin: 1rem auto;
+        height: 300px;
+     
+      
+    }
      
 }
 
@@ -317,7 +351,13 @@ main {
 @media screen and (min-width: 768px) {
     
     /* ------- main -------- */
-
+  
+  /*      page      */
+  
+  .imagecoeur-container{
+        height: 400px;
+       
+    }
     
 }
 
@@ -367,6 +407,7 @@ main {
         padding: 0 1.5em;
     }
     
-
-
 }
+
+
+
