@@ -27,6 +27,9 @@ body {
     padding-bottom: calc(var(--footer-height) + 30px);
     min-height: 100vh;
 }
+body.noscroll {
+    overflow: hidden;
+}
   
 .bg-main {
     background-color: var(--main-color);
