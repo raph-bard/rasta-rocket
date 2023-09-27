@@ -7,8 +7,8 @@
     <title>Document</title>
 </head>
 
-<body class="index">
-  <header>
+<body class="bar-detail">
+  <header class="bg-main">
     <div class="logo">
        <a href="home.html"> <img src="https://placehold.co/100x40/EEE/31343C" alt="logo"> </a>
     </div>
@@ -27,18 +27,26 @@
   </header>
   <main>
     <div class="bandeau-container">
-        <div class="bandeau">
+        <div class="bandeau" style="background-image: url('img/cafe-neon.jpg');">
             <h1>Voici le titre du bandeau</h1>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
         </div>
     </div>
-    <div class="container">
-        
+    <div class="container flex md-flex-column">
+          <div class="md-flex-order-1">
+            <img src="img/cafe-neon.jpg" alt="img">
+          </div>
+          <div class="text">
+            <h2>Lorem Ipsum</h2>
+            <p>Sed at varius mauris. Pellentesque in augue dui. Quisque at consectetur mi. Sed nec ipsum eu ante efficitur tincidunt non quis eros. Vestibulum condimentum commodo est. Nullam gravida, erat id laoreet imperdiet, mauris metus sollicitudin neque, vel vehicula nisl justo a libero. Phasellus vehicula nisi quis turpis ultrices.</p>
+            <h2>Lorem Ipsum</h2>
+            <p>Sed at varius mauris. Pellentesque in augue dui. Quisque at consectetur mi. Sed nec ipsum eu ante efficitur tincidunt non quis eros. Vestibulum condimentum commodo est. </p>
+          </div>
     </div>
   </main>
-  <footer class="footer">
-    <p>&copy 2023 - Tous les droits sont réservés <span>Rasta rockett</span></p>
-    
+  <footer class="bg-main">
+    <p>&copy 2023 - Tous les droits sont réservés</p>
+    <span>Rasta rockett</span>
   </footer>
     
     <script src="js/script.js"></script>
