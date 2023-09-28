@@ -419,7 +419,7 @@ main {
         position: absolute;
         width: 27px;
         height: 24px;
-        right: 20px;
+        right: 27px;
         top: calc(50% - 12px);
     }
     .burger span:before, .burger span:after {
