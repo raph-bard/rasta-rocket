@@ -8,7 +8,14 @@ bars.forEach((bar) => {
 
 // --------------- Dynamisation de pages --------------- //
 
-// Class body //
+// ajouter la class body //
+
+// Obtenir le nom de la page actuelle
+const currentPage = window.location.pathname.split('/').pop().replace('.html', '');
+
+// Ajouter le nom de la page en tant que classe à l'élément body
+document.body.classList.add(currentPage);
+
 
 document.addEventListener("DOMContentLoaded", function () {
   // Obtenir le nom de la page actuelle
