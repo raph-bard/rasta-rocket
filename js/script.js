@@ -1,7 +1,7 @@
 //  generation des cartes bars
 import {bars, createCardMobile} from './data.mjs'
 
- const container = document.querySelector(".container");
+ const container = document.querySelector(".container-cards");
  bars.forEach((bar) => {
     container.appendChild(createCardMobile(bar));
  })
