@@ -12,12 +12,12 @@ import {bars, createCardMobile} from './data.mjs'
 // Class body //
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Obtenir le nom de la page actuelle
-  const currentPage = window.location.pathname.split('/').pop().replace('.html', '');
-  
-  // Ajouter le nom de la page en tant que classe à l'élément body
-  document.body.classList.add(currentPage);
-});
+            // Obtenir le nom de la page actuelle
+            const currentPage = window.location.pathname.split('/').pop().replace('.html', '');
+            
+            // Ajouter le nom de la page en tant que classe à l'élément body
+            document.body.classList.add(currentPage);
+        });
 
 // HEADER //
 
@@ -58,11 +58,4 @@ burger.addEventListener('click', function() {
   menu.classList.toggle('active');
   burger.classList.toggle('active');
   body.classList.toggle('noscroll');
-
-  // condition permettant d'enlever le décallage du burger menu quand la scrollbar disparait
-  // if (body.classList.contains('noscroll')) {
-  //   burger.style.right = 27 + largeurBarreDeDefilement + 'px'; 
-  //   } else {
-  //     burger.style.right = '27px';
-  //   }
 });
