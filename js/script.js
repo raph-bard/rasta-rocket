@@ -60,9 +60,9 @@ burger.addEventListener('click', function() {
   body.classList.toggle('noscroll');
 
   // condition permettant d'enlever le décallage du burger menu quand la scrollbar disparait
-  if (body.classList.contains('noscroll')) {
-    burger.style.right = 27 + largeurBarreDeDefilement + 'px'; 
-    } else {
-      burger.style.right = '27px';
-    }
+  // if (body.classList.contains('noscroll')) {
+  //   burger.style.right = 27 + largeurBarreDeDefilement + 'px'; 
+  //   } else {
+  //     burger.style.right = '27px';
+  //   }
 });
