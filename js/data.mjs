@@ -122,7 +122,7 @@ let bars = [
   let createCardMobile= (cardObjectProperties) => {
     const newElement = document.createElement('a');
     newElement.classList.add('card');
-    newElement.href = "/bar.html";
+    newElement.href = "bar.html";
     newElement.innerHTML = `
     <div class="card-image"></div>
     <div class="card-details">
