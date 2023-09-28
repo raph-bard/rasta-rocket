@@ -1,14 +1,3 @@
-//  generation des cartes bars
-import {bars, createCardMobile} from './data.mjs'
-
- const container = document.querySelector(".container");
- bars.forEach((bar) => {
-    container.appendChild(createCardMobile(bar)); 
- })
-
- 
-
-
 // --------------- Dynamisation de pages --------------- //
 
 // ajouter la class body //
@@ -60,3 +49,6 @@ burger.addEventListener('click', function() {
   burger.classList.toggle('active');
   body.classList.toggle('noscroll');
 });
+
+
+id = 0
