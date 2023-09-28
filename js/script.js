@@ -1,28 +1,30 @@
 //  generation des cartes bars
-import {bars, createCardMobile} from './data.mjs'
+import { bars, createCardMobile } from "./data.mjs";
 
- const container = document.querySelector(".container-cards");
- bars.forEach((bar) => {
-    container.appendChild(createCardMobile(bar));
- })
+const container = document.querySelector(".container-cards");
+bars.forEach((bar) => {
+  container.appendChild(createCardMobile(bar));
+});
 
- 
 // --------------- Dynamisation de pages --------------- //
 
 // Class body //
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", function () {
   // Obtenir le nom de la page actuelle
-  const currentPage = window.location.pathname.split('/').pop().replace('.html', '');
-  
+  const currentPage = window.location.pathname
+    .split("/")
+    .pop()
+    .replace(".html", "");
+
   // Ajouter le nom de la page en tant que classe à l'élément body
   document.body.classList.add(currentPage);
 });
 
 // HEADER //
 
-  const header = document.querySelector('header');
-  header.innerHTML = `
+const header = document.querySelector("header");
+header.innerHTML = `
       <div class="logo">
           <a href="index.html"> <img src="https://placehold.co/100x40/EEE/31343C" alt="logo"> </a>
       </div>
@@ -42,26 +44,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // FOOTER //
 
-const footer = document.querySelector('footer');
+const footer = document.querySelector("footer");
 footer.innerHTML = `<p>&copy 2023 - Tous les droits sont réservés</p><span>Rasta rockett</span>`;
-
 
 // animation burger menu //
 
-const burger = document.querySelector('.burger');
-const menu = document.querySelector('.menu');
+const burger = document.querySelector(".burger");
+const menu = document.querySelector(".menu");
 const body = document.body;
-const largeurBarreDeDefilement = window.innerWidth - document.documentElement.clientWidth; //calcul de la largeur de la scrollbar
+const largeurBarreDeDefilement =
+  window.innerWidth - document.documentElement.clientWidth; //calcul de la largeur de la scrollbar
 
 //fonction permettant d'afficher/cacher le menu quand on appuie sur le boutton burger
-burger.addEventListener('click', function() {
-  menu.classList.toggle('active');
-  burger.classList.toggle('active');
-  body.classList.toggle('noscroll');
+burger.addEventListener("click", function () {
+  menu.classList.toggle("active");
+  burger.classList.toggle("active");
+  body.classList.toggle("noscroll");
 
   // condition permettant d'enlever le décallage du burger menu quand la scrollbar disparait
   // if (body.classList.contains('noscroll')) {
-  //   burger.style.right = 27 + largeurBarreDeDefilement + 'px'; 
+  //   burger.style.right = 27 + largeurBarreDeDefilement + 'px';
   //   } else {
   //     burger.style.right = '27px';
   //   }
