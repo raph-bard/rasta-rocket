@@ -476,6 +476,18 @@ main {
     header{
         justify-content: space-between;
     }
+    /*  pop up contact */
+   /* li a .contact{
+        background-color: brown;
+    }
+
+    li a .contact:hover{
+
+    }
+
+    li a .contact:after{
+
+    } */
 
    
 
