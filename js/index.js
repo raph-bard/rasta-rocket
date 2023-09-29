@@ -52,7 +52,7 @@ burger.addEventListener("click", function () {
 
 /*      Creation Tableau d'objets bars         */
 
-let bar = [
+let bars = [
   {
     id: 1,
     name: "Nom de bar",
@@ -211,6 +211,7 @@ let bar = [
   },
 ];
 
+/**                         creation d'une carte bar    */
 const barList = document.querySelector(".container-cards");
 
 const myBeer = document.createElement("a");
@@ -223,3 +224,19 @@ myBeer.innerHTML = ` <div class="card-image"></div>
 <div class="card`;
 myBeer.classList.add("card");
 barList.appendChild(myBeer);
+
+/****         CREATION DE LA LISTE DES BARS AVEC FOR EACH */
+
+/****      SLIDER COUP DE COEUR             */
+
+const selectionCoupDeCoeur = document.querySelector(".coeur-container");
+
+const barCoupDeCoeur = document.createElement("a");
+barCoupDeCoeur.innerHTML = `<h2>Nos coup de coeur du moment</h2>
+<div class="imagecoeur-container"></div>`;
+
+selectionCoupDeCoeur.appendChild(barCoupDeCoeur);
+
+/*   EN COURS --- > const coupDeCoeurName = document.querySelector(".imagecoeur-container");
+const nameCoupDeCoeur = document.createElement("h1");
+nameCoupDeCoeur.innerHTML = `${bars[0].name}`; */
