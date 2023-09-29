@@ -244,6 +244,9 @@ main {
     box-shadow: 4px 2px 10px 3px #e8e7e7;
     line-height: 1.4rem;
 }
+a.card:hover {
+    color: initial;
+}
 
 .card h2{ 
     padding-bottom: .5rem;
