@@ -16,7 +16,7 @@ document.body.classList.add(currentPage);
 const header = document.querySelector("header");
 header.innerHTML = `
       <div class="logo">
-          <a href="index.html"> <img src="https://placehold.co/100x40/EEE/31343C" alt="logo"> </a>
+        <a href="index.html"> <img src="media/logo-rastarockett.jpg" alt="logo"> </a>
       </div>
       <div class="burger">
           <span></span>
