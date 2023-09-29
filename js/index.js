@@ -41,13 +41,28 @@ footer.innerHTML = `<p>&copy 2023 - Tous les droits sont réservés</p><span>Ras
 
 const burger = document.querySelector(".burger");
 const menu = document.querySelector(".menu");
-const body = document.body;
+const html = document.html;
+console.log("test" + html)
 
 //fonction permettant d'afficher/cacher le menu quand on appuie sur le boutton burger
 burger.addEventListener("click", function () {
   menu.classList.toggle("active");
-  burger.classList.toggle("active");
-  body.classList.toggle("noscroll");
+  burger.classList.toggle("active");document.documentElement.classList.toggle('noscroll');
+});
+
+
+/* POPUP DETAIL BAR */
+
+const popBut = document.querySelector(".pop-but");
+const popupBar = document.querySelector(".popup-bar-container");
+popBut.addEventListener("click", function () { 
+  popupBar.classList.toggle("active");
+  document.documentElement.classList.toggle('noscroll');
+});
+
+const closePop = document.querySelector(".close-button");
+closePop.addEventListener("click", function () { 
+  popupBar.classList.toggle("active");
 });
 
 /*      Creation Tableau d'objets bars         */

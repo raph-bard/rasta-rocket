@@ -30,7 +30,7 @@ body {
     padding-bottom: calc(var(--footer-height) + 30px);
     min-height: 100vh;
 }
-body.noscroll {
+html.noscroll {
     overflow: hidden;
 }
   
@@ -298,6 +298,64 @@ a.card:hover {
 .md-flex-order-1 img {
     width: 100%;    
 }
+
+
+/*************** popup bar detail **************/
+
+.popup-bar-container {
+    position: absolute;
+    left: 0;
+    top: 0vh;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.popup-bar-container.active {
+    opacity: 1;
+    z-index: 11;
+}
+.popup-bar {
+    position: relative;
+    width: 80%;
+    height: 80%;
+    background-color: var(--grey-color);
+    border-radius: 15px;
+}
+.popup-bar img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+}
+.popup-bar  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    z-index: 12;
+}
+.popup-bar  .close-button:after, .popup-bar .close-button:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: white;
+    border-radius: 4px;
+    position: absolute;
+    top: 12px;
+}
+.popup-bar .close-button:before {
+   transform: rotate(-45deg);
+}
+.popup-bar .close-button:after {
+    transform: rotate(45deg);
+ }
+
 
 /*************** Coup de coeur **************/
 
@@ -670,9 +728,5 @@ a.card:hover {
         padding: 0 1.5em;
     }
     
-}
-
-@media screen and (min-width: 576px) {
-
 }
 
