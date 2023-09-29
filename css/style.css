@@ -205,12 +205,17 @@ main {
     margin-right: 30px;
     position: relative;
     white-space: nowrap;
+    border:none;
+    border:0px;
+    outline:0px;
+    font-size: 1rem;
 }
 
 .categories-container span.category.active,
 .categories-container span.category:hover{
     color:black;
 }
+
 
 .categories-container span.category::after{
     content :"";
@@ -591,8 +596,19 @@ a.card:hover {
 
 
 }
+/*      map     */
 
 
+iframe{
+    display: block;
+    margin: 0;
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1280px;
+}
+.map {
+    zoom : 15;
+}
 
 /* RESPONSIVE 768 */
 
@@ -700,7 +716,6 @@ a.card:hover {
     }
 }
     
-}
 
 @media screen and (max-width: 992px) {
     
@@ -729,4 +744,6 @@ a.card:hover {
     }
     
 }
+
+
 
