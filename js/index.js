@@ -56,7 +56,7 @@ let bars = [
   {
     id: 1,
     name: "Nom de bar",
-    img: "/media/cafe-neon.jpg",
+    img: "media/cafe-neon.jpg",
     shortDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus.",
     longDescription:
@@ -64,12 +64,12 @@ let bars = [
     price: "cheap",
     type: "biere",
     location: "Bordeaux",
-    coupDeCoeur: "false",
+    coupDeCoeur: false,
   },
   {
     id: 2,
     name: "Nom de bar",
-    img: "/media/cafe-neon.jpg",
+    img: "media/cafe-neon.jpg",
     shortDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus.",
     longDescription:
@@ -77,12 +77,12 @@ let bars = [
     price: "cheap",
     type: "biere",
     location: "Bordeaux",
-    coupDeCoeur: "false",
+    coupDeCoeur: false,
   },
   {
     id: 3,
     name: "Nom de bar",
-    img: "/media/cafe-neon.jpg",
+    img: "media/cafe-neon.jpg",
     shortDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus.",
     longDescription:
@@ -90,12 +90,12 @@ let bars = [
     price: "cheap",
     type: "biere",
     location: "Bordeaux",
-    coupDeCoeur: "false",
+    coupDeCoeur: false,
   },
   {
     id: 4,
     name: "Nom de bar",
-    img: "/media/cafe-neon.jpg",
+    img: "media/cafe-neon.jpg",
     shortDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus.",
     longDescription:
@@ -103,12 +103,12 @@ let bars = [
     price: "cheap",
     type: "biere",
     location: "Bordeaux",
-    coupDeCoeur: "false",
+    coupDeCoeur: false,
   },
   {
     id: 5,
     name: "Nom de bar",
-    img: "/media/cafe-neon.jpg",
+    img: "media/cafe-neon.jpg",
     shortDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus.",
     longDescription:
@@ -116,12 +116,12 @@ let bars = [
     price: "cheap",
     type: "biere",
     location: "Bordeaux",
-    coupDeCoeur: "false",
+    coupDeCoeur: false,
   },
   {
     id: 6,
     name: "Nom de bar",
-    img: "/media/cafe-neon.jpg",
+    img: "media/cafe-neon.jpg",
     shortDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus.",
     longDescription:
@@ -129,12 +129,12 @@ let bars = [
     price: "cheap",
     type: "biere",
     location: "Bordeaux",
-    coupDeCoeur: "false",
+    coupDeCoeur: false,
   },
   {
     id: 7,
     name: "Nom de bar",
-    img: "/media/cafe-neon.jpg",
+    img: "media/cafe-neon.jpg",
     shortDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus.",
     longDescription:
@@ -142,12 +142,12 @@ let bars = [
     price: "cheap",
     type: "biere",
     location: "Bordeaux",
-    coupDeCoeur: "false",
+    coupDeCoeur: false,
   },
   {
     id: 8,
     name: "Nom de bar",
-    img: "/media/cafe-neon.jpg",
+    img: "media/cafe-neon.jpg",
     shortDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus.",
     longDescription:
@@ -155,12 +155,12 @@ let bars = [
     price: "cheap",
     type: "biere",
     location: "Bordeaux",
-    coupDeCoeur: "false",
+    coupDeCoeur: false,
   },
   {
     id: 9,
     name: "Nom de bar",
-    img: "/media/cafe-neon.jpg",
+    img: "media/cafe-neon.jpg",
     shortDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus.",
     longDescription:
@@ -168,12 +168,12 @@ let bars = [
     price: "cheap",
     type: "biere",
     location: "Bordeaux",
-    coupDeCoeur: "false",
+    coupDeCoeur: false,
   },
   {
     id: 10,
-    name: "Nom de bar",
-    img: "/media/cafe-neon.jpg",
+    name: "Delirium",
+    img: "media/cafe-neon.jpg",
     shortDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus.",
     longDescription:
@@ -181,12 +181,12 @@ let bars = [
     price: "cheap",
     type: "biere",
     location: "Bordeaux",
-    coupDeCoeur: "false",
+    coupDeCoeur: true,
   },
   {
     id: 11,
     name: "Nom de bar",
-    img: "/media/cafe-neon.jpg",
+    img: "media/cafe-neon.jpg",
     shortDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus.",
     longDescription:
@@ -194,12 +194,12 @@ let bars = [
     price: "cheap",
     type: "biere",
     location: "Bordeaux",
-    coupDeCoeur: "false",
+    coupDeCoeur: false,
   },
   {
     id: 12,
     name: "Nom de bar",
-    img: "/media/cafe-neon.jpg",
+    img: "media/cafe-neon.jpg",
     shortDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus.",
     longDescription:
@@ -207,7 +207,7 @@ let bars = [
     price: "cheap",
     type: "biere",
     location: "Bordeaux",
-    coupDeCoeur: "false",
+    coupDeCoeur: false,
   },
 ];
 
@@ -215,7 +215,8 @@ let bars = [
 const barList = document.querySelector(".container-cards");
 
 const myBeer = document.createElement("a");
-myBeer.innerHTML = ` <div class="card-image"></div>
+myBeer.innerHTML = `
+<div class="card-image"></div>
 <div class="card-details">
     <div class="card-title-description">
         <h2 class="card-title">titre</h2>
@@ -232,11 +233,25 @@ barList.appendChild(myBeer);
 const selectionCoupDeCoeur = document.querySelector(".coeur-container");
 
 const barCoupDeCoeur = document.createElement("a");
-barCoupDeCoeur.innerHTML = `<h2>Nos coup de coeur du moment</h2>
-<div class="imagecoeur-container"></div>`;
+const coupDeCoeurElements = "<h2>Nos coup de coeur du moment</h2>";
+barCoupDeCoeur.innerHTML = bars
+  .filter((bar) => bar.coupDeCoeur === true)
+  .map(
+    (bar) => `
+    
+    <div class= ".imagecoeur-container"> ${bar.name}</div>
+  `
+    /*<img class="imagecoeur-container" src="${bar.img}" />*/
+  );
+// bars.forEach((bar) => {
+//   barCoupDeCoeur.appendChild();
+// });
+console.log(barCoupDeCoeur);
+
+barCoupDeCoeur.classList.add("imagecoeur-container");
 
 selectionCoupDeCoeur.appendChild(barCoupDeCoeur);
 
-/*   EN COURS --- > const coupDeCoeurName = document.querySelector(".imagecoeur-container");
+/*const coupDeCoeurName = document.querySelector(".imagecoeur-container");
 const nameCoupDeCoeur = document.createElement("h1");
-nameCoupDeCoeur.innerHTML = `${bars[0].name}`; */
+nameCoupDeCoeur.innerHTML = `${bars[0].name}`;*/
