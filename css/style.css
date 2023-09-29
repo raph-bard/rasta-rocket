@@ -5,7 +5,7 @@
    --second-color:#ca5501;
    --grey-color: #807979;
    --footer-height: 60px;
-   --team-card-height: 100px;
+   --team-card-height: 85px;
 }
 
 
@@ -39,6 +39,7 @@ body.noscroll {
 }
 
 h2 {
+    font-size: 1.6em;
     margin-top: 0.5em;
 }
 main p, main h2 {
@@ -73,6 +74,7 @@ header a {
 header .logo img {
     display: block;
     float: left;
+    max-width: 200px;
 }
 header .logo, header .burger, footer {
     z-index: 10;
@@ -203,12 +205,17 @@ main {
     margin-right: 30px;
     position: relative;
     white-space: nowrap;
+    border:none;
+    border:0px;
+    outline:0px;
+    font-size: 1rem;
 }
 
 .categories-container span.category.active,
 .categories-container span.category:hover{
     color:black;
 }
+
 
 .categories-container span.category::after{
     content :"";
@@ -242,9 +249,11 @@ main {
     box-shadow: 4px 2px 10px 3px #e8e7e7;
     line-height: 1.4rem;
 }
+a.card:hover {
+    color: initial;
+}
 
-.card h2{
-    font-size: 1.2rem;
+.card h2{ 
     padding-bottom: .5rem;
     margin-top: 0.3rem;
 }
@@ -327,16 +336,23 @@ main {
     margin: 90px 0 60px;
     font-size: 36px;
 }
-.aboutus p {
+.aboutus main p {
     margin-bottom: 40px;
 }
-.aboutus .team-card-container {
-    display: flex;
-    justify-content: center;
-}
+
+.team-card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); /* 5 éléments par ligne au minimum, adaptatif en fonction de l'espace disponible */
+    gap: 10px; /* Espace entre les éléments */
+    align-items: center; /* Centrez les éléments verticalement */
+    justify-content: center; /* Centrez horizontalement la dernière ligne */
+  }
+  
 
 .aboutus .team-card {
-    max-width: 350px;
+    flex-basis: calc(20% - 20px);
+    width: 100%;
+    max-width: 310px;
     margin: 0 auto 50px;
     position: relative;
     overflow: hidden;
@@ -374,7 +390,7 @@ main {
 }
 .aboutus .team-card strong {
     display: block;
-    font-size: 34px;
+    font-size: 27px;
     line-height: 34px;
 }
 
@@ -409,12 +425,7 @@ main {
 
     /* ------- pages -------- */
 
-    /* bar-detail */
-
-    .bar-detail .container .md-flex-order-1 { 
-        max-width: 40%;
-        margin-right: 2em;
-    }
+    
   /*  coup de coeur   */
     .imagecoeur-container{
         margin: 1em auto;
@@ -429,15 +440,7 @@ main {
     /* ------- main -------- */
 
 
-    .md-flex {
-        display: flex;
-    }
-    .md-flex-column {
-        flex-direction: column;
-    }
-    .md-flex-order-1 {
-        order: +1;
-    }
+    
 
     /* bandeau */
 
@@ -532,16 +535,23 @@ main {
 
     /* ------- pages -------- */
 
-    /* bar-detail */
-
-    .md-flex-order-1 img {
-        margin-top: 2em;
-    }
+    
 
 
 }
+/*      map     */
 
 
+iframe{
+    display: block;
+    margin: 0;
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1280px;
+}
+.map {
+    zoom : 15;
+}
 
 /* RESPONSIVE 768 */
 
@@ -550,22 +560,66 @@ main {
     /* ------- main -------- */
     
     .bandeau h1 {
-        font-size: 3em;
+        font-size: 2.2em;
     }
     .bandeau p {
-        font-size: 1.5em;
+        font-size: 1.2em;
     }
   
-  /*      page      */
+    /* ------- pages -------- */
   
-  .imagecoeur-container{
-        height: 400px;
-       
+    .imagecoeur-container{
+        height: 400px; 
     }
+    .team-card-container {
+        grid-template-columns: repeat(3, 1fr); /* Trois colonnes pour desktop */
+      }
+
+    /* bar-detail */
+
+    .bar-detail .container .md-flex-order-1 { 
+        max-width: 40%;
+        margin-right: 2em;
+    }  
+    
+
+}
+
 
 @media screen and (max-width: 768px) {
     
     /* ------- main -------- */
+
+    
+
+    .md-flex {
+        display: flex;
+    }
+    .md-flex-column {
+        flex-direction: column;
+    }
+    .md-flex-order-1 {
+        order: +1;
+    }
+
+    
+
+    /* ------- pages -------- */
+
+    .team-card-container {
+        grid-template-columns: repeat(2, 1fr); /* Deux colonnes pour tablette */
+    }
+
+    /* Appliquer une largeur de 100% à la dernière ligne (élément 5, 6, 7, etc.) */
+    .team-card:nth-child(n+5) {
+        grid-column: span 2;
+    }
+
+    /* bar-detail */
+
+    .md-flex-order-1 img {
+        margin-top: 2em;
+    }
 
 }
 
@@ -638,4 +692,6 @@ main {
 @media screen and (min-width: 576px) {
 
 }
+
+
 

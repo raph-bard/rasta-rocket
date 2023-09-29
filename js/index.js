@@ -16,7 +16,7 @@ document.body.classList.add(currentPage);
 const header = document.querySelector("header");
 header.innerHTML = `
       <div class="logo">
-          <a href="index.html"> <img src="https://placehold.co/100x40/EEE/31343C" alt="logo"> </a>
+        <a href="index.html"> <img src="media/logo-rastarockett.jpg" alt="logo"> </a>
       </div>
       <div class="burger">
           <span></span>
@@ -58,7 +58,7 @@ let bars = [
     name: "Nom de bar",
     img: "media/cafe-neon.jpg",
     shortDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     longDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque itaque perspiciatis, illo ex fuga culpa modi accusantium quas temporibus similique deleniti, ullam facere dignissimos illum tenetur deserunt ut, enim fugit adipisci maxime perferendis assumenda. Modi facere recusandae libero! Quidem incidunt vel tempora repudiandae eaque doloremque quibusdam tenetur reiciendis reprehenderit culpa delectus architecto, deserunt dolorem ipsum accusamus dolores dignissimos suscipit quae unde nesciunt impedit! Temporibus rem maiores culpa soluta cumque sequi vel labore esse. Laborum deleniti corporis impedit quo placeat perspiciatis explicabo ex aut illo in exercitationem architecto, sed animi vero unde reprehenderit earum maxime nisi id. Corporis, similique. Iure, tempora?",
     price: "cheap",
@@ -71,7 +71,8 @@ let bars = [
     name: "Nom de bar",
     img: "media/cafe-neon.jpg",
     shortDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+
     longDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque itaque perspiciatis, illo ex fuga culpa modi accusantium quas temporibus similique deleniti, ullam facere dignissimos illum tenetur deserunt ut, enim fugit adipisci maxime perferendis assumenda. Modi facere recusandae libero! Quidem incidunt vel tempora repudiandae eaque doloremque quibusdam tenetur reiciendis reprehenderit culpa delectus architecto, deserunt dolorem ipsum accusamus dolores dignissimos suscipit quae unde nesciunt impedit! Temporibus rem maiores culpa soluta cumque sequi vel labore esse. Laborum deleniti corporis impedit quo placeat perspiciatis explicabo ex aut illo in exercitationem architecto, sed animi vero unde reprehenderit earum maxime nisi id. Corporis, similique. Iure, tempora?",
     price: "cheap",
@@ -84,7 +85,8 @@ let bars = [
     name: "Nom de bar",
     img: "media/cafe-neon.jpg",
     shortDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+
     longDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque itaque perspiciatis, illo ex fuga culpa modi accusantium quas temporibus similique deleniti, ullam facere dignissimos illum tenetur deserunt ut, enim fugit adipisci maxime perferendis assumenda. Modi facere recusandae libero! Quidem incidunt vel tempora repudiandae eaque doloremque quibusdam tenetur reiciendis reprehenderit culpa delectus architecto, deserunt dolorem ipsum accusamus dolores dignissimos suscipit quae unde nesciunt impedit! Temporibus rem maiores culpa soluta cumque sequi vel labore esse. Laborum deleniti corporis impedit quo placeat perspiciatis explicabo ex aut illo in exercitationem architecto, sed animi vero unde reprehenderit earum maxime nisi id. Corporis, similique. Iure, tempora?",
     price: "cheap",
@@ -97,7 +99,8 @@ let bars = [
     name: "Nom de bar",
     img: "media/cafe-neon.jpg",
     shortDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+
     longDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque itaque perspiciatis, illo ex fuga culpa modi accusantium quas temporibus similique deleniti, ullam facere dignissimos illum tenetur deserunt ut, enim fugit adipisci maxime perferendis assumenda. Modi facere recusandae libero! Quidem incidunt vel tempora repudiandae eaque doloremque quibusdam tenetur reiciendis reprehenderit culpa delectus architecto, deserunt dolorem ipsum accusamus dolores dignissimos suscipit quae unde nesciunt impedit! Temporibus rem maiores culpa soluta cumque sequi vel labore esse. Laborum deleniti corporis impedit quo placeat perspiciatis explicabo ex aut illo in exercitationem architecto, sed animi vero unde reprehenderit earum maxime nisi id. Corporis, similique. Iure, tempora?",
     price: "cheap",
@@ -110,7 +113,8 @@ let bars = [
     name: "Nom de bar",
     img: "media/cafe-neon.jpg",
     shortDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+
     longDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque itaque perspiciatis, illo ex fuga culpa modi accusantium quas temporibus similique deleniti, ullam facere dignissimos illum tenetur deserunt ut, enim fugit adipisci maxime perferendis assumenda. Modi facere recusandae libero! Quidem incidunt vel tempora repudiandae eaque doloremque quibusdam tenetur reiciendis reprehenderit culpa delectus architecto, deserunt dolorem ipsum accusamus dolores dignissimos suscipit quae unde nesciunt impedit! Temporibus rem maiores culpa soluta cumque sequi vel labore esse. Laborum deleniti corporis impedit quo placeat perspiciatis explicabo ex aut illo in exercitationem architecto, sed animi vero unde reprehenderit earum maxime nisi id. Corporis, similique. Iure, tempora?",
     price: "cheap",
@@ -123,7 +127,8 @@ let bars = [
     name: "Nom de bar",
     img: "media/cafe-neon.jpg",
     shortDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+
     longDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque itaque perspiciatis, illo ex fuga culpa modi accusantium quas temporibus similique deleniti, ullam facere dignissimos illum tenetur deserunt ut, enim fugit adipisci maxime perferendis assumenda. Modi facere recusandae libero! Quidem incidunt vel tempora repudiandae eaque doloremque quibusdam tenetur reiciendis reprehenderit culpa delectus architecto, deserunt dolorem ipsum accusamus dolores dignissimos suscipit quae unde nesciunt impedit! Temporibus rem maiores culpa soluta cumque sequi vel labore esse. Laborum deleniti corporis impedit quo placeat perspiciatis explicabo ex aut illo in exercitationem architecto, sed animi vero unde reprehenderit earum maxime nisi id. Corporis, similique. Iure, tempora?",
     price: "cheap",
@@ -136,7 +141,8 @@ let bars = [
     name: "Nom de bar",
     img: "media/cafe-neon.jpg",
     shortDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+
     longDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque itaque perspiciatis, illo ex fuga culpa modi accusantium quas temporibus similique deleniti, ullam facere dignissimos illum tenetur deserunt ut, enim fugit adipisci maxime perferendis assumenda. Modi facere recusandae libero! Quidem incidunt vel tempora repudiandae eaque doloremque quibusdam tenetur reiciendis reprehenderit culpa delectus architecto, deserunt dolorem ipsum accusamus dolores dignissimos suscipit quae unde nesciunt impedit! Temporibus rem maiores culpa soluta cumque sequi vel labore esse. Laborum deleniti corporis impedit quo placeat perspiciatis explicabo ex aut illo in exercitationem architecto, sed animi vero unde reprehenderit earum maxime nisi id. Corporis, similique. Iure, tempora?",
     price: "cheap",
@@ -149,7 +155,8 @@ let bars = [
     name: "Nom de bar",
     img: "media/cafe-neon.jpg",
     shortDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+
     longDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque itaque perspiciatis, illo ex fuga culpa modi accusantium quas temporibus similique deleniti, ullam facere dignissimos illum tenetur deserunt ut, enim fugit adipisci maxime perferendis assumenda. Modi facere recusandae libero! Quidem incidunt vel tempora repudiandae eaque doloremque quibusdam tenetur reiciendis reprehenderit culpa delectus architecto, deserunt dolorem ipsum accusamus dolores dignissimos suscipit quae unde nesciunt impedit! Temporibus rem maiores culpa soluta cumque sequi vel labore esse. Laborum deleniti corporis impedit quo placeat perspiciatis explicabo ex aut illo in exercitationem architecto, sed animi vero unde reprehenderit earum maxime nisi id. Corporis, similique. Iure, tempora?",
     price: "cheap",
@@ -162,7 +169,8 @@ let bars = [
     name: "Nom de bar",
     img: "media/cafe-neon.jpg",
     shortDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+
     longDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque itaque perspiciatis, illo ex fuga culpa modi accusantium quas temporibus similique deleniti, ullam facere dignissimos illum tenetur deserunt ut, enim fugit adipisci maxime perferendis assumenda. Modi facere recusandae libero! Quidem incidunt vel tempora repudiandae eaque doloremque quibusdam tenetur reiciendis reprehenderit culpa delectus architecto, deserunt dolorem ipsum accusamus dolores dignissimos suscipit quae unde nesciunt impedit! Temporibus rem maiores culpa soluta cumque sequi vel labore esse. Laborum deleniti corporis impedit quo placeat perspiciatis explicabo ex aut illo in exercitationem architecto, sed animi vero unde reprehenderit earum maxime nisi id. Corporis, similique. Iure, tempora?",
     price: "cheap",
@@ -175,7 +183,8 @@ let bars = [
     name: "Delirium",
     img: "media/cafe-neon.jpg",
     shortDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+
     longDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque itaque perspiciatis, illo ex fuga culpa modi accusantium quas temporibus similique deleniti, ullam facere dignissimos illum tenetur deserunt ut, enim fugit adipisci maxime perferendis assumenda. Modi facere recusandae libero! Quidem incidunt vel tempora repudiandae eaque doloremque quibusdam tenetur reiciendis reprehenderit culpa delectus architecto, deserunt dolorem ipsum accusamus dolores dignissimos suscipit quae unde nesciunt impedit! Temporibus rem maiores culpa soluta cumque sequi vel labore esse. Laborum deleniti corporis impedit quo placeat perspiciatis explicabo ex aut illo in exercitationem architecto, sed animi vero unde reprehenderit earum maxime nisi id. Corporis, similique. Iure, tempora?",
     price: "cheap",
@@ -188,7 +197,8 @@ let bars = [
     name: "Nom de bar",
     img: "media/cafe-neon.jpg",
     shortDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+
     longDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque itaque perspiciatis, illo ex fuga culpa modi accusantium quas temporibus similique deleniti, ullam facere dignissimos illum tenetur deserunt ut, enim fugit adipisci maxime perferendis assumenda. Modi facere recusandae libero! Quidem incidunt vel tempora repudiandae eaque doloremque quibusdam tenetur reiciendis reprehenderit culpa delectus architecto, deserunt dolorem ipsum accusamus dolores dignissimos suscipit quae unde nesciunt impedit! Temporibus rem maiores culpa soluta cumque sequi vel labore esse. Laborum deleniti corporis impedit quo placeat perspiciatis explicabo ex aut illo in exercitationem architecto, sed animi vero unde reprehenderit earum maxime nisi id. Corporis, similique. Iure, tempora?",
     price: "cheap",
@@ -201,7 +211,8 @@ let bars = [
     name: "Nom de bar",
     img: "media/cafe-neon.jpg",
     shortDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+
     longDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque itaque perspiciatis, illo ex fuga culpa modi accusantium quas temporibus similique deleniti, ullam facere dignissimos illum tenetur deserunt ut, enim fugit adipisci maxime perferendis assumenda. Modi facere recusandae libero! Quidem incidunt vel tempora repudiandae eaque doloremque quibusdam tenetur reiciendis reprehenderit culpa delectus architecto, deserunt dolorem ipsum accusamus dolores dignissimos suscipit quae unde nesciunt impedit! Temporibus rem maiores culpa soluta cumque sequi vel labore esse. Laborum deleniti corporis impedit quo placeat perspiciatis explicabo ex aut illo in exercitationem architecto, sed animi vero unde reprehenderit earum maxime nisi id. Corporis, similique. Iure, tempora?",
     price: "cheap",
@@ -212,19 +223,78 @@ let bars = [
 ];
 
 /**                         creation d'une carte bar    */
-const barList = document.querySelector(".container-cards");
+const barList = document.querySelector(".container-cards"); // container pour les cartes
 
-const myBeer = document.createElement("a");
-myBeer.innerHTML = `
-<div class="card-image"></div>
-<div class="card-details">
-    <div class="card-title-description">
-        <h2 class="card-title">titre</h2>
-        <p class="card-description"> lorem </p>
-    </div>
-<div class="card`;
-myBeer.classList.add("card");
-barList.appendChild(myBeer);
+let options = (bar) => {
+  let optionsHTML = "";
+  switch (bar.price) {
+    case "cheap":
+      optionsHTML += `<div class="card-option">
+        <img src="/assets/dollar1.png" alt="" class="logo">
+        <h4>Economique</h4>
+        </div>`;
+      break;
+    case "affordable":
+      optionsHTML += `<div class="card-option">
+        <img src="/assets/dollar2.png" alt="" class="logo">
+        <h4>Abordable</h4>
+        </div>`;
+      break;
+    case "expensive":
+      optionsHTML += `<div class="card-option">
+        <img src="/assets/dollar3.png" alt="" class="logo">
+        <h4>cher</h4>
+        </div>`;
+      break;
+  }
+  switch (bar.type) {
+    case "biere":
+      optionsHTML += `<div class="card-option">
+        <img src="/assets/biere.png" alt="" class="logo">
+        <h4>Bières</h4>
+        </div>`;
+      break;
+    case "cocktail":
+      optionsHTML += `<div class="card-option">
+        <img src="/assets/cocktail.png" alt="" class="logo">
+        <h4>Cocktails</h4>
+        </div>`;
+      break;
+    case "vin":
+      optionsHTML += `<div class="card-option">
+        <img src="/assets/vin.png" alt="" class="logo">
+        <h4>Vins</h4>
+        </div>`;
+      break;
+  }
+  return optionsHTML;
+};
+
+let createCardMobile = (bar) => {
+  let para = new URLSearchParams();
+  para.append("id", bar.id);
+  const newBar = document.createElement("a");
+  newBar.href = "bar-detail.html?" + para.toString(); // creation du lien, de la balaise <a>, avec le Id inseré à la fin
+  newBar.classList.add("card"); // donc le lien sera de cette forme : bar-detail.html?id=1 par exemple
+  newBar.innerHTML = `
+   
+<div class="card-image" style="background: url(${
+    bar.img
+  }) no-repeat center/cover;"></div>
+    <div class="card-details">
+        <div class="card-title-description">
+            <h2 class="card-title">${bar.name}</h2>
+            <p class="card-description"> ${bar.shortDescription}</p>
+        </div>
+        <div class="card-options">
+          ${options(bar)}
+        </div>
+      </div>   
+    `;
+
+  return newBar;
+};
+bars.forEach((bar) => barList.appendChild(createCardMobile(bar)));
 
 /****         CREATION DE LA LISTE DES BARS AVEC FOR EACH */
 
