@@ -5,6 +5,7 @@
    --second-color:#ca5501;
    --grey-color: #807979;
    --footer-height: 60px;
+   --team-card-height: 100px;
 }
 
 
@@ -130,6 +131,7 @@ main {
     text-align: center;
     text-shadow: 2px 2px 4px black;
     margin-bottom: 2em;
+    font-size: 1.5em;
 }
 .bandeau:after {
     content: '';
@@ -145,7 +147,12 @@ main {
     position: relative;
     z-index: 3;
 }
-
+.bandeau h1 {
+    font-size: 1.3em;
+}
+.bandeau p {
+    font-size: 18px;
+}
 
 
 /* ------ Pages ------- */
@@ -312,6 +319,64 @@ main {
   }
 
 
+/* --- About Us --- */
+
+.aboutus h2 {
+    text-align: center;
+    margin: 90px 0 60px;
+    font-size: 36px;
+}
+.aboutus p {
+    margin-bottom: 40px;
+}
+.aboutus .team-card-container {
+    display: flex;
+    justify-content: center;
+}
+
+.aboutus .team-card {
+    max-width: 350px;
+    margin: 0 auto 50px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 50px;
+} 
+.aboutus .team-card div {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: var(--team-card-height);
+    background-color: var(--second-color);
+    padding: 0 24px;
+    font-weight: 700;
+    transform: translateY(100%);
+    display: flex;
+    align-items: center;
+}
+.aboutus .team-card:hover div {
+    transform: translateY(0%);
+}
+.aboutus .team-card:hover div {
+    transform: translateY(0%);
+}
+.aboutus .team-card:hover div, .aboutus .team-card div, .aboutus .team-card img, .aboutus .team-card:hover img {
+    transition: all 0.3s;
+}
+.aboutus .team-card img {
+    float: left;
+    width: 100%;
+    height: auto;
+}
+.aboutus .team-card:hover img {
+    transform: scale(1.08);
+}
+.aboutus .team-card strong {
+    display: block;
+    font-size: 34px;
+    line-height: 34px;
+}
+
 
 
 /* ------------- RESPONSIVE -------------- */
@@ -350,11 +415,9 @@ main {
         margin-right: 2em;
     }
   /*  coup de coeur   */
-.imagecoeur-container{
+    .imagecoeur-container{
         margin: 1em auto;
         height: 300px;
-     
-      
     }
      
 }
@@ -377,9 +440,6 @@ main {
 
     /* bandeau */
 
-    .bandeau h1 {
-        font-size: 2em;
-    }
 
 
     /* nav footer */
@@ -487,6 +547,13 @@ main {
 @media screen and (min-width: 768px) {
     
     /* ------- main -------- */
+    
+    .bandeau h1 {
+        font-size: 3em;
+    }
+    .bandeau p {
+        font-size: 1.5em;
+    }
   
   /*      page      */
   
@@ -551,13 +618,11 @@ main {
 
 /* RESPONSIVE 1200 */
 
-@media screen and (MIN-width: 1200px) {
+@media screen and (min-width: 1200px) {
 
     /* bandeau */
 
-    .bandeau h1 {
-        font-size: 2em;
-    }
+    
 }
 
 @media screen and (max-width: 1200px) {
