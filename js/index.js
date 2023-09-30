@@ -65,6 +65,7 @@ let bars = [
     type: "biere",
     location: "Bordeaux",
     coupDeCoeur: "false",
+    ambiance: "dansant",
   },
   {
     id: 2,
@@ -76,9 +77,10 @@ let bars = [
     longDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque itaque perspiciatis, illo ex fuga culpa modi accusantium quas temporibus similique deleniti, ullam facere dignissimos illum tenetur deserunt ut, enim fugit adipisci maxime perferendis assumenda. Modi facere recusandae libero! Quidem incidunt vel tempora repudiandae eaque doloremque quibusdam tenetur reiciendis reprehenderit culpa delectus architecto, deserunt dolorem ipsum accusamus dolores dignissimos suscipit quae unde nesciunt impedit! Temporibus rem maiores culpa soluta cumque sequi vel labore esse. Laborum deleniti corporis impedit quo placeat perspiciatis explicabo ex aut illo in exercitationem architecto, sed animi vero unde reprehenderit earum maxime nisi id. Corporis, similique. Iure, tempora?",
     price: "cheap",
-    type: "biere",
+    type: "vin",
     location: "Bordeaux",
     coupDeCoeur: "false",
+    ambiance: "dansant",
   },
   {
     id: 3,
@@ -90,9 +92,10 @@ let bars = [
     longDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque itaque perspiciatis, illo ex fuga culpa modi accusantium quas temporibus similique deleniti, ullam facere dignissimos illum tenetur deserunt ut, enim fugit adipisci maxime perferendis assumenda. Modi facere recusandae libero! Quidem incidunt vel tempora repudiandae eaque doloremque quibusdam tenetur reiciendis reprehenderit culpa delectus architecto, deserunt dolorem ipsum accusamus dolores dignissimos suscipit quae unde nesciunt impedit! Temporibus rem maiores culpa soluta cumque sequi vel labore esse. Laborum deleniti corporis impedit quo placeat perspiciatis explicabo ex aut illo in exercitationem architecto, sed animi vero unde reprehenderit earum maxime nisi id. Corporis, similique. Iure, tempora?",
     price: "cheap",
-    type: "biere",
+    type: "cocktail",
     location: "Bordeaux",
     coupDeCoeur: "false",
+    ambiance: "dansant",
   },
   {
     id: 4,
@@ -104,9 +107,10 @@ let bars = [
     longDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque itaque perspiciatis, illo ex fuga culpa modi accusantium quas temporibus similique deleniti, ullam facere dignissimos illum tenetur deserunt ut, enim fugit adipisci maxime perferendis assumenda. Modi facere recusandae libero! Quidem incidunt vel tempora repudiandae eaque doloremque quibusdam tenetur reiciendis reprehenderit culpa delectus architecto, deserunt dolorem ipsum accusamus dolores dignissimos suscipit quae unde nesciunt impedit! Temporibus rem maiores culpa soluta cumque sequi vel labore esse. Laborum deleniti corporis impedit quo placeat perspiciatis explicabo ex aut illo in exercitationem architecto, sed animi vero unde reprehenderit earum maxime nisi id. Corporis, similique. Iure, tempora?",
     price: "cheap",
-    type: "biere",
+    type: "cocktail",
     location: "Bordeaux",
     coupDeCoeur: "false",
+    ambiance: "sportif",
   },
   {
     id: 5,
@@ -121,6 +125,7 @@ let bars = [
     type: "biere",
     location: "Bordeaux",
     coupDeCoeur: "false",
+    ambiance: "guinguette",
   },
   {
     id: 6,
@@ -135,6 +140,7 @@ let bars = [
     type: "biere",
     location: "Bordeaux",
     coupDeCoeur: "false",
+    ambiance: "guinguette",
   },
   {
     id: 7,
@@ -149,6 +155,7 @@ let bars = [
     type: "biere",
     location: "Bordeaux",
     coupDeCoeur: "false",
+    ambiance: "sportif",
   },
   {
     id: 8,
@@ -163,6 +170,7 @@ let bars = [
     type: "biere",
     location: "Bordeaux",
     coupDeCoeur: "false",
+    ambiance: "guinguette",
   },
   {
     id: 9,
@@ -177,6 +185,7 @@ let bars = [
     type: "biere",
     location: "Bordeaux",
     coupDeCoeur: "false",
+    ambiance: "dansant",
   },
   {
     id: 10,
@@ -191,6 +200,7 @@ let bars = [
     type: "biere",
     location: "Bordeaux",
     coupDeCoeur: "false",
+    ambiance: "guinguette",
   },
   {
     id: 11,
@@ -205,6 +215,7 @@ let bars = [
     type: "biere",
     location: "Bordeaux",
     coupDeCoeur: "false",
+    ambiance: "sportif",
   },
   {
     id: 12,
@@ -219,6 +230,7 @@ let bars = [
     type: "biere",
     location: "Bordeaux",
     coupDeCoeur: "false",
+    ambiance: "sportif",
   },
 ];
 
@@ -292,4 +304,39 @@ let createCardMobile = (bar) => {
 
   return newBar;
 };
+// append all bars in the main  barList
 bars.forEach((bar) => barList.appendChild(createCardMobile(bar)));
+
+/****** filtering ******/
+
+const selectType = document.querySelector("#type");
+const selectPrice = document.querySelector("#price");
+const selectAmbiance = document.querySelector("#ambiance");
+
+// adding event listeners onchange
+
+selectAmbiance.addEventListener("change", () => filterHandler());
+selectType.addEventListener("change", () => filterHandler());
+selectPrice.addEventListener("change", () => filterHandler());
+
+function filterHandler() {
+  console.log("select value : ", selectAmbiance.value);
+  let filteredBars = bars
+    .filter(
+      (bar) =>
+        bar.type == includes(selectType.value) || selectType.value == "all"
+    )
+    .filter(
+      (bar) =>
+        bar.ambiance.includes(selectAmbiance.value) ||
+        selectAmbiance.value == "all"
+    )
+    .filter(
+      (bar) => bar.price == selectPrice.value || selectPrice.value == "all"
+    );
+
+  barList.innerHTML = "";
+
+  // appending filtered bars
+  filteredBars.forEach((bar) => barList.appendChild(createCardMobile(bar)));
+}
