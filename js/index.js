@@ -42,7 +42,6 @@ footer.innerHTML = `<p>&copy 2023 - Tous les droits sont réservés</p><span>Ras
 const burger = document.querySelector(".burger");
 const menu = document.querySelector(".menu");
 const html = document.html;
-console.log("test" + html)
 
 //fonction permettant d'afficher/cacher le menu quand on appuie sur le boutton burger
 burger.addEventListener("click", function () {
@@ -51,19 +50,7 @@ burger.addEventListener("click", function () {
 });
 
 
-/* POPUP DETAIL BAR */
 
-const popBut = document.querySelector(".pop-but");
-const popupBar = document.querySelector(".popup-bar-container");
-popBut.addEventListener("click", function () { 
-  popupBar.classList.toggle("active");
-  document.documentElement.classList.toggle('noscroll');
-});
-
-const closePop = document.querySelector(".close-button");
-closePop.addEventListener("click", function () { 
-  popupBar.classList.toggle("active");
-});
 
 /*      Creation Tableau d'objets bars         */
 
@@ -71,7 +58,7 @@ let bars = [
   {
     id: 1,
     name: "Nom de bar",
-    img: "/media/cafe-neon.jpg",
+    img: "media/cafe-neon.jpg",
     shortDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     longDescription:
@@ -84,7 +71,7 @@ let bars = [
   {
     id: 2,
     name: "Nom de bar",
-    img: "/media/cafe-neon.jpg",
+    img: "media/cafe-neon.jpg",
     shortDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 
@@ -98,7 +85,7 @@ let bars = [
   {
     id: 3,
     name: "Nom de bar",
-    img: "/media/cafe-neon.jpg",
+    img: "media/cafe-neon.jpg",
     shortDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 
@@ -112,7 +99,7 @@ let bars = [
   {
     id: 4,
     name: "Nom de bar",
-    img: "/media/cafe-neon.jpg",
+    img: "media/cafe-neon.jpg",
     shortDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 
@@ -126,7 +113,7 @@ let bars = [
   {
     id: 5,
     name: "Nom de bar",
-    img: "/media/cafe-neon.jpg",
+    img: "media/cafe-neon.jpg",
     shortDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 
@@ -140,7 +127,7 @@ let bars = [
   {
     id: 6,
     name: "Nom de bar",
-    img: "/media/cafe-neon.jpg",
+    img: "media/cafe-neon.jpg",
     shortDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 
@@ -154,7 +141,7 @@ let bars = [
   {
     id: 7,
     name: "Nom de bar",
-    img: "/media/cafe-neon.jpg",
+    img: "media/cafe-neon.jpg",
     shortDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 
@@ -168,7 +155,7 @@ let bars = [
   {
     id: 8,
     name: "Nom de bar",
-    img: "/media/cafe-neon.jpg",
+    img: "media/cafe-neon.jpg",
     shortDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 
@@ -182,7 +169,7 @@ let bars = [
   {
     id: 9,
     name: "Nom de bar",
-    img: "/media/cafe-neon.jpg",
+    img: "media/cafe-neon.jpg",
     shortDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 
@@ -196,7 +183,7 @@ let bars = [
   {
     id: 10,
     name: "Nom de bar",
-    img: "/media/cafe-neon.jpg",
+    img: "media/cafe-neon.jpg",
     shortDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 
@@ -210,7 +197,7 @@ let bars = [
   {
     id: 11,
     name: "Nom de bar",
-    img: "/media/cafe-neon.jpg",
+    img: "media/cafe-neon.jpg",
     shortDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 
@@ -224,7 +211,7 @@ let bars = [
   {
     id: 12,
     name: "Nom de bar",
-    img: "/media/cafe-neon.jpg",
+    img: "media/cafe-neon.jpg",
     shortDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 
@@ -287,8 +274,8 @@ let options = (bar) => {
 let createCardMobile = (bar) => {
   let para = new URLSearchParams();
   para.append("id", bar.id);
-  const newBar = document.createElement("a");
-  newBar.href = "bar-detail.html?" + para.toString(); // creation du lien, de la balaise <a>, avec le Id inseré à la fin
+  const newBar = document.createElement("div");
+  //newBar.href = "bar-detail.html?" + para.toString(); // creation du lien, de la balaise <a>, avec le Id inseré à la fin
   newBar.classList.add("card"); // donc le lien sera de cette forme : bar-detail.html?id=1 par exemple
   newBar.innerHTML = `
     <div class="card-image" style="background: url(${
@@ -303,8 +290,38 @@ let createCardMobile = (bar) => {
           ${options(bar)}
         </div>
       </div>   
+      <div class="pop-but"></div>
     `;
 
   return newBar;
 };
 bars.forEach((bar) => barList.appendChild(createCardMobile(bar)));
+
+
+
+/* POPUP DETAIL BAR */
+
+const popButs = document.querySelectorAll(".pop-but");
+const popupBar = document.querySelector(".popup-bar-container");
+
+popButs.forEach(function (popBut) {
+  popBut.addEventListener("click", function () {
+    popupBar.classList.toggle("active");
+    document.documentElement.classList.toggle('noscroll');
+  });
+});
+
+const closePop = document.querySelector(".close-button");
+
+closePop.addEventListener("click", function () { 
+  popupBar.classList.remove("active");
+  document.documentElement.classList.remove('noscroll');
+});
+
+// Fermer la popup en cliquant à l'extérieur
+popupBar.addEventListener("click", function (e) {
+  if (e.target === popupBar) {
+    popupBar.classList.remove("active");
+    document.documentElement.classList.remove('noscroll');
+  }
+});
