@@ -66,7 +66,7 @@ let bars = [
     price: "cheap",
     type: "biere",
     location: "Bordeaux",
-    coupDeCoeur: "false",
+    coupDeCoeur: false,
   },
   {
     id: 2,
@@ -80,7 +80,7 @@ let bars = [
     price: "cheap",
     type: "biere",
     location: "Bordeaux",
-    coupDeCoeur: "false",
+    coupDeCoeur: false,
   },
   {
     id: 3,
@@ -94,7 +94,7 @@ let bars = [
     price: "cheap",
     type: "biere",
     location: "Bordeaux",
-    coupDeCoeur: "false",
+    coupDeCoeur: false,
   },
   {
     id: 4,
@@ -108,7 +108,7 @@ let bars = [
     price: "cheap",
     type: "biere",
     location: "Bordeaux",
-    coupDeCoeur: "false",
+    coupDeCoeur: false,
   },
   {
     id: 5,
@@ -122,7 +122,7 @@ let bars = [
     price: "cheap",
     type: "biere",
     location: "Bordeaux",
-    coupDeCoeur: "false",
+    coupDeCoeur: false,
   },
   {
     id: 6,
@@ -136,7 +136,7 @@ let bars = [
     price: "cheap",
     type: "biere",
     location: "Bordeaux",
-    coupDeCoeur: "false",
+    coupDeCoeur: false,
   },
   {
     id: 7,
@@ -150,7 +150,7 @@ let bars = [
     price: "cheap",
     type: "biere",
     location: "Bordeaux",
-    coupDeCoeur: "false",
+    coupDeCoeur: false,
   },
   {
     id: 8,
@@ -164,7 +164,7 @@ let bars = [
     price: "cheap",
     type: "biere",
     location: "Bordeaux",
-    coupDeCoeur: "false",
+    coupDeCoeur: false,
   },
   {
     id: 9,
@@ -178,11 +178,11 @@ let bars = [
     price: "cheap",
     type: "biere",
     location: "Bordeaux",
-    coupDeCoeur: "false",
+    coupDeCoeur: false,
   },
   {
     id: 10,
-    name: "Nom de bar",
+    name: "Delirium",
     img: "media/cafe-neon.jpg",
     shortDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
@@ -192,7 +192,7 @@ let bars = [
     price: "cheap",
     type: "biere",
     location: "Bordeaux",
-    coupDeCoeur: "false",
+    coupDeCoeur: true,
   },
   {
     id: 11,
@@ -206,7 +206,7 @@ let bars = [
     price: "cheap",
     type: "biere",
     location: "Bordeaux",
-    coupDeCoeur: "false",
+    coupDeCoeur: false,
   },
   {
     id: 12,
@@ -220,10 +220,11 @@ let bars = [
     price: "cheap",
     type: "biere",
     location: "Bordeaux",
-    coupDeCoeur: "false",
+    coupDeCoeur: false,
   },
 ];
 
+/**                         creation d'une carte bar    */
 const barList = document.querySelector(".container-cards"); // container pour les cartes
 
 let options = (bar) => {
@@ -278,9 +279,10 @@ let createCardMobile = (bar) => {
   //newBar.href = "bar-detail.html?" + para.toString(); // creation du lien, de la balaise <a>, avec le Id inseré à la fin
   newBar.classList.add("card"); // donc le lien sera de cette forme : bar-detail.html?id=1 par exemple
   newBar.innerHTML = `
-    <div class="card-image" style="background: url(${
-      bar.img
-    }) no-repeat center/cover;"></div>
+   
+<div class="card-image" style="background: url(${
+    bar.img
+  }) no-repeat center/cover;"></div>
     <div class="card-details">
         <div class="card-title-description">
             <h2 class="card-title">${bar.name}</h2>
@@ -296,6 +298,7 @@ let createCardMobile = (bar) => {
   return newBar;
 };
 bars.forEach((bar) => barList.appendChild(createCardMobile(bar)));
+
 
 
 
@@ -328,3 +331,34 @@ popupBar.addEventListener("click", function (e) {
     document.documentElement.classList.remove('noscroll');
   }
 });
+
+/****         CREATION DE LA LISTE DES BARS AVEC FOR EACH */
+
+/****      SLIDER COUP DE COEUR             */
+
+const selectionCoupDeCoeur = document.querySelector(".coeur-container");
+
+const barCoupDeCoeur = document.createElement("a");
+const coupDeCoeurElements = "<h2>Nos coup de coeur du moment</h2>";
+barCoupDeCoeur.innerHTML = bars
+  .filter((bar) => bar.coupDeCoeur === true)
+  .map(
+    (bar) => `
+    
+    <div class= ".imagecoeur-container"> ${bar.name}</div>
+  `
+    /*<img class="imagecoeur-container" src="${bar.img}" />*/
+  );
+// bars.forEach((bar) => {
+//   barCoupDeCoeur.appendChild();
+// });
+console.log(barCoupDeCoeur);
+
+barCoupDeCoeur.classList.add("imagecoeur-container");
+
+selectionCoupDeCoeur.appendChild(barCoupDeCoeur);
+
+/*const coupDeCoeurName = document.querySelector(".imagecoeur-container");
+const nameCoupDeCoeur = document.createElement("h1");
+nameCoupDeCoeur.innerHTML = `${bars[0].name}`;*/
+
