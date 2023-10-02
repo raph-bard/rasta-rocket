@@ -273,11 +273,10 @@ let options = (bar) => {
 let createCardMobile = (bar) => {
   let para = new URLSearchParams();
   para.append("id", bar.id);
-  const newBar = document.createElement("div");
-  //newBar.href = "bar-detail.html?" + para.toString(); // creation du lien, de la balaise <a>, avec le Id inseré à la fin
+  const newBar = document.createElement("a");
+  newBar.href = "bar-detail.html?" + para.toString(); // creation du lien, de la balaise <a>, avec le Id inseré à la fin
   newBar.classList.add("card"); // donc le lien sera de cette forme : bar-detail.html?id=1 par exemple
   newBar.innerHTML = `
-   
 <div class="card-image" style="background: url(${
     bar.img
   }) no-repeat center/cover;"></div>
@@ -292,7 +291,7 @@ let createCardMobile = (bar) => {
       </div>   
       <div class="pop-but"></div>
     `;
-
+  console.log(newBar);
   return newBar;
 };
 // append all bars in the main  barList
@@ -347,7 +346,7 @@ barCoupDeCoeur.innerHTML = bars
 // bars.forEach((bar) => {
 //   barCoupDeCoeur.appendChild();
 // });
-console.log(barCoupDeCoeur);
+//console.log(barCoupDeCoeur);
 
 barCoupDeCoeur.classList.add("imagecoeur-container");
 
