@@ -240,3 +240,5 @@ bars
     div.style.background = `url(${bar.img}) no-repeat center/cover`;
     coupDeCoeurContainer.appendChild(div);
   });
+
+  
