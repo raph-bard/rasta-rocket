@@ -41,13 +41,13 @@ footer.innerHTML = `<p>&copy 2023 - Tous les droits sont réservés</p><span>Ras
 
 const burger = document.querySelector(".burger");
 const menu = document.querySelector(".menu");
-const body = document.body;
+const html = document.html;
 
 //fonction permettant d'afficher/cacher le menu quand on appuie sur le boutton burger
 burger.addEventListener("click", function () {
   menu.classList.toggle("active");
   burger.classList.toggle("active");
-  body.classList.toggle("noscroll");
+  document.documentElement.classList.toggle("noscroll");
 });
 
 /*      Creation Tableau d'objets bars         */
@@ -56,7 +56,7 @@ let bars = [
   {
     id: 1,
     name: "Nom de bar",
-    img: "/media/cafe-neon.jpg",
+    img: "media/cafe-neon.jpg",
     shortDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     longDescription:
@@ -69,7 +69,7 @@ let bars = [
   {
     id: 2,
     name: "Nom de bar",
-    img: "/media/cafe-neon.jpg",
+    img: "media/cafe-neon.jpg",
     shortDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 
@@ -83,7 +83,7 @@ let bars = [
   {
     id: 3,
     name: "Nom de bar",
-    img: "/media/cafe-neon.jpg",
+    img: "media/cafe-neon.jpg",
     shortDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 
@@ -97,7 +97,7 @@ let bars = [
   {
     id: 4,
     name: "Nom de bar",
-    img: "/media/cafe-neon.jpg",
+    img: "media/cafe-neon.jpg",
     shortDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 
@@ -111,7 +111,7 @@ let bars = [
   {
     id: 5,
     name: "Nom de bar",
-    img: "/media/cafe-neon.jpg",
+    img: "media/cafe-neon.jpg",
     shortDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 
@@ -125,7 +125,7 @@ let bars = [
   {
     id: 6,
     name: "Nom de bar",
-    img: "/media/cafe-neon.jpg",
+    img: "media/cafe-neon.jpg",
     shortDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 
@@ -139,7 +139,7 @@ let bars = [
   {
     id: 7,
     name: "Nom de bar",
-    img: "/media/cafe-neon.jpg",
+    img: "media/cafe-neon.jpg",
     shortDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 
@@ -153,7 +153,7 @@ let bars = [
   {
     id: 8,
     name: "Nom de bar",
-    img: "/media/cafe-neon.jpg",
+    img: "media/cafe-neon.jpg",
     shortDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 
@@ -167,7 +167,7 @@ let bars = [
   {
     id: 9,
     name: "Nom de bar",
-    img: "/media/cafe-neon.jpg",
+    img: "media/cafe-neon.jpg",
     shortDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 
@@ -180,8 +180,8 @@ let bars = [
   },
   {
     id: 10,
-    name: "Nom de bar",
-    img: "/media/cafe-neon.jpg",
+    name: "Delirium",
+    img: "media/cafe-neon.jpg",
     shortDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 
@@ -190,12 +190,12 @@ let bars = [
     price: "cheap",
     type: "biere",
     location: "Bordeaux",
-    coupDeCoeur: false,
+    coupDeCoeur: "false",
   },
   {
     id: 11,
     name: "Nom de bar",
-    img: "/media/cafe-neon.jpg",
+    img: "media/cafe-neon.jpg",
     shortDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 
@@ -209,7 +209,7 @@ let bars = [
   {
     id: 12,
     name: "Nom de bar",
-    img: "/media/cafe-neon.jpg",
+    img: "media/cafe-neon.jpg",
     shortDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 
@@ -222,6 +222,7 @@ let bars = [
   },
 ];
 
+/**                         creation d'une carte bar    */
 const barList = document.querySelector(".container-cards"); // container pour les cartes
 
 let options = (bar) => {
@@ -272,13 +273,14 @@ let options = (bar) => {
 let createCardMobile = (bar) => {
   let para = new URLSearchParams();
   para.append("id", bar.id);
-  const newBar = document.createElement("a");
-  newBar.href = "bar-detail.html?" + para.toString(); // creation du lien, de la balaise <a>, avec le Id inseré à la fin
+  const newBar = document.createElement("div");
+  //newBar.href = "bar-detail.html?" + para.toString(); // creation du lien, de la balaise <a>, avec le Id inseré à la fin
   newBar.classList.add("card"); // donc le lien sera de cette forme : bar-detail.html?id=1 par exemple
   newBar.innerHTML = `
-    <div class="card-image" style="background: url(${
-      bar.img
-    }) no-repeat center/cover;"></div>
+   
+<div class="card-image" style="background: url(${
+    bar.img
+  }) no-repeat center/cover;"></div>
     <div class="card-details">
         <div class="card-title-description">
             <h2 class="card-title">${bar.name}</h2>
@@ -288,12 +290,72 @@ let createCardMobile = (bar) => {
           ${options(bar)}
         </div>
       </div>   
+      <div class="pop-but"></div>
     `;
 
   return newBar;
 };
 // append all bars in the main  barList
 bars.forEach((bar) => barList.appendChild(createCardMobile(bar)));
+
+/* POPUP DETAIL BAR */
+
+const popButs = document.querySelectorAll(".pop-but");
+const popupBar = document.querySelector(".popup-bar-container");
+
+// on ajoute la classe active à la pop-up lorsqu'on clique sur un bar
+popButs.forEach(function (popBut) {
+  popBut.addEventListener("click", function () {
+    popupBar.classList.toggle("active");
+    document.documentElement.classList.toggle("noscroll");
+  });
+});
+
+const closePop = document.querySelector(".close-button");
+
+// Fermer la popup quand on clique sur la croix
+closePop.addEventListener("click", function () {
+  popupBar.classList.remove("active");
+  document.documentElement.classList.remove("noscroll");
+});
+
+// Fermer la popup en cliquant à l'extérieur de celle-ci
+popupBar.addEventListener("click", function (e) {
+  if (e.target === popupBar) {
+    popupBar.classList.remove("active");
+    document.documentElement.classList.remove("noscroll");
+  }
+});
+
+/****         CREATION DE LA LISTE DES BARS AVEC FOR EACH */
+
+/****      SLIDER COUP DE COEUR             */
+
+const selectionCoupDeCoeur = document.querySelector(".coeur-container");
+
+const barCoupDeCoeur = document.createElement("a");
+const coupDeCoeurElements = "<h2>Nos coup de coeur du moment</h2>";
+barCoupDeCoeur.innerHTML = bars
+  .filter((bar) => bar.coupDeCoeur === true)
+  .map(
+    (bar) => `
+    
+    <div class= ".imagecoeur-container"> ${bar.name}</div>
+  `
+    /*<img class="imagecoeur-container" src="${bar.img}" />*/
+  );
+// bars.forEach((bar) => {
+//   barCoupDeCoeur.appendChild();
+// });
+console.log(barCoupDeCoeur);
+
+barCoupDeCoeur.classList.add("imagecoeur-container");
+
+selectionCoupDeCoeur.appendChild(barCoupDeCoeur);
+
+/*const coupDeCoeurName = document.querySelector(".imagecoeur-container");
+const nameCoupDeCoeur = document.createElement("h1");
+nameCoupDeCoeur.innerHTML = `${bars[0].name}`;*/
 
 /****** filtering ******/
 
