@@ -8,6 +8,10 @@ const currentPage = window.location.pathname
   .pop()
   .replace(".html", "");
 
+// Ici il était possible que currentPage soit égal à '', ce qui causait un bug
+if (!currentPage) {
+  currentPage = "index";
+}
 // Ajouter le nom de la page en tant que classe à l'élément body
 document.body.classList.add(currentPage);
 
@@ -46,11 +50,9 @@ const html = document.html;
 //fonction permettant d'afficher/cacher le menu quand on appuie sur le boutton burger
 burger.addEventListener("click", function () {
   menu.classList.toggle("active");
-  burger.classList.toggle("active");document.documentElement.classList.toggle('noscroll');
+  burger.classList.toggle("active");
+  document.documentElement.classList.toggle("noscroll");
 });
-
-
-
 
 /*      Creation Tableau d'objets bars         */
 
@@ -292,18 +294,14 @@ let createCardMobile = (bar) => {
           ${options(bar)}
         </div>
       </div>   
-      <div class="pop-but"></div>
+      <div class="pop-but" data-id="${bar.id}"></div>
     `;
 
   return newBar;
 };
 bars.forEach((bar) => barList.appendChild(createCardMobile(bar)));
 
-
-
-
 /* POPUP DETAIL BAR */
-
 
 const popButs = document.querySelectorAll(".pop-but");
 const popupBar = document.querySelector(".popup-bar-container");
@@ -312,23 +310,48 @@ const popupBar = document.querySelector(".popup-bar-container");
 popButs.forEach(function (popBut) {
   popBut.addEventListener("click", function () {
     popupBar.classList.toggle("active");
-    document.documentElement.classList.toggle('noscroll');
+    document.documentElement.classList.toggle("noscroll");
+
+    /****         DYNAMISATION DE LA POPUP */
+
+    const barId = popBut.getAttribute("data-id");
+    let barSelectionne;
+    bars.forEach((bar) => {
+      if (bar.id == barId) {
+        barSelectionne = bar;
+      }
+    });
+    const contenuPopUp = document.querySelector(".popup-bar-container");
+    const popUpTitre = contenuPopUp.querySelector("h2");
+    popUpTitre.innerHTML = barSelectionne.name;
+
+    const descriptionLongue = contenuPopUp.querySelector("p");
+    descriptionLongue.innerHTML = barSelectionne.shortDescription;
+
+    const adresseInfo = document.querySelector(".adresse span");
+    adresseInfo.innerHTML = barSelectionne.location;
+
+    const horairesInfo = document.querySelector(".horaires span");
+    horairesInfo.innerHTML = barSelectionne.location; // todo
+
+    const moreInfo = document.querySelector(".option-supplementaires span");
+    moreInfo.innerHTML = barSelectionne.location; // todo
   });
 });
 
 const closePop = document.querySelector(".close-button");
 
 // Fermer la popup quand on clique sur la croix
-closePop.addEventListener("click", function () { 
+closePop.addEventListener("click", function () {
   popupBar.classList.remove("active");
-  document.documentElement.classList.remove('noscroll');
+  document.documentElement.classList.remove("noscroll");
 });
 
 // Fermer la popup en cliquant à l'extérieur de celle-ci
 popupBar.addEventListener("click", function (e) {
   if (e.target === popupBar) {
     popupBar.classList.remove("active");
-    document.documentElement.classList.remove('noscroll');
+    document.documentElement.classList.remove("noscroll");
   }
 });
 
@@ -352,7 +375,6 @@ barCoupDeCoeur.innerHTML = bars
 // bars.forEach((bar) => {
 //   barCoupDeCoeur.appendChild();
 // });
-console.log(barCoupDeCoeur);
 
 barCoupDeCoeur.classList.add("imagecoeur-container");
 
@@ -361,4 +383,3 @@ selectionCoupDeCoeur.appendChild(barCoupDeCoeur);
 /*const coupDeCoeurName = document.querySelector(".imagecoeur-container");
 const nameCoupDeCoeur = document.createElement("h1");
 nameCoupDeCoeur.innerHTML = `${bars[0].name}`;*/
-
