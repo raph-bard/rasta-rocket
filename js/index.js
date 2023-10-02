@@ -56,7 +56,7 @@ let bars = [
   {
     id: 1,
     name: "Nom de bar",
-    img: "media/cafe-neon.jpg",
+    img: "../media/cafe-neon.jpg",
     shortDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     longDescription:
@@ -69,7 +69,7 @@ let bars = [
   {
     id: 2,
     name: "Nom de bar",
-    img: "media/cafe-neon.jpg",
+    img: "media/deliriumcafe.jpeg",
     shortDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 
@@ -96,8 +96,8 @@ let bars = [
   },
   {
     id: 4,
-    name: "Nom de bar",
-    img: "media/cafe-neon.jpg",
+    name: "MY BEERS",
+    img: "media/deliriumcafe.jpeg",
     shortDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 
@@ -106,11 +106,11 @@ let bars = [
     price: "cheap",
     type: "biere",
     location: "Bordeaux",
-    coupDeCoeur: false,
+    coupDeCoeur: true,
   },
   {
     id: 5,
-    name: "Nom de bar",
+    name: "BAR A VIN",
     img: "media/cafe-neon.jpg",
     shortDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
@@ -124,8 +124,8 @@ let bars = [
   },
   {
     id: 6,
-    name: "Nom de bar",
-    img: "media/cafe-neon.jpg",
+    name: "Bar de ouf",
+    img: "../media/cafe-neon.jpg",
     shortDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 
@@ -138,76 +138,6 @@ let bars = [
   },
   {
     id: 7,
-    name: "Nom de bar",
-    img: "media/cafe-neon.jpg",
-    shortDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-
-    longDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque itaque perspiciatis, illo ex fuga culpa modi accusantium quas temporibus similique deleniti, ullam facere dignissimos illum tenetur deserunt ut, enim fugit adipisci maxime perferendis assumenda. Modi facere recusandae libero! Quidem incidunt vel tempora repudiandae eaque doloremque quibusdam tenetur reiciendis reprehenderit culpa delectus architecto, deserunt dolorem ipsum accusamus dolores dignissimos suscipit quae unde nesciunt impedit! Temporibus rem maiores culpa soluta cumque sequi vel labore esse. Laborum deleniti corporis impedit quo placeat perspiciatis explicabo ex aut illo in exercitationem architecto, sed animi vero unde reprehenderit earum maxime nisi id. Corporis, similique. Iure, tempora?",
-    price: "cheap",
-    type: "biere",
-    location: "Bordeaux",
-    coupDeCoeur: false,
-  },
-  {
-    id: 8,
-    name: "Nom de bar",
-    img: "media/cafe-neon.jpg",
-    shortDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-
-    longDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque itaque perspiciatis, illo ex fuga culpa modi accusantium quas temporibus similique deleniti, ullam facere dignissimos illum tenetur deserunt ut, enim fugit adipisci maxime perferendis assumenda. Modi facere recusandae libero! Quidem incidunt vel tempora repudiandae eaque doloremque quibusdam tenetur reiciendis reprehenderit culpa delectus architecto, deserunt dolorem ipsum accusamus dolores dignissimos suscipit quae unde nesciunt impedit! Temporibus rem maiores culpa soluta cumque sequi vel labore esse. Laborum deleniti corporis impedit quo placeat perspiciatis explicabo ex aut illo in exercitationem architecto, sed animi vero unde reprehenderit earum maxime nisi id. Corporis, similique. Iure, tempora?",
-    price: "cheap",
-    type: "biere",
-    location: "Bordeaux",
-    coupDeCoeur: false,
-  },
-  {
-    id: 9,
-    name: "Nom de bar",
-    img: "media/cafe-neon.jpg",
-    shortDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-
-    longDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque itaque perspiciatis, illo ex fuga culpa modi accusantium quas temporibus similique deleniti, ullam facere dignissimos illum tenetur deserunt ut, enim fugit adipisci maxime perferendis assumenda. Modi facere recusandae libero! Quidem incidunt vel tempora repudiandae eaque doloremque quibusdam tenetur reiciendis reprehenderit culpa delectus architecto, deserunt dolorem ipsum accusamus dolores dignissimos suscipit quae unde nesciunt impedit! Temporibus rem maiores culpa soluta cumque sequi vel labore esse. Laborum deleniti corporis impedit quo placeat perspiciatis explicabo ex aut illo in exercitationem architecto, sed animi vero unde reprehenderit earum maxime nisi id. Corporis, similique. Iure, tempora?",
-    price: "cheap",
-    type: "biere",
-    location: "Bordeaux",
-    coupDeCoeur: false,
-  },
-  {
-    id: 10,
-    name: "Delirium",
-    img: "media/cafe-neon.jpg",
-    shortDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-
-    longDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque itaque perspiciatis, illo ex fuga culpa modi accusantium quas temporibus similique deleniti, ullam facere dignissimos illum tenetur deserunt ut, enim fugit adipisci maxime perferendis assumenda. Modi facere recusandae libero! Quidem incidunt vel tempora repudiandae eaque doloremque quibusdam tenetur reiciendis reprehenderit culpa delectus architecto, deserunt dolorem ipsum accusamus dolores dignissimos suscipit quae unde nesciunt impedit! Temporibus rem maiores culpa soluta cumque sequi vel labore esse. Laborum deleniti corporis impedit quo placeat perspiciatis explicabo ex aut illo in exercitationem architecto, sed animi vero unde reprehenderit earum maxime nisi id. Corporis, similique. Iure, tempora?",
-    price: "cheap",
-    type: "biere",
-    location: "Bordeaux",
-    coupDeCoeur: true,
-  },
-  {
-    id: 11,
-    name: "Nom de bar",
-    img: "media/cafe-neon.jpg",
-    shortDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-
-    longDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque itaque perspiciatis, illo ex fuga culpa modi accusantium quas temporibus similique deleniti, ullam facere dignissimos illum tenetur deserunt ut, enim fugit adipisci maxime perferendis assumenda. Modi facere recusandae libero! Quidem incidunt vel tempora repudiandae eaque doloremque quibusdam tenetur reiciendis reprehenderit culpa delectus architecto, deserunt dolorem ipsum accusamus dolores dignissimos suscipit quae unde nesciunt impedit! Temporibus rem maiores culpa soluta cumque sequi vel labore esse. Laborum deleniti corporis impedit quo placeat perspiciatis explicabo ex aut illo in exercitationem architecto, sed animi vero unde reprehenderit earum maxime nisi id. Corporis, similique. Iure, tempora?",
-    price: "cheap",
-    type: "biere",
-    location: "Bordeaux",
-    coupDeCoeur: false,
-  },
-  {
-    id: 12,
     name: "Nom de bar",
     img: "media/cafe-neon.jpg",
     shortDescription:
@@ -296,32 +226,17 @@ let createCardMobile = (bar) => {
 };
 bars.forEach((bar) => barList.appendChild(createCardMobile(bar)));
 
-/****         CREATION DE LA LISTE DES BARS AVEC FOR EACH */
-
 /****      SLIDER COUP DE COEUR             */
 
-const selectionCoupDeCoeur = document.querySelector(".coeur-container");
-
-const barCoupDeCoeur = document.createElement("a");
-const coupDeCoeurElements = "<h2>Nos coup de coeur du moment</h2>";
-barCoupDeCoeur.innerHTML = bars
-  .filter((bar) => bar.coupDeCoeur === true)
-  .map(
-    (bar) => `
-    
-    <div class= ".imagecoeur-container"> ${bar.name}</div>
-  `
-    /*<img class="imagecoeur-container" src="${bar.img}" />*/
-  );
-// bars.forEach((bar) => {
-//   barCoupDeCoeur.appendChild();
-// });
-console.log(barCoupDeCoeur);
-
-barCoupDeCoeur.classList.add("imagecoeur-container");
-
-selectionCoupDeCoeur.appendChild(barCoupDeCoeur);
-
-/*const coupDeCoeurName = document.querySelector(".imagecoeur-container");
-const nameCoupDeCoeur = document.createElement("h1");
-nameCoupDeCoeur.innerHTML = `${bars[0].name}`;*/
+const coupDeCoeurContainer = document.querySelector(".coeur-container");
+coupDeCoeurContainer.innerHTML = 
+`<h2> Notre Coup de coeur de la semaine</h2>
+<div class= imagecoeur-container style="background: url(${bars.img})></div>`
+bars
+  .filter((bar) => bar.coupDeCoeur === true) // Filtrez les éléments qui sont des coups de cœur
+  .forEach((bar) => {
+    const div = document.createElement("div");
+    div.classList.add("imagecoeur-container");
+    div.style.background = `url(${bar.img}) no-repeat center/cover`;
+    coupDeCoeurContainer.appendChild(div);
+  });
