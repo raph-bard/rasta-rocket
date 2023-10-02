@@ -82,7 +82,7 @@ let bars = [
   },
   {
     id: 3,
-    name: "Nom de bar",
+    name: "DELIRIUM CAFE",
     img: "media/cafe-neon.jpg",
     shortDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
@@ -229,16 +229,16 @@ bars.forEach((bar) => barList.appendChild(createCardMobile(bar)));
 /****      SLIDER COUP DE COEUR             */
 
 const coupDeCoeurContainer = document.querySelector(".coeur-container");
-coupDeCoeurContainer.innerHTML = 
-`<h2> Notre Coup de coeur de la semaine</h2>
-<div class= imagecoeur-container style="background: url(${bars.img})></div>`
+
 bars
   .filter((bar) => bar.coupDeCoeur === true) // Filtrez les éléments qui sont des coups de cœur
   .forEach((bar) => {
+   const h3 = document.createElement("h3");
+    h3.textContent = `${bar.name} est notre coup de coeur de la semaine !`
     const div = document.createElement("div");
     div.classList.add("imagecoeur-container");
     div.style.background = `url(${bar.img}) no-repeat center/cover`;
+    coupDeCoeurContainer.appendChild(h3)
     coupDeCoeurContainer.appendChild(div);
   });
 
-  
