@@ -301,9 +301,11 @@ bars.forEach((bar) => barList.appendChild(createCardMobile(bar)));
 
 /* POPUP DETAIL BAR */
 
+
 const popButs = document.querySelectorAll(".pop-but");
 const popupBar = document.querySelector(".popup-bar-container");
 
+// on ajoute la classe active à la pop-up lorsqu'on clique sur un bar
 popButs.forEach(function (popBut) {
   popBut.addEventListener("click", function () {
     popupBar.classList.toggle("active");
@@ -313,12 +315,13 @@ popButs.forEach(function (popBut) {
 
 const closePop = document.querySelector(".close-button");
 
+// Fermer la popup quand on clique sur la croix
 closePop.addEventListener("click", function () { 
   popupBar.classList.remove("active");
   document.documentElement.classList.remove('noscroll');
 });
 
-// Fermer la popup en cliquant à l'extérieur
+// Fermer la popup en cliquant à l'extérieur de celle-ci
 popupBar.addEventListener("click", function (e) {
   if (e.target === popupBar) {
     popupBar.classList.remove("active");
