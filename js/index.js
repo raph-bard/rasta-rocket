@@ -273,7 +273,7 @@ let options = (bar) => {
 let createCardMobile = (bar) => {
   let para = new URLSearchParams();
   para.append("id", bar.id);
-  const newBar = document.createElement("a");
+  const newBar = document.createElement("div");
   newBar.href = "bar-detail.html?" + para.toString(); // creation du lien, de la balaise <a>, avec le Id inseré à la fin
   newBar.classList.add("card"); // donc le lien sera de cette forme : bar-detail.html?id=1 par exemple
   newBar.innerHTML = `
