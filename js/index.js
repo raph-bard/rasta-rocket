@@ -64,8 +64,7 @@ let bars = [
     price: "cheap",
     type: "biere",
     location: "Bordeaux",
-    coupDeCoeur: "false",
-    ambiance: "dansant",
+    coupDeCoeur: false,
   },
   {
     id: 2,
@@ -79,8 +78,7 @@ let bars = [
     price: "cheap",
     type: "vin",
     location: "Bordeaux",
-    coupDeCoeur: "false",
-    ambiance: "dansant",
+    coupDeCoeur: false,
   },
   {
     id: 3,
@@ -94,8 +92,7 @@ let bars = [
     price: "cheap",
     type: "cocktail",
     location: "Bordeaux",
-    coupDeCoeur: "false",
-    ambiance: "dansant",
+    coupDeCoeur: false,
   },
   {
     id: 4,
@@ -109,8 +106,7 @@ let bars = [
     price: "cheap",
     type: "cocktail",
     location: "Bordeaux",
-    coupDeCoeur: "false",
-    ambiance: "sportif",
+    coupDeCoeur: false,
   },
   {
     id: 5,
@@ -124,8 +120,7 @@ let bars = [
     price: "cheap",
     type: "biere",
     location: "Bordeaux",
-    coupDeCoeur: "false",
-    ambiance: "guinguette",
+    coupDeCoeur: false,
   },
   {
     id: 6,
@@ -139,8 +134,7 @@ let bars = [
     price: "cheap",
     type: "biere",
     location: "Bordeaux",
-    coupDeCoeur: "false",
-    ambiance: "guinguette",
+    coupDeCoeur: false,
   },
   {
     id: 7,
@@ -154,8 +148,7 @@ let bars = [
     price: "cheap",
     type: "biere",
     location: "Bordeaux",
-    coupDeCoeur: "false",
-    ambiance: "sportif",
+    coupDeCoeur: false,
   },
   {
     id: 8,
@@ -169,8 +162,7 @@ let bars = [
     price: "cheap",
     type: "biere",
     location: "Bordeaux",
-    coupDeCoeur: "false",
-    ambiance: "guinguette",
+    coupDeCoeur: false,
   },
   {
     id: 9,
@@ -184,8 +176,7 @@ let bars = [
     price: "cheap",
     type: "biere",
     location: "Bordeaux",
-    coupDeCoeur: "false",
-    ambiance: "dansant",
+    coupDeCoeur: false,
   },
   {
     id: 10,
@@ -199,8 +190,7 @@ let bars = [
     price: "cheap",
     type: "biere",
     location: "Bordeaux",
-    coupDeCoeur: "false",
-    ambiance: "guinguette",
+    coupDeCoeur: false,
   },
   {
     id: 11,
@@ -214,8 +204,7 @@ let bars = [
     price: "cheap",
     type: "biere",
     location: "Bordeaux",
-    coupDeCoeur: "false",
-    ambiance: "sportif",
+    coupDeCoeur: false,
   },
   {
     id: 12,
@@ -229,8 +218,7 @@ let bars = [
     price: "cheap",
     type: "biere",
     location: "Bordeaux",
-    coupDeCoeur: "false",
-    ambiance: "sportif",
+    coupDeCoeur: false,
   },
 ];
 
@@ -311,25 +299,16 @@ bars.forEach((bar) => barList.appendChild(createCardMobile(bar)));
 
 const selectType = document.querySelector("#type");
 const selectPrice = document.querySelector("#price");
-const selectAmbiance = document.querySelector("#ambiance");
 
 // adding event listeners onchange
 
-selectAmbiance.addEventListener("change", () => filterHandler());
 selectType.addEventListener("change", () => filterHandler());
 selectPrice.addEventListener("change", () => filterHandler());
 
 function filterHandler() {
-  console.log("select value : ", selectAmbiance.value);
   let filteredBars = bars
     .filter(
-      (bar) =>
-        bar.type == includes(selectType.value) || selectType.value == "all"
-    )
-    .filter(
-      (bar) =>
-        bar.ambiance.includes(selectAmbiance.value) ||
-        selectAmbiance.value == "all"
+      (bar) => bar.type.includes(selectType.value) || selectType.value == "all"
     )
     .filter(
       (bar) => bar.price == selectPrice.value || selectPrice.value == "all"
