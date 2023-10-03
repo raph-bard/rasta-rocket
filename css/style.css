@@ -210,12 +210,12 @@ main {
   font-size: 1rem;
 }
 
-.categories-container select.category.active,
-.categories-container select.category:hover {
+.categories-container span.category.active,
+.categories-container span.category:hover {
   color: black;
 }
 
-.categories-container select.category::after {
+.categories-container span.category::after {
   content: "";
   height: 8px;
   background-color: var(--second-color);
@@ -228,8 +228,8 @@ main {
   transition: 0.3s;
 }
 
-.categories-container select.category.active:after,
-.categories-container select.category:hover::after{
+.categories-container span.category.active:after,
+.categories-container span.category:hover::after{
     width: 70%;
     left:0%;
 }
@@ -247,7 +247,7 @@ main {
     font-size: 16px;    
     box-shadow: 4px 2px 10px 3px #e8e7e7;
     line-height: 1.4rem;
-}
+
 .categories-container span.category:hover::after {
   width: 70%;
   left: 0%;
@@ -526,10 +526,27 @@ a.card:hover {
   text-align: left;
   width: 100%;
 }
+.overlay-container {
+    position: relative; /* Position relative pour que les éléments enfants soient positionnés par rapport à ce conteneur */
+  }
+  
+  .overlay-container h3 {
+    position: absolute; /* Position absolue pour le titre */
+    bottom: 10px; /* Positionnez le titre 10px en bas du conteneur */
+    left: 20px; /* Positionnez le titre 10px à gauche du conteneur */
+    color: #fff; /* Couleur du texte du titre */
+    padding: 5px; /* Espacement interne pour le titre */
+    margin: 0; 
+    font-size: 1.6em;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px black;
+    background-color: #413c58;
+  }
+  
 .imagecoeur-container {
     /* background-image: url("../media/cafe-neon.jpg"); */
-    width: 70%;
-    height: 170px;
+    width: 100%;
+    height: 230px;
     margin-top: .7em;
     background-size: cover;
     border-radius: 5px;

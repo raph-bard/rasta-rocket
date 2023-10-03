@@ -326,7 +326,6 @@ popupBar.addEventListener("click", function (e) {
   }
 });
 
-/****         CREATION DE LA LISTE DES BARS AVEC FOR EACH */
 
 /****      SLIDER COUP DE COEUR             */
 
