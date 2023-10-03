@@ -6,7 +6,10 @@
   --grey-color: #807979;
   --footer-height: 60px;
   --team-card-height: 85px;
+  --pink-color: #fbf4ed;
 }
+
+
 
 * {
   margin: 0;
@@ -51,6 +54,10 @@ a:hover {
 }
 a:hover {
   color: var(--second-color);
+}
+
+.bg-pink {
+  background-color: var(--pink-color);
 }
 
 /* ------ nav + footer ------- */
@@ -118,7 +125,6 @@ main {
 }
 .container-max {
   width: 100%;
-  background-color: #fbf4ed;
   padding: 20px 0px;
   margin-top: 20px;
 }
@@ -410,7 +416,6 @@ a.card:hover {
   font-size: 16px;
   font-weight: 300;
   line-height: 1.8rem;
-  background-color: #fbf4ed;
 }
 
 .container-horaires {
@@ -525,6 +530,10 @@ a.card:hover {
 .popup-bar .close-button:hover:before {
   background-color: var(--second-color);
   transition: all 0.3s;
+}
+.popup-bar a:hover {
+  color: white;
+  background-color: var(--main-color);
 }
 
 /*************** Coup de coeur **************/
