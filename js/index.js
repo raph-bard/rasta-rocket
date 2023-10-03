@@ -32,7 +32,7 @@ let bars = [
   },
   {
     id: 3,
-    name: "DELIRIUM CAFE",
+    name: "Delirium Café",
     img: "media/cafe-neon.jpg",
     shortDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
@@ -307,22 +307,28 @@ popupBar.addEventListener("click", function (e) {
 
 const coupDeCoeurContainer = document.querySelector(".coeur-container");
 
-bars
-  .filter((bar) => bar.coupDeCoeur === true) 
-  .forEach((bar) => {
-    /*const overlayContainer = document.createElement("div");
-    overlayContainer.classList.add("overlay-container");*/
+let barPrivilige = bars
+  .filter((bar) => bar.coupDeCoeur === true)[0]; 
+  
+    const overlayContainer = document.createElement("div");
+    overlayContainer.classList.add("overlay-container");
+
     const h3 = document.createElement("h3");
-    h3.textContent = `${bar.name} est notre coup de coeur de la semaine !`
+    h3.textContent = `${barPrivilige.name}`
+    
+    const link = document.createElement("a");
+    link.href = `bar-detail.html?id=${barPrivilige.id}` ; 
+    
     const div = document.createElement("div");
     div.classList.add("imagecoeur-container");
-    div.style.background = `url(${bar.img}) no-repeat center/cover`;
+    div.style.background = `url(${barPrivilige.img}) no-repeat center/cover`;
     
-    coupDeCoeurContainer.appendChild(h3);
-    coupDeCoeurContainer.appendChild(div);
+   
+    link.appendChild(div)
+    overlayContainer.appendChild(h3);
+    overlayContainer.appendChild(link);
+    coupDeCoeurContainer.appendChild(overlayContainer);
 
-    /*coupDeCoeurContainer.appendChild(overlayContainer);*/
-  });
 
 
 /****** filtering ******/
