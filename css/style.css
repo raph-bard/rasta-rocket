@@ -281,10 +281,8 @@ a.card:hover {
 }
 .card-image {
   width: 100%;
-  min-height: 200px;
+  min-height: 220px;
   border-radius: 3px;
-  background: url("https://media.timeout.com/images/105922006/750/422/image.jpg")
-    no-repeat center/cover;
 }
 .card-details {
   display: flex;
@@ -370,7 +368,6 @@ a.card:hover {
   margin-top: 50px;
   width: 100%;
   height: 300px;
-  background: url("/media/cafe-neon.jpg") no-repeat center/cover;
 }
 .container-infos-bar h1 {
   font-size: 26px;
@@ -468,6 +465,7 @@ a.card:hover {
   background-color: white;
   border-radius: 15px;
   font-size: 16px;
+  overflow-x: auto;
 }
 
 .popup-bar p {
@@ -590,6 +588,7 @@ a.card:hover {
   position: relative;
   overflow: hidden;
   margin-bottom: 50px;
+  color: white;
 }
 .aboutus .team-card div {
   position: absolute;
@@ -614,15 +613,17 @@ a.card:hover {
 .aboutus .team-card div,
 .aboutus .team-card img,
 .aboutus .team-card:hover img {
-  transition: all 0.3s;
+  transition: transform 0.3s;
 }
 .aboutus .team-card img {
   float: left;
   width: 100%;
   height: auto;
+  filter: grayscale(100%);
 }
 .aboutus .team-card:hover img {
   transform: scale(1.08);
+  filter: none;
 }
 .aboutus .team-card strong {
   display: block;
@@ -977,6 +978,9 @@ iframe {
 @media screen and (min-width: 992px) {
   /* ------- main -------- */
 
+  .popup-bar .container {
+    padding: 0 1.5em;
+  }
   .bandeau {
     padding: 15vh 10%;
   }
@@ -986,12 +990,6 @@ iframe {
 
   .card {
     width: 49%;
-    flex-direction: row;
-    padding: 1.3rem;
-  }
-
-  .card-details {
-    padding: 0;
   }
 
   .card h2 {
@@ -1004,18 +1002,9 @@ iframe {
     width: 100%;
     justify-content: space-between;
   }
-
-  .card-image {
-    min-width: 100px;
-    max-width: 130px;
-    margin-right: 1.3rem;
-    min-height: auto;
-  }
 }
 
-.card-details {
-  padding: 0;
-}
+
 
 .card h2 {
   margin-top: 0;
@@ -1029,10 +1018,7 @@ iframe {
 }
 
 .card-image {
-  min-width: 100px;
-  max-width: 130px;
   margin-right: 1.3rem;
-  min-height: auto;
 }
 
 @media screen and (max-width: 992px) {
@@ -1043,9 +1029,6 @@ iframe {
 
 @media screen and (min-width: 1200px) {
   /* bandeau */
-  .popup-bar .container {
-    padding: 0 1.5em;
-  }
   .popup-bar .container-horaires {
     padding: 30px 15px 30px 15px;
   }
@@ -1053,7 +1036,5 @@ iframe {
 
 @media screen and (max-width: 1200px) {
   /* ------- main -------- */
-  .container {
-    padding: 0 1.5em;
-  }
+  
 }

@@ -5,174 +5,48 @@
 let bars = [
   {
     id: 1,
-    name: "Nom de bar",
-    img: "media/cafe-neon.jpg",
+    name: "Delirium Café",
+    img: "media/deliriumcafe.jpeg",
+    imgBar: "media/deliriumcafe2.png",
     shortDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "Découvrez le Délirium Café, un bar à bières convivial de 800m2. Avec plus de 30 bières à la pression, des tapas en terrasse, des matchs en direct et des soirées animées, c'est l'endroit idéal pour passer un moment agréable entre amis. Profitez de l'ambiance festive et décontractée !",
     longDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque itaque perspiciatis, illo ex fuga culpa modi accusantium quas temporibus similique deleniti, ullam facere dignissimos illum tenetur deserunt ut, enim fugit adipisci maxime perferendis assumenda. Modi facere recusandae libero! Quidem incidunt vel tempora repudiandae eaque doloremque quibusdam tenetur reiciendis reprehenderit culpa delectus architecto, deserunt dolorem ipsum accusamus dolores dignissimos suscipit quae unde nesciunt impedit! Temporibus rem maiores culpa soluta cumque sequi vel labore esse. Laborum deleniti corporis impedit quo placeat perspiciatis explicabo ex aut illo in exercitationem architecto, sed animi vero unde reprehenderit earum maxime nisi id. Corporis, similique. Iure, tempora?",
-    price: "cheap",
+      "Plonge dans 800m2 de folie, de fête et de bonne humeur ! 🍻 Avec plus de 30 bières à la pression, des tapas à savourer en terrasse, des matchs en direct et des soirées inoubliables, le Délirium Café promet de devenir ton nouveau lieu de prédilection ! 🎶 ",
+    ambianceDescription:
+      "",
+    price: "expensive",
     type: "biere",
     location: "Bordeaux",
     coupDeCoeur: false,
+    adress: "30 Quai Virginie Hériot, 33300 Bordeaux",
+    openTime: "16h-2h",
+    infos: "Bar à bières belges",
+    linkMap: `https://maps.app.goo.gl/hDMas2R6VKgTCvGx9`,
   },
   {
     id: 2,
-    name: "Nom de bar",
-    img: "media/cafe-neon.jpg",
+    name: "Delirium Café",
+    img: "media/deliriumcafe.jpeg",
+    imgBar: "media/deliriumcafe2.png",
     shortDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-
+      "Découvrez le Délirium Café, un bar à bières convivial de 800m2. Avec plus de 30 bières à la pression, des tapas en terrasse, des matchs en direct et des soirées animées, c'est l'endroit idéal pour passer un moment agréable entre amis. Profitez de l'ambiance festive et décontractée !",
     longDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque itaque perspiciatis, illo ex fuga culpa modi accusantium quas temporibus similique deleniti, ullam facere dignissimos illum tenetur deserunt ut, enim fugit adipisci maxime perferendis assumenda. Modi facere recusandae libero! Quidem incidunt vel tempora repudiandae eaque doloremque quibusdam tenetur reiciendis reprehenderit culpa delectus architecto, deserunt dolorem ipsum accusamus dolores dignissimos suscipit quae unde nesciunt impedit! Temporibus rem maiores culpa soluta cumque sequi vel labore esse. Laborum deleniti corporis impedit quo placeat perspiciatis explicabo ex aut illo in exercitationem architecto, sed animi vero unde reprehenderit earum maxime nisi id. Corporis, similique. Iure, tempora?",
-    price: "cheap",
-    type: "vin",
-    location: "Bordeaux",
-    coupDeCoeur: false,
-  },
-  {
-    id: 3,
-    name: "Nom de bar",
-    img: "media/cafe-neon.jpg",
-    shortDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-
-    longDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque itaque perspiciatis, illo ex fuga culpa modi accusantium quas temporibus similique deleniti, ullam facere dignissimos illum tenetur deserunt ut, enim fugit adipisci maxime perferendis assumenda. Modi facere recusandae libero! Quidem incidunt vel tempora repudiandae eaque doloremque quibusdam tenetur reiciendis reprehenderit culpa delectus architecto, deserunt dolorem ipsum accusamus dolores dignissimos suscipit quae unde nesciunt impedit! Temporibus rem maiores culpa soluta cumque sequi vel labore esse. Laborum deleniti corporis impedit quo placeat perspiciatis explicabo ex aut illo in exercitationem architecto, sed animi vero unde reprehenderit earum maxime nisi id. Corporis, similique. Iure, tempora?",
-    price: "cheap",
-    type: "cocktail",
-    location: "Bordeaux",
-    coupDeCoeur: false,
-  },
-  {
-    id: 4,
-    name: "Nom de bar",
-    img: "media/cafe-neon.jpg",
-    shortDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-
-    longDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque itaque perspiciatis, illo ex fuga culpa modi accusantium quas temporibus similique deleniti, ullam facere dignissimos illum tenetur deserunt ut, enim fugit adipisci maxime perferendis assumenda. Modi facere recusandae libero! Quidem incidunt vel tempora repudiandae eaque doloremque quibusdam tenetur reiciendis reprehenderit culpa delectus architecto, deserunt dolorem ipsum accusamus dolores dignissimos suscipit quae unde nesciunt impedit! Temporibus rem maiores culpa soluta cumque sequi vel labore esse. Laborum deleniti corporis impedit quo placeat perspiciatis explicabo ex aut illo in exercitationem architecto, sed animi vero unde reprehenderit earum maxime nisi id. Corporis, similique. Iure, tempora?",
-    price: "cheap",
-    type: "cocktail",
-    location: "Bordeaux",
-    coupDeCoeur: false,
-  },
-  {
-    id: 5,
-    name: "Nom de bar",
-    img: "media/cafe-neon.jpg",
-    shortDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-
-    longDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque itaque perspiciatis, illo ex fuga culpa modi accusantium quas temporibus similique deleniti, ullam facere dignissimos illum tenetur deserunt ut, enim fugit adipisci maxime perferendis assumenda. Modi facere recusandae libero! Quidem incidunt vel tempora repudiandae eaque doloremque quibusdam tenetur reiciendis reprehenderit culpa delectus architecto, deserunt dolorem ipsum accusamus dolores dignissimos suscipit quae unde nesciunt impedit! Temporibus rem maiores culpa soluta cumque sequi vel labore esse. Laborum deleniti corporis impedit quo placeat perspiciatis explicabo ex aut illo in exercitationem architecto, sed animi vero unde reprehenderit earum maxime nisi id. Corporis, similique. Iure, tempora?",
-    price: "cheap",
+      "Plonge dans 800m2 de folie, de fête et de bonne humeur ! 🍻 Avec plus de 30 bières à la pression, des tapas à savourer en terrasse, des matchs en direct et des soirées inoubliables, le Délirium Café promet de devenir ton nouveau lieu de prédilection ! 🎶 ",
+    ambianceDescription:
+      "",
+    price: "expensive",
     type: "biere",
     location: "Bordeaux",
     coupDeCoeur: false,
-  },
-  {
-    id: 6,
-    name: "Nom de bar",
-    img: "media/cafe-neon.jpg",
-    shortDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-
-    longDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque itaque perspiciatis, illo ex fuga culpa modi accusantium quas temporibus similique deleniti, ullam facere dignissimos illum tenetur deserunt ut, enim fugit adipisci maxime perferendis assumenda. Modi facere recusandae libero! Quidem incidunt vel tempora repudiandae eaque doloremque quibusdam tenetur reiciendis reprehenderit culpa delectus architecto, deserunt dolorem ipsum accusamus dolores dignissimos suscipit quae unde nesciunt impedit! Temporibus rem maiores culpa soluta cumque sequi vel labore esse. Laborum deleniti corporis impedit quo placeat perspiciatis explicabo ex aut illo in exercitationem architecto, sed animi vero unde reprehenderit earum maxime nisi id. Corporis, similique. Iure, tempora?",
-    price: "cheap",
-    type: "biere",
-    location: "Bordeaux",
-    coupDeCoeur: false,
-  },
-  {
-    id: 7,
-    name: "Nom de bar",
-    img: "media/cafe-neon.jpg",
-    shortDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-
-    longDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque itaque perspiciatis, illo ex fuga culpa modi accusantium quas temporibus similique deleniti, ullam facere dignissimos illum tenetur deserunt ut, enim fugit adipisci maxime perferendis assumenda. Modi facere recusandae libero! Quidem incidunt vel tempora repudiandae eaque doloremque quibusdam tenetur reiciendis reprehenderit culpa delectus architecto, deserunt dolorem ipsum accusamus dolores dignissimos suscipit quae unde nesciunt impedit! Temporibus rem maiores culpa soluta cumque sequi vel labore esse. Laborum deleniti corporis impedit quo placeat perspiciatis explicabo ex aut illo in exercitationem architecto, sed animi vero unde reprehenderit earum maxime nisi id. Corporis, similique. Iure, tempora?",
-    price: "cheap",
-    type: "biere",
-    location: "Bordeaux",
-    coupDeCoeur: false,
-  },
-  {
-    id: 8,
-    name: "Nom de bar",
-    img: "media/cafe-neon.jpg",
-    shortDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-
-    longDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque itaque perspiciatis, illo ex fuga culpa modi accusantium quas temporibus similique deleniti, ullam facere dignissimos illum tenetur deserunt ut, enim fugit adipisci maxime perferendis assumenda. Modi facere recusandae libero! Quidem incidunt vel tempora repudiandae eaque doloremque quibusdam tenetur reiciendis reprehenderit culpa delectus architecto, deserunt dolorem ipsum accusamus dolores dignissimos suscipit quae unde nesciunt impedit! Temporibus rem maiores culpa soluta cumque sequi vel labore esse. Laborum deleniti corporis impedit quo placeat perspiciatis explicabo ex aut illo in exercitationem architecto, sed animi vero unde reprehenderit earum maxime nisi id. Corporis, similique. Iure, tempora?",
-    price: "cheap",
-    type: "biere",
-    location: "Bordeaux",
-    coupDeCoeur: false,
-  },
-  {
-    id: 9,
-    name: "Nom de bar",
-    img: "media/cafe-neon.jpg",
-    shortDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-
-    longDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque itaque perspiciatis, illo ex fuga culpa modi accusantium quas temporibus similique deleniti, ullam facere dignissimos illum tenetur deserunt ut, enim fugit adipisci maxime perferendis assumenda. Modi facere recusandae libero! Quidem incidunt vel tempora repudiandae eaque doloremque quibusdam tenetur reiciendis reprehenderit culpa delectus architecto, deserunt dolorem ipsum accusamus dolores dignissimos suscipit quae unde nesciunt impedit! Temporibus rem maiores culpa soluta cumque sequi vel labore esse. Laborum deleniti corporis impedit quo placeat perspiciatis explicabo ex aut illo in exercitationem architecto, sed animi vero unde reprehenderit earum maxime nisi id. Corporis, similique. Iure, tempora?",
-    price: "cheap",
-    type: "biere",
-    location: "Bordeaux",
-    coupDeCoeur: false,
-  },
-  {
-    id: 10,
-    name: "Delirium",
-    img: "media/cafe-neon.jpg",
-    shortDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-
-    longDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque itaque perspiciatis, illo ex fuga culpa modi accusantium quas temporibus similique deleniti, ullam facere dignissimos illum tenetur deserunt ut, enim fugit adipisci maxime perferendis assumenda. Modi facere recusandae libero! Quidem incidunt vel tempora repudiandae eaque doloremque quibusdam tenetur reiciendis reprehenderit culpa delectus architecto, deserunt dolorem ipsum accusamus dolores dignissimos suscipit quae unde nesciunt impedit! Temporibus rem maiores culpa soluta cumque sequi vel labore esse. Laborum deleniti corporis impedit quo placeat perspiciatis explicabo ex aut illo in exercitationem architecto, sed animi vero unde reprehenderit earum maxime nisi id. Corporis, similique. Iure, tempora?",
-    price: "cheap",
-    type: "biere",
-    location: "Bordeaux",
-    coupDeCoeur: "false",
-  },
-  {
-    id: 11,
-    name: "Nom de bar",
-    img: "media/cafe-neon.jpg",
-    shortDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-
-    longDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque itaque perspiciatis, illo ex fuga culpa modi accusantium quas temporibus similique deleniti, ullam facere dignissimos illum tenetur deserunt ut, enim fugit adipisci maxime perferendis assumenda. Modi facere recusandae libero! Quidem incidunt vel tempora repudiandae eaque doloremque quibusdam tenetur reiciendis reprehenderit culpa delectus architecto, deserunt dolorem ipsum accusamus dolores dignissimos suscipit quae unde nesciunt impedit! Temporibus rem maiores culpa soluta cumque sequi vel labore esse. Laborum deleniti corporis impedit quo placeat perspiciatis explicabo ex aut illo in exercitationem architecto, sed animi vero unde reprehenderit earum maxime nisi id. Corporis, similique. Iure, tempora?",
-    price: "cheap",
-    type: "biere",
-    location: "Bordeaux",
-    coupDeCoeur: false,
-  },
-  {
-    id: 12,
-    name: "Nom de bar",
-    img: "media/cafe-neon.jpg",
-    shortDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-
-    longDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque itaque perspiciatis, illo ex fuga culpa modi accusantium quas temporibus similique deleniti, ullam facere dignissimos illum tenetur deserunt ut, enim fugit adipisci maxime perferendis assumenda. Modi facere recusandae libero! Quidem incidunt vel tempora repudiandae eaque doloremque quibusdam tenetur reiciendis reprehenderit culpa delectus architecto, deserunt dolorem ipsum accusamus dolores dignissimos suscipit quae unde nesciunt impedit! Temporibus rem maiores culpa soluta cumque sequi vel labore esse. Laborum deleniti corporis impedit quo placeat perspiciatis explicabo ex aut illo in exercitationem architecto, sed animi vero unde reprehenderit earum maxime nisi id. Corporis, similique. Iure, tempora?",
-    price: "cheap",
-    type: "biere",
-    location: "Bordeaux",
-    coupDeCoeur: false,
+    adress: "30 Quai Virginie Hériot, 33300 Bordeaux",
+    openTime: "16h-2h",
+    infos: "Bar à bières belges",
+    linkMap: `https://maps.app.goo.gl/hDMas2R6VKgTCvGx9`,
   },
 ];
 
-/**                         creation d'une carte bar    */
+/**    creation d'une carte bar    */
+
 const barList = document.querySelector(".container-cards"); // container pour les cartes
 
 let options = (bar) => {
@@ -180,7 +54,7 @@ let options = (bar) => {
   switch (bar.price) {
     case "cheap":
       optionsHTML += `<div class="card-option">
-        <img src="/assets/dollar1.png" alt="" class="logo">
+        <img src="${bar.imgBar}" alt="" class="logo">
         <h4>Economique</h4>
         </div>`;
       break;
