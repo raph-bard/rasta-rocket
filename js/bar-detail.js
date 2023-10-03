@@ -225,7 +225,7 @@ let createBarDetailPage = (bar) => {
         <div class="container img-quelques-infos"></div>
       </div>
     </div>
-    <div class="container-max">
+    <div class="container-max bg-pink">
       <div class="container container-ambiance" ->
         <h3>L'ambiance et l'univers</h3>
         <p>

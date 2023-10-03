@@ -1,32 +1,26 @@
-//  generation des cartes bars
-import {bars, createCardMobile} from './data.mjs'
-
- const container = document.querySelector(".container-cards");
- bars.forEach((bar) => {
-    container.appendChild(createCardMobile(bar)); 
- })
-
- 
-
-
 // --------------- Dynamisation de pages --------------- //
 
 // ajouter la class body //
 
 // Obtenir le nom de la page actuelle
-const currentPage = window.location.pathname.split('/').pop().replace('.html', '');
+const currentPage = window.location.pathname
+  .split("/")
+  .pop()
+  .replace(".html", "");
 
+// Ici il était possible que currentPage soit égal à '', ce qui causait un bug
+if (!currentPage) {
+  currentPage = "index";
+}
 // Ajouter le nom de la page en tant que classe à l'élément body
 document.body.classList.add(currentPage);
 
-
-
 // HEADER //
 
-  const header = document.querySelector('header');
-  header.innerHTML = `
+const header = document.querySelector("header");
+header.innerHTML = `
       <div class="logo">
-          <a href="index.html"> <img src="media/logo-rastarockett.jpg" alt="logo"> </a>
+        <a href="index.html"> <img src="media/logo-rastarockett.jpg" alt="logo"> </a>
       </div>
       <div class="burger">
           <span></span>
@@ -44,19 +38,18 @@ document.body.classList.add(currentPage);
 
 // FOOTER //
 
-const footer = document.querySelector('footer');
+const footer = document.querySelector("footer");
 footer.innerHTML = `<p>&copy 2023 - Tous les droits sont réservés</p><span>Rasta rockett</span>`;
-
 
 // animation burger menu //
 
-const burger = document.querySelector('.burger');
-const menu = document.querySelector('.menu');
-const body = document.body;
+const burger = document.querySelector(".burger");
+const menu = document.querySelector(".menu");
+const html = document.html;
 
 //fonction permettant d'afficher/cacher le menu quand on appuie sur le boutton burger
-burger.addEventListener('click', function() {
-  menu.classList.toggle('active');
-  burger.classList.toggle('active');
-  body.classList.toggle('noscroll');
+burger.addEventListener("click", function () {
+  menu.classList.toggle("active");
+  burger.classList.toggle("active");
+  document.documentElement.classList.toggle("noscroll");
 });
