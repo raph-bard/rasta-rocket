@@ -269,7 +269,9 @@ let createBarDetailPage = (bar) => {
   console.log(newBar);
   return newBar;
 };
+let searchLink = new URLSearchParams(window.location.search);
+let id = searchLink.get("id");
 
-const barHtml = createBarDetailPage(bars[0]);
+const barHtml = createBarDetailPage(bars.filter((bar) => bar.id == id)[0]);
 const barDiv = document.querySelector(".bar");
 barDiv.appendChild(barHtml);
