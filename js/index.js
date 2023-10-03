@@ -233,8 +233,8 @@ const coupDeCoeurContainer = document.querySelector(".coeur-container");
 bars
   .filter((bar) => bar.coupDeCoeur === true) 
   .forEach((bar) => {
-    const overlayContainer = document.createElement("div");
-    overlayContainer.classList.add("overlay-container");
+    /*const overlayContainer = document.createElement("div");
+    overlayContainer.classList.add("overlay-container");*/
     const h3 = document.createElement("h3");
     h3.textContent = `${bar.name} est notre coup de coeur de la semaine !`
     const div = document.createElement("div");
@@ -243,6 +243,7 @@ bars
     
     coupDeCoeurContainer.appendChild(h3);
     coupDeCoeurContainer.appendChild(div);
+
     /*coupDeCoeurContainer.appendChild(overlayContainer);*/
   });
 
