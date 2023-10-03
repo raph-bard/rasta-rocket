@@ -312,7 +312,6 @@ popButs.forEach(function (popBut) {
     popupBar.classList.toggle("active");
     document.documentElement.classList.toggle("noscroll");
 
-
     /****         DYNAMISATION DE LA POPUP */
 
     const barId = popBut.getAttribute("data-id");
@@ -377,7 +376,6 @@ barCoupDeCoeur.innerHTML = bars
 //   barCoupDeCoeur.appendChild();
 // });
 
-
 barCoupDeCoeur.classList.add("imagecoeur-container");
 
 selectionCoupDeCoeur.appendChild(barCoupDeCoeur);
@@ -385,7 +383,6 @@ selectionCoupDeCoeur.appendChild(barCoupDeCoeur);
 /*const coupDeCoeurName = document.querySelector(".imagecoeur-container");
 const nameCoupDeCoeur = document.createElement("h1");
 nameCoupDeCoeur.innerHTML = `${bars[0].name}`;*/
-
 
 /****** filtering ******/
 
@@ -407,8 +404,6 @@ function filterHandler() {
     );
 
   barList.innerHTML = "";
-
-  // appending filtered bars
-  filteredBars.forEach((bar) => barList.appendChild(createCardMobile(bar)));
-
-
+}
+// appending filtered bars
+filteredBars.forEach((bar) => barList.appendChild(createCardMobile(bar)));
