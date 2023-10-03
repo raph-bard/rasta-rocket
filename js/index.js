@@ -41,14 +41,16 @@ footer.innerHTML = `<p>&copy 2023 - Tous les droits sont réservés</p><span>Ras
 
 const burger = document.querySelector(".burger");
 const menu = document.querySelector(".menu");
-const body = document.body;
+const html = document.html;
 
 //fonction permettant d'afficher/cacher le menu quand on appuie sur le boutton burger
 burger.addEventListener("click", function () {
   menu.classList.toggle("active");
-  burger.classList.toggle("active");
-  body.classList.toggle("noscroll");
+  burger.classList.toggle("active");document.documentElement.classList.toggle('noscroll');
 });
+
+
+
 
 /*      Creation Tableau d'objets bars         */
 
@@ -203,8 +205,8 @@ let options = (bar) => {
 let createCardMobile = (bar) => {
   let para = new URLSearchParams();
   para.append("id", bar.id);
-  const newBar = document.createElement("a");
-  newBar.href = "bar-detail.html?" + para.toString(); // creation du lien, de la balaise <a>, avec le Id inseré à la fin
+  const newBar = document.createElement("div");
+  //newBar.href = "bar-detail.html?" + para.toString(); // creation du lien, de la balaise <a>, avec le Id inseré à la fin
   newBar.classList.add("card"); // donc le lien sera de cette forme : bar-detail.html?id=1 par exemple
   newBar.innerHTML = `
    
@@ -220,11 +222,47 @@ let createCardMobile = (bar) => {
           ${options(bar)}
         </div>
       </div>   
+      <div class="pop-but"></div>
     `;
 
   return newBar;
 };
 bars.forEach((bar) => barList.appendChild(createCardMobile(bar)));
+
+
+
+
+/* POPUP DETAIL BAR */
+
+
+const popButs = document.querySelectorAll(".pop-but");
+const popupBar = document.querySelector(".popup-bar-container");
+
+// on ajoute la classe active à la pop-up lorsqu'on clique sur un bar
+popButs.forEach(function (popBut) {
+  popBut.addEventListener("click", function () {
+    popupBar.classList.toggle("active");
+    document.documentElement.classList.toggle('noscroll');
+  });
+});
+
+const closePop = document.querySelector(".close-button");
+
+// Fermer la popup quand on clique sur la croix
+closePop.addEventListener("click", function () { 
+  popupBar.classList.remove("active");
+  document.documentElement.classList.remove('noscroll');
+});
+
+// Fermer la popup en cliquant à l'extérieur de celle-ci
+popupBar.addEventListener("click", function (e) {
+  if (e.target === popupBar) {
+    popupBar.classList.remove("active");
+    document.documentElement.classList.remove('noscroll');
+  }
+});
+
+/****         CREATION DE LA LISTE DES BARS AVEC FOR EACH */
 
 /****      SLIDER COUP DE COEUR             */
 
