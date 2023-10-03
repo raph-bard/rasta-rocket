@@ -5,14 +5,21 @@ let bars = [
     id: 1,
     name: "Nom de bar",
     img: "media/cafe-neon.jpg",
+    imgBar: "media/cafe-neon.jpg",
     shortDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, necessitatibus. amet consectetur adipisicing elit. Quae, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     longDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque itaque perspiciatis, illo ex fuga culpa modi accusantium quas temporibus similique deleniti, ullam facere dignissimos illum tenetur deserunt ut, enim fugit adipisci maxime perferendis assumenda. Modi facere recusandae libero! Quidem incidunt vel tempora repudiandae eaque doloremque quibusdam tenetur reiciendis reprehenderit culpa delectus architecto, deserunt dolorem ipsum accusamus dolores dignissimos suscipit quae unde nesciunt impedit! Temporibus rem maiores culpa soluta cumque sequi vel labore esse. Laborum deleniti corporis impedit quo placeat perspiciatis explicabo ex aut illo in exercitationem architecto, sed animi vero unde reprehenderit earum maxime nisi id. Corporis, similique. Iure, tempora?",
+    ambianceDescription:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque itaque perspiciatis, illo ex fuga culpa modi accusantium quas temporibus similique deleniti, ullam facere dignissimos illum tenetur deserunt ut, enim fugit adipisci maxime perferendis assumenda. Modi facere recusandae libero! Quidem incidunt vel tempora repudiandae eaque doloremque quibusdam tenetur reiciendis reprehenderit culpa delectus architecto, deserunt dolorem ipsum accusamus dolores dignissimos suscipit quae unde nesciunt impedit! Temporibus rem maiores culpa soluta cumque sequi vel labore esse. Laborum deleniti corporis impedit quo placeat perspiciatis explicabo ex aut illo in exercitationem architecto, sed animi vero unde reprehenderit earum maxime nisi id. Corporis, similique. Iure, tempora?",
     price: "cheap",
-    type: "biere",
-    location: "Bordeaux",
+    type: "vin",
+    location: "Talence",
     coupDeCoeur: false,
+    adress: "1 rue La Fontaine de bière, 33000 Bordeaux",
+    openTime: "Lundi au samedi : 16h - 20h",
+    infos: "Happy hours tous les jours de 16h à 22h",
+    linkMap: `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d781137.9506807565!2d-1.8405982541953783!3d43.87331476487897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd55291a454527fd%3A0xe5a9bb6c46321064!2sMy%20Beers%20-%20Bassins%20%C3%A0%20Flot%20-%20Bar%20%C3%A0%20bi%C3%A8re%20pr%C3%A8s%20de%20Bordeaux!5e0!3m2!1sfr!2sfr!4v1695976340475!5m2!1sfr!2sfr`,
   },
   {
     id: 2,
@@ -276,10 +283,13 @@ popButs.forEach(function (popBut) {
     adresseInfo.innerHTML = barSelectionne.location;
 
     const horairesInfo = document.querySelector(".horaires span");
-    horairesInfo.innerHTML = barSelectionne.location; // todo
+    horairesInfo.innerHTML = barSelectionne.openTime; // todo
 
     const moreInfo = document.querySelector(".option-supplementaires span");
-    moreInfo.innerHTML = barSelectionne.location; // todo
+    moreInfo.innerHTML = barSelectionne.infos; // todo
+
+    const btnLink = document.querySelector(".pop-up-button");
+    btnLink.href = `bar-detail.html?id=${barId}`;
   });
 });
 

@@ -197,19 +197,41 @@ let createBarDetailPage = (bar) => {
             ? "bièrres"
             : bar.type.includes("vin")
             ? "vin"
-            : bar.type.includes("cocktail")
-            ? "cocktail"
-            : ""
+            : "cocktail"
         }</span>
 
         <div class="icons-bar">
           <div class="icon1">
-          <i class="fa-solid fa-mountain-sun"></i>
-            <span>${bar.type}</span>
+          ${
+            bar.type.includes("biere")
+              ? `<i class="fa-solid fa-beer-mug-empty"></i>`
+              : bar.type.includes("vin")
+              ? `<i class="fa-solid fa-wine-bottle"></i>`
+              : `<i class="fa-solid fa-martini-glass"></i>`
+          }
+          <span>${
+            bar.type.includes("vin")
+              ? `Vin`
+              : bar.type.includes("biere")
+              ? `Bières`
+              : `Cocktails`
+          }</span>
           </div>
           <div class="icon2">
-            <img src="/assets/dollar.png" alt="" />
-            <span>Lieu insolite</span>
+          ${
+            bar.price.includes("cheap")
+              ? `<i class="fa-solid fa-euro-sign"></i>`
+              : bar.price.includes("affordable")
+              ? `<i class="fa-solid fa-euro-sign"></i>`
+              : `<i class="fa-solid fa-euro-sign"></i>`
+          }
+            <span>${
+              bar.price.includes("cheap")
+                ? `Économique`
+                : bar.price.includes("affordable")
+                ? `Abordable`
+                : `Chic`
+            }</span>
           </div>
         </div>
       </div>
@@ -238,15 +260,15 @@ let createBarDetailPage = (bar) => {
         <h3>Infos générales</h3>
         <div class="infos-genriques">
           <div class="adresse">
-            <img src="assets/dollar.png" alt="" />
+          <i class="fa-regular fa-map"></i>
             <span>${bar.adress}</span>
           </div>
           <div class="horaires">
-            <img src="assets/dollar.png" alt="" />
+          <i class="fa-regular fa-clock"></i>
             <span>${bar.openTime}</span>
           </div>
           <div class="option-supplementaires">
-            <img src="assets/dollar.png" alt="" />
+          <i class="fa-regular fa-lightbulb"></i>
             <span>${bar.infos}</span>
           </div>
         </div>
