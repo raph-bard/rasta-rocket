@@ -1,5 +1,3 @@
-
-
 /*      Creation Tableau d'objets bars         */
 
 let bars = [
@@ -350,7 +348,6 @@ function filterHandler() {
     );
 
   barList.innerHTML = "";
-    }
-  // appending filtered bars
-  filteredBars.forEach((bar) => barList.appendChild(createCardMobile(bar)));
 }
+// appending filtered bars
+filteredBars.forEach((bar) => barList.appendChild(createCardMobile(bar)));
