@@ -211,12 +211,12 @@ main {
   font-size: 1rem;
 }
 
-.categories-container span.category.active,
-.categories-container span.category:hover {
+.categories-container select.category.active,
+.categories-container select.category:hover {
   color: black;
 }
 
-.categories-container span.category::after {
+.categories-container select.category::after {
   content: "";
   height: 8px;
   background-color: var(--second-color);
@@ -228,6 +228,7 @@ main {
   right: 0%;
   transition: 0.3s;
 }
+
 
 .categories-container span.category.active:after,
 .categories-container span.category:hover::after {
