@@ -8,6 +8,10 @@ const currentPage = window.location.pathname
   .pop()
   .replace(".html", "");
 
+// Ici il était possible que currentPage soit égal à '', ce qui causait un bug
+if (!currentPage) {
+  currentPage = "index";
+}
 // Ajouter le nom de la page en tant que classe à l'élément body
 document.body.classList.add(currentPage);
 
@@ -289,7 +293,7 @@ let createCardMobile = (bar) => {
           ${options(bar)}
         </div>
       </div>   
-      <div class="pop-but"></div>
+      <div class="pop-but" data-id="${bar.id}"></div>
     `;
   console.log(newBar);
   return newBar;
@@ -307,6 +311,32 @@ popButs.forEach(function (popBut) {
   popBut.addEventListener("click", function () {
     popupBar.classList.toggle("active");
     document.documentElement.classList.toggle("noscroll");
+
+
+    /****         DYNAMISATION DE LA POPUP */
+
+    const barId = popBut.getAttribute("data-id");
+    let barSelectionne;
+    bars.forEach((bar) => {
+      if (bar.id == barId) {
+        barSelectionne = bar;
+      }
+    });
+    const contenuPopUp = document.querySelector(".popup-bar-container");
+    const popUpTitre = contenuPopUp.querySelector("h2");
+    popUpTitre.innerHTML = barSelectionne.name;
+
+    const descriptionLongue = contenuPopUp.querySelector("p");
+    descriptionLongue.innerHTML = barSelectionne.shortDescription;
+
+    const adresseInfo = document.querySelector(".adresse span");
+    adresseInfo.innerHTML = barSelectionne.location;
+
+    const horairesInfo = document.querySelector(".horaires span");
+    horairesInfo.innerHTML = barSelectionne.location; // todo
+
+    const moreInfo = document.querySelector(".option-supplementaires span");
+    moreInfo.innerHTML = barSelectionne.location; // todo
   });
 });
 
@@ -346,7 +376,7 @@ barCoupDeCoeur.innerHTML = bars
 // bars.forEach((bar) => {
 //   barCoupDeCoeur.appendChild();
 // });
-//console.log(barCoupDeCoeur);
+
 
 barCoupDeCoeur.classList.add("imagecoeur-container");
 
@@ -355,6 +385,7 @@ selectionCoupDeCoeur.appendChild(barCoupDeCoeur);
 /*const coupDeCoeurName = document.querySelector(".imagecoeur-container");
 const nameCoupDeCoeur = document.createElement("h1");
 nameCoupDeCoeur.innerHTML = `${bars[0].name}`;*/
+
 
 /****** filtering ******/
 
@@ -379,4 +410,5 @@ function filterHandler() {
 
   // appending filtered bars
   filteredBars.forEach((bar) => barList.appendChild(createCardMobile(bar)));
-}
+
+
