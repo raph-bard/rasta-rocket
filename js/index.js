@@ -275,8 +275,8 @@ popButs.forEach(function (popBut) {
     const popUpTitre = contenuPopUp.querySelector("h2");
     popUpTitre.innerHTML = barSelectionne.name;
 
-    const photoBar = contenuPopUp.querySelector("img");
-    photoBar.src = barSelectionne.img;
+    const photoBar = contenuPopUp.querySelector(".pop-up-img");
+    photoBar.style.backgroundImage = `url(${barSelectionne.img}) `;
 
     const descriptionLongue = contenuPopUp.querySelector("p");
     descriptionLongue.classList.add("ellipsis-6");
@@ -293,7 +293,6 @@ popButs.forEach(function (popBut) {
 
     const moreInfo = document.querySelector(".option-supplementaires span");
     moreInfo.innerHTML = barSelectionne.infos;
-
   });
 });
 
