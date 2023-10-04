@@ -14,7 +14,7 @@ let bars = [
     price: "expensive",
     type: "biere",
     location: "Bordeaux",
-    coupDeCoeur: true,
+    coupDeCoeur: false,
     adress: "30 Quai Virginie Hériot, 33300 Bordeaux",
     openTime: "16h-2h",
     infos: "Bar à bières belges",
@@ -275,6 +275,9 @@ popButs.forEach(function (popBut) {
     const popUpTitre = contenuPopUp.querySelector("h2");
     popUpTitre.innerHTML = barSelectionne.name;
 
+    const photoBar = contenuPopUp.querySelector("img");
+    photoBar.src = barSelectionne.img;
+
     const descriptionLongue = contenuPopUp.querySelector("p");
     descriptionLongue.innerHTML = barSelectionne.shortDescription;
 
@@ -282,10 +285,10 @@ popButs.forEach(function (popBut) {
     adresseInfo.innerHTML = barSelectionne.location;
 
     const horairesInfo = document.querySelector(".horaires span");
-    horairesInfo.innerHTML = barSelectionne.openTime; // todo
+    horairesInfo.innerHTML = barSelectionne.openTime;
 
     const moreInfo = document.querySelector(".option-supplementaires span");
-    moreInfo.innerHTML = barSelectionne.infos; // todo
+    moreInfo.innerHTML = barSelectionne.infos;
 
     const btnLink = document.querySelector(".pop-up-button");
     btnLink.href = `bar-detail.html?id=${barId}`;
@@ -312,7 +315,12 @@ popupBar.addEventListener("click", function (e) {
 
 const coupDeCoeurContainer = document.querySelector(".coeur-container");
 
+
 let barPrivilige = bars.filter((bar) => bar.coupDeCoeur === true)[0];
+if (bars.filter((bar) => bar.coupDeCoeur === true).length === 0){
+coupDeCoeurContainer.style.display = `none`;}
+
+else {
 
 const overlayContainer = document.createElement("div");
 overlayContainer.classList.add("overlay-container");
@@ -331,6 +339,7 @@ link.appendChild(div);
 overlayContainer.appendChild(h3);
 overlayContainer.appendChild(link);
 coupDeCoeurContainer.appendChild(overlayContainer);
+}
 
 /****** filtering ******/
 
@@ -396,3 +405,5 @@ function createPopUp() {
     });
   });
 }
+// appending filtered bars
+filteredBars.forEach((bar) => barList.appendChild(createCardMobile(bar)));
