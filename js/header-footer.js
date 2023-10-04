@@ -1,7 +1,7 @@
 // --------------- Dynamisation de pages --------------- //
 
 // ajouter la class body //
-
+console.log(" header footer js loaded ");
 // Obtenir le nom de la page actuelle
 const currentPage = window.location.pathname
   .split("/")
