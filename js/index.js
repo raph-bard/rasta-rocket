@@ -151,7 +151,7 @@ let bars = [
     coupDeCoeur: false,
     adress: "106 Quai Lawton, 33300 Bordeaux",
     openTime: "17h-02h",
-    infos: "Rudby / Beerpong",
+    infos: "Rugby / Beerpong",
     linkMap: `https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2827.8405179163697!2d-0.5592044!3d44.8655414!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd55292ace4f83db%3A0x73beb848737c6f50!2sHome%20Run%20Bar!5e0!3m2!1sfr!2sfr!4v1696345148756!5m2!1sfr!2sfr`,
   },
   {
@@ -184,39 +184,39 @@ let options = (bar) => {
   switch (bar.price) {
     case "cheap":
       optionsHTML += `<div class="card-option">
-        <img src="${bar.imgBar}" alt="" class="logo">
+        <i class="fa-solid fa-euro-sign"></i>
         <h4>Economique</h4>
         </div>`;
       break;
     case "affordable":
       optionsHTML += `<div class="card-option">
-        <img src="/assets/dollar2.png" alt="" class="logo">
+        <i class="fa-solid fa-euro-sign"></i>
         <h4>Abordable</h4>
         </div>`;
       break;
     case "expensive":
       optionsHTML += `<div class="card-option">
-        <img src="/assets/dollar3.png" alt="" class="logo">
-        <h4>cher</h4>
+        <i class="fa-solid fa-euro-sign"></i>
+        <h4>Chic</h4>
         </div>`;
       break;
   }
   switch (bar.type) {
     case "biere":
       optionsHTML += `<div class="card-option">
-        <img src="/assets/biere.png" alt="" class="logo">
+      <i class="fa-solid fa-beer-mug-empty"></i>
         <h4>Bières</h4>
         </div>`;
       break;
     case "cocktail":
       optionsHTML += `<div class="card-option">
-        <img src="/assets/cocktail.png" alt="" class="logo">
+      <i class="fa-solid fa-martini-glass"></i>
         <h4>Cocktails</h4>
         </div>`;
       break;
     case "vin":
       optionsHTML += `<div class="card-option">
-        <img src="/assets/vin.png" alt="" class="logo">
+      <i class="fa-solid fa-wine-bottle"></i>
         <h4>Vins</h4>
         </div>`;
       break;
@@ -237,7 +237,7 @@ let createCardMobile = (bar) => {
     <div class="card-details">
         <div class="card-title-description">
             <h2 class="card-title">${bar.name}</h2>
-            <p class="card-description"> ${bar.shortDescription}</p>
+            <p class="card-description ellipsis-4"> ${bar.shortDescription}</p>
         </div>
         <div class="card-options">
           ${options(bar)}
@@ -279,7 +279,11 @@ popButs.forEach(function (popBut) {
     photoBar.src = barSelectionne.img;
 
     const descriptionLongue = contenuPopUp.querySelector("p");
+    descriptionLongue.classList.add("ellipsis-6");
     descriptionLongue.innerHTML = barSelectionne.shortDescription;
+
+    const btnLink = document.querySelector(".pop-up-button");
+    btnLink.href = `bar-detail.html?id=${barId}`;
 
     const adresseInfo = document.querySelector(".adresse span");
     adresseInfo.innerHTML = barSelectionne.location;
@@ -290,8 +294,6 @@ popButs.forEach(function (popBut) {
     const moreInfo = document.querySelector(".option-supplementaires span");
     moreInfo.innerHTML = barSelectionne.infos;
 
-    const btnLink = document.querySelector(".pop-up-button");
-    btnLink.href = `bar-detail.html?id=${barId}`;
   });
 });
 
