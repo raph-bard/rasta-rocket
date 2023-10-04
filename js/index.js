@@ -1,3 +1,31 @@
+
+// Vérifiez si la page actuelle est "index.html"
+if (window.location.pathname === "/index.html") {
+  // Ajoutez la classe "no-scroll" à la balise HTML dès le début
+  document.documentElement.classList.add("noscroll");
+
+  // Retirez la classe "no-scroll" de la balise HTML après 4,5 secondes
+  setTimeout(function() {
+      document.documentElement.classList.remove("noscroll");
+  }, 4500); // 4500 millisecondes (4,5 secondes)
+}
+
+
+// Sélectionnez l'élément HTML que vous souhaitez supprimer
+var deleteShaker = document.querySelector(".shaker-container");
+
+// Utilisez setTimeout pour définir un délai de 4 secondes (4000 millisecondes)
+setTimeout(function() {
+    // Vérifiez d'abord si l'élément existe encore
+    if (deleteShaker) {
+        // Supprimez l'élément du DOM
+        deleteShaker.parentNode.removeChild(deleteShaker);
+    }
+}, 4500); // 4500 millisecondes (4.5 secondes)
+
+
+
+
 /*      Creation Tableau d'objets bars         */
 
 import bars from "./data.js";
