@@ -744,6 +744,194 @@ button {
   border-radius: 7px;
 }
 
+
+
+
+
+
+
+
+
+
+/************* SHAKER ANIMATION *****************/
+
+@keyframes shaker-disapear {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+.shaker-container {
+  background-color: var(--main-color);
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 12;
+  animation: shaker-disapear 1s ease 3.5s;
+  animation-fill-mode: forwards;
+}
+
+.shaker-container, .shaker-animation-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shaker-animation {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  border-radius: 100%;
+  background-color: white;
+}
+
+@keyframes shaker-shaking {
+  0% {
+    top: 35px;
+    right: 140px;
+  }
+
+  50% {
+    top: 55px;
+    right: 160px;
+  }
+
+  100% {
+    top: 35px;
+    right: 140px;
+  }
+}
+@keyframes rotate-shaker {
+  0% {
+    rotate: 35deg;
+  }
+  100% {
+    transform: rotate(80deg);
+  }
+}
+
+.shaker-item {
+  width: 100px;
+  height: 100px;
+  background-image: url("../media/shaker-item.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  rotate: 35deg;
+  animation: shaker-shaking 0.4s ease 4, rotate-shaker 0.4s linear 1.6s;
+  animation-fill-mode: forwards;
+  position: absolute;
+  top: 35px;
+  right: 140px;
+}
+
+.glass-item {
+  position: absolute;
+  right: 100px;
+  bottom: 90px;
+  background-image: url("../media/glass-item.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 70px;
+  height: 70px;
+}
+
+/* Animation du triangle (alcool qui va dans le verre)  */
+@keyframes drink-in {
+  0% {
+    opacity: 0;
+    border-top: 0px solid var(--second-color);
+    bottom: 33px;
+  }
+  100% {
+    opacity: 0.8;
+    border-top: 15px solid var(--second-color);
+  }
+}
+
+.glass-item:before {
+  content: "";
+  width: 0;
+  height: 0;
+  opacity: 0;
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-top: 0 solid orange;
+  position: absolute;
+  bottom: 33px;
+  left: 21px;
+  animation: drink-in 1s linear 1.7s;
+  animation-fill-mode: forwards;
+}
+
+/* animation de la paille */
+@keyframes straw-up {
+  0% {
+    opacity: 0;
+    top: 100px;
+  }
+  100% {
+    opacity: 1;
+    top: 123px;
+  }
+}
+
+.straw-item {
+  position: absolute;
+  right: 95px;
+  top: 123px;
+  rotate: 16deg;
+  opacity: 0;
+  background-image: url("../media/straw.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 38px;
+  height: 40px;
+  z-index: 9;
+  animation: straw-up 0.4s linear 2.55s;
+  animation-fill-mode: forwards;
+}
+
+
+/* barre de chargement */
+.loader-container {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #ccc;
+  border-radius: 20px;
+  position: absolute;
+  bottom: -80px;
+}
+
+.loader {
+  width: 100%;
+  height: 30px;
+  background-color: var(--second-color);
+  animation: loading 3s linear 1;
+  border-radius: 20px;
+}
+
+/* Animation de la barre de chargement */
+@keyframes loading {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
 /* ------------- RESPONSIVE -------------- */
 
 /* RESPONSIVE 576 */
@@ -1085,6 +1273,10 @@ iframe {
     margin-top: 2em;
   }
 }
+
+
+
+
 
 /* RESPONSIVE 992 */
 
