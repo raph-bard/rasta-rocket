@@ -29,7 +29,7 @@ let options = (bar) => {
       break;
   }
 
-    optionsHTML += `<div class="card-option">
+  optionsHTML += `<div class="card-option">
     ${
       bar.type.includes("Bières")
         ? `<i class="fa-solid fa-beer-mug-empty"></i>`
@@ -39,8 +39,6 @@ let options = (bar) => {
     }
         <h4>${bar.type}</h4>
         </div>`;
-      break;
-  }
   return optionsHTML;
 };
 
