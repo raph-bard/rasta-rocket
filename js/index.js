@@ -237,7 +237,7 @@ let createCardMobile = (bar) => {
     <div class="card-details">
         <div class="card-title-description">
             <h2 class="card-title">${bar.name}</h2>
-            <p class="card-description"> ${bar.shortDescription}</p>
+            <p class="card-description ellipsis-4"> ${bar.shortDescription}</p>
         </div>
         <div class="card-options">
           ${options(bar)}

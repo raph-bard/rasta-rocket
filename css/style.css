@@ -58,6 +58,13 @@ a:hover {
   background-color: var(--pink-color);
 }
 
+.ellipsis-4 {
+  max-height: 80px; /* Définissez la hauteur maximale pour afficher 4 lignes */
+  overflow: hidden; /* Masque le contenu supplémentaire */
+  text-overflow: ellipsis; /* Ajoute des points de suspension (...) */
+  white-space: nowrap; /* Empêche le texte de se rompre sur plusieurs lignes */
+}
+
 /* ------ nav + footer ------- */
 
 header,
@@ -119,7 +126,7 @@ main {
 .container {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0;
+  padding: 0 12px;
 }
 .container-max {
   width: 100%;
@@ -1112,9 +1119,6 @@ iframe {
   justify-content: space-between;
 }
 
-.card-image {
-  margin-right: 1.3rem;
-}
 
 @media screen and (max-width: 992px) {
   /* ------- main -------- */
