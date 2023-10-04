@@ -184,39 +184,39 @@ let options = (bar) => {
   switch (bar.price) {
     case "cheap":
       optionsHTML += `<div class="card-option">
-        <img src="${bar.imgBar}" alt="" class="logo">
+        <i class="fa-solid fa-euro-sign"></i>
         <h4>Economique</h4>
         </div>`;
       break;
     case "affordable":
       optionsHTML += `<div class="card-option">
-        <img src="/assets/dollar2.png" alt="" class="logo">
+        <i class="fa-solid fa-euro-sign"></i>
         <h4>Abordable</h4>
         </div>`;
       break;
     case "expensive":
       optionsHTML += `<div class="card-option">
-        <img src="/assets/dollar3.png" alt="" class="logo">
-        <h4>cher</h4>
+        <i class="fa-solid fa-euro-sign"></i>
+        <h4>Chic</h4>
         </div>`;
       break;
   }
   switch (bar.type) {
     case "biere":
       optionsHTML += `<div class="card-option">
-        <img src="/assets/biere.png" alt="" class="logo">
+      <i class="fa-solid fa-beer-mug-empty"></i>
         <h4>Bières</h4>
         </div>`;
       break;
     case "cocktail":
       optionsHTML += `<div class="card-option">
-        <img src="/assets/cocktail.png" alt="" class="logo">
+      <i class="fa-solid fa-martini-glass"></i>
         <h4>Cocktails</h4>
         </div>`;
       break;
     case "vin":
       optionsHTML += `<div class="card-option">
-        <img src="/assets/vin.png" alt="" class="logo">
+      <i class="fa-solid fa-wine-bottle"></i>
         <h4>Vins</h4>
         </div>`;
       break;
