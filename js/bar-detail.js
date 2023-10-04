@@ -8,7 +8,7 @@ let bars = [
       "Découvrez le Délirium Café, un bar à bières convivial de 800m2. Avec plus de 30 bières à la pression, des tapas en terrasse, des matchs en direct et des soirées animées, c'est l'endroit idéal pour passer un moment agréable entre amis. Profitez de l'ambiance festive et décontractée !",
     longDescription:
       "Plonge dans 800m2 de folie, de fête et de bonne humeur ! 🍻 Avec plus de 30 bières à la pression, des tapas à savourer en terrasse, des matchs en direct et des soirées inoubliables, le Délirium Café promet de devenir ton nouveau lieu de prédilection ! 🎶 ",
-    ambianceDescription: "",
+    ambianceDescription: `Le son d'une playlist soigneusement sélectionnée crée une mélodie d'ambiance, un rythme en harmonie avec les conversations animées et les rires joyeux. Des éclats de rire résonnent, des discussions passionnées sur les différentes nuances de bières se croisent, créant une symphonie humaine unique. Le bar en lui-est un spectacle à part même entière. Les barmen, experts en la matière, jonglent entre les robinets et les bouteilles, créant des mélanges magistraux avec une dextérité fascinante. Chaque geste est une démonstration de savoir-faire, une célébration de l'art de servir la bière. Les différentes zones de dégustation offrent des expériences variées. Un coin lounge, moelleux et confortable, est idéal pour les conversations plus intimes. Des tables hautes, éclairées par des luminaires tamisés, créent une ambiance conviviale pour les groupes d'amis. Des fauteuils en cuir, évoquant un air de gentlemen's club, invitent à la contemplation et à la dégustation paisible. La terrasse, une oasis urbaine, est un joyau où les brises légères caressent les visages et où la vue sur la ville ajoute une dimension enchanteresse à l'expérience. C'est le lieu parfait pour déguster une bière sous le soleil éclatant ou les étoiles scintillantes.`,
     price: "expensive",
     type: "biere",
     location: "Bordeaux",
@@ -343,44 +343,3 @@ const footer = document.querySelector("footer");
 footer.innerHTML = `<p>&copy 2023 - Tous les droits sont réservés</p><span>Rasta rockett</span>`;
 
 // --------------- Dynamisation de pages --------------- //
-
-// ajouter la class body //
-
-// Obtenir le nom de la page actuelle
-const currentPage = window.location.pathname
-  .split("/")
-  .pop()
-  .replace(".html", "");
-
-// Ici il était possible que currentPage soit égal à '', ce qui causait un bug
-if (!currentPage) {
-  currentPage = "index";
-}
-// Ajouter le nom de la page en tant que classe à l'élément body
-document.body.classList.add(currentPage);
-
-// HEADER //
-
-const header = document.querySelector("header");
-header.innerHTML = `
-      <div class="logo">
-        <a href="index.html"> <img src="media/logo-rastarockett.jpg" alt="logo"> </a>
-      </div>
-      <div class="burger">
-          <span></span>
-      </div>
-      <div class="menu">
-          <nav>
-              <ul>
-                  <li><a href="index.html">Accueil</a></li>
-                  <li><a href="aboutus.html">A propos</a></li>
-                  <li><a href="contact.html">Contact</a></li>
-              </ul>
-          </nav>
-      </div>
-  `;
-
-// FOOTER //
-
-const footer = document.querySelector("footer");
-footer.innerHTML = `<p>&copy 2023 - Tous les droits sont réservés</p><span>Rasta rockett</span>`;
