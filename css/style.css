@@ -440,6 +440,7 @@ a.card:hover {
   margin-top: 10px;
 }
 
+
 /*************** popup bar detail **************/
 
 .popup-bar-container {
@@ -548,6 +549,15 @@ a.card:hover {
 .popup-bar a:hover {
   color: white;
   background-color: var(--main-color);
+}
+/****** icons popup color and style *******/
+.infos-genriques span{
+  padding-left: 5px;
+}
+
+i{
+  color: var( --second-color);
+  min-width: 1rem;
 }
 
 /*************** Coup de coeur **************/

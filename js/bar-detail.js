@@ -11,7 +11,7 @@ let createBarDetailPage = (bar) => {
     <div class="bandeau-container">
       <div
         class="bandeau"
-        style="background-image: url(../${bar.img})"
+        style="background-image: url(${bar.img})"
       ></div>
     </div>
 
