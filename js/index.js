@@ -353,4 +353,46 @@ function filterHandler() {
 
   barList.innerHTML = "";
   filteredBars.forEach((bar) => barList.appendChild(createCardMobile(bar)));
+  createPopUp();
+}
+
+function createPopUp() {
+  const popButs = document.querySelectorAll(".pop-but");
+  const popupBar = document.querySelector(".popup-bar-container");
+
+  // on ajoute la classe active à la pop-up lorsqu'on clique sur un bar
+  popButs.forEach(function (popBut) {
+    popBut.addEventListener("click", function () {
+      popupBar.classList.toggle("active");
+      document.documentElement.classList.toggle("noscroll");
+
+      /****         DYNAMISATION DE LA POPUP */
+
+      const barId = popBut.getAttribute("data-id");
+      let barSelectionne;
+      bars.forEach((bar) => {
+        if (bar.id == barId) {
+          barSelectionne = bar;
+        }
+      });
+      const contenuPopUp = document.querySelector(".popup-bar-container");
+      const popUpTitre = contenuPopUp.querySelector("h2");
+      popUpTitre.innerHTML = barSelectionne.name;
+
+      const descriptionLongue = contenuPopUp.querySelector("p");
+      descriptionLongue.innerHTML = barSelectionne.shortDescription;
+
+      const adresseInfo = document.querySelector(".adresse span");
+      adresseInfo.innerHTML = barSelectionne.location;
+
+      const horairesInfo = document.querySelector(".horaires span");
+      horairesInfo.innerHTML = barSelectionne.openTime; // todo
+
+      const moreInfo = document.querySelector(".option-supplementaires span");
+      moreInfo.innerHTML = barSelectionne.infos; // todo
+
+      const btnLink = document.querySelector(".pop-up-button");
+      btnLink.href = `bar-detail.html?id=${barId}`;
+    });
+  });
 }
