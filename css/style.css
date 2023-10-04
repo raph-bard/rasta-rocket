@@ -568,9 +568,7 @@ a.card:hover {
     color: white;
     padding-right: 90px;
 }
-  
 
-  
 .imagecoeur-container {
     width: 100%;
     height: 230px;
@@ -1138,7 +1136,5 @@ iframe {
 
 @media screen and (max-width: 1200px) {
   /* ------- main -------- */
-  .container {
-    padding: 0 1.5em;
-  }
+
 }
