@@ -184,39 +184,39 @@ let options = (bar) => {
   switch (bar.price) {
     case "cheap":
       optionsHTML += `<div class="card-option">
-        <img src="${bar.imgBar}" alt="" class="logo">
+        <i class="fa-solid fa-euro-sign"></i>
         <h4>Economique</h4>
         </div>`;
       break;
     case "affordable":
       optionsHTML += `<div class="card-option">
-        <img src="/assets/dollar2.png" alt="" class="logo">
+        <i class="fa-solid fa-euro-sign"></i>
         <h4>Abordable</h4>
         </div>`;
       break;
     case "expensive":
       optionsHTML += `<div class="card-option">
-        <img src="/assets/dollar3.png" alt="" class="logo">
-        <h4>cher</h4>
+        <i class="fa-solid fa-euro-sign"></i>
+        <h4>Chic</h4>
         </div>`;
       break;
   }
   switch (bar.type) {
     case "biere":
       optionsHTML += `<div class="card-option">
-        <img src="/assets/biere.png" alt="" class="logo">
+      <i class="fa-solid fa-beer-mug-empty"></i>
         <h4>Bières</h4>
         </div>`;
       break;
     case "cocktail":
       optionsHTML += `<div class="card-option">
-        <img src="/assets/cocktail.png" alt="" class="logo">
+      <i class="fa-solid fa-martini-glass"></i>
         <h4>Cocktails</h4>
         </div>`;
       break;
     case "vin":
       optionsHTML += `<div class="card-option">
-        <img src="/assets/vin.png" alt="" class="logo">
+      <i class="fa-solid fa-wine-bottle"></i>
         <h4>Vins</h4>
         </div>`;
       break;
@@ -275,6 +275,9 @@ popButs.forEach(function (popBut) {
     const popUpTitre = contenuPopUp.querySelector("h2");
     popUpTitre.innerHTML = barSelectionne.name;
 
+    const photoBar = contenuPopUp.querySelector("img");
+    photoBar.src = barSelectionne.img;
+
     const descriptionLongue = contenuPopUp.querySelector("p");
     descriptionLongue.classList.add("ellipsis-6");
     descriptionLongue.innerHTML = barSelectionne.shortDescription;
@@ -286,10 +289,10 @@ popButs.forEach(function (popBut) {
     adresseInfo.innerHTML = barSelectionne.location;
 
     const horairesInfo = document.querySelector(".horaires span");
-    horairesInfo.innerHTML = barSelectionne.openTime; // todo
+    horairesInfo.innerHTML = barSelectionne.openTime;
 
     const moreInfo = document.querySelector(".option-supplementaires span");
-    moreInfo.innerHTML = barSelectionne.infos; // todo
+    moreInfo.innerHTML = barSelectionne.infos;
 
   });
 });
@@ -314,7 +317,12 @@ popupBar.addEventListener("click", function (e) {
 
 const coupDeCoeurContainer = document.querySelector(".coeur-container");
 
+
 let barPrivilige = bars.filter((bar) => bar.coupDeCoeur === true)[0];
+if (bars.filter((bar) => bar.coupDeCoeur === true).length === 0){
+coupDeCoeurContainer.style.display = `none`;}
+
+else {
 
 const overlayContainer = document.createElement("div");
 overlayContainer.classList.add("overlay-container");
@@ -333,6 +341,7 @@ link.appendChild(div);
 overlayContainer.appendChild(h3);
 overlayContainer.appendChild(link);
 coupDeCoeurContainer.appendChild(overlayContainer);
+}
 
 /****** filtering ******/
 
@@ -354,6 +363,49 @@ function filterHandler() {
     );
 
   barList.innerHTML = "";
+  filteredBars.forEach((bar) => barList.appendChild(createCardMobile(bar)));
+  createPopUp();
+}
+
+function createPopUp() {
+  const popButs = document.querySelectorAll(".pop-but");
+  const popupBar = document.querySelector(".popup-bar-container");
+
+  // on ajoute la classe active à la pop-up lorsqu'on clique sur un bar
+  popButs.forEach(function (popBut) {
+    popBut.addEventListener("click", function () {
+      popupBar.classList.toggle("active");
+      document.documentElement.classList.toggle("noscroll");
+
+      /****         DYNAMISATION DE LA POPUP */
+
+      const barId = popBut.getAttribute("data-id");
+      let barSelectionne;
+      bars.forEach((bar) => {
+        if (bar.id == barId) {
+          barSelectionne = bar;
+        }
+      });
+      const contenuPopUp = document.querySelector(".popup-bar-container");
+      const popUpTitre = contenuPopUp.querySelector("h2");
+      popUpTitre.innerHTML = barSelectionne.name;
+
+      const descriptionLongue = contenuPopUp.querySelector("p");
+      descriptionLongue.innerHTML = barSelectionne.shortDescription;
+
+      const adresseInfo = document.querySelector(".adresse span");
+      adresseInfo.innerHTML = barSelectionne.location;
+
+      const horairesInfo = document.querySelector(".horaires span");
+      horairesInfo.innerHTML = barSelectionne.openTime; // todo
+
+      const moreInfo = document.querySelector(".option-supplementaires span");
+      moreInfo.innerHTML = barSelectionne.infos; // todo
+
+      const btnLink = document.querySelector(".pop-up-button");
+      btnLink.href = `bar-detail.html?id=${barId}`;
+    });
+  });
 }
 // appending filtered bars
 filteredBars.forEach((bar) => barList.appendChild(createCardMobile(bar)));
