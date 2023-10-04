@@ -378,8 +378,8 @@ function createPopUp() {
       const popUpTitre = contenuPopUp.querySelector("h2");
       popUpTitre.innerHTML = barSelectionne.name;
 
-      const photoBar = contenuPopUp.querySelector("img");
-      photoBar.src = barSelectionne.img;
+      const photoBar = contenuPopUp.querySelector(".pop-up-img");
+      photoBar.style.backgroundImage = `url(${barSelectionne.img}) `;
 
       const descriptionLongue = contenuPopUp.querySelector("p");
       descriptionLongue.innerHTML = barSelectionne.shortDescription;
@@ -398,5 +398,3 @@ function createPopUp() {
     });
   });
 }
-// appending filtered bars
-filteredBars.forEach((bar) => barList.appendChild(createCardMobile(bar)));
