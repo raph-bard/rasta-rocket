@@ -14,7 +14,7 @@ let bars = [
     price: "expensive",
     type: "biere",
     location: "Bordeaux",
-    coupDeCoeur: false,
+    coupDeCoeur: true,
     adress: "30 Quai Virginie Hériot, 33300 Bordeaux",
     openTime: "16h-2h",
     infos: "Bar à bières belges",
@@ -352,6 +352,5 @@ function filterHandler() {
     );
 
   barList.innerHTML = "";
+  filteredBars.forEach((bar) => barList.appendChild(createCardMobile(bar)));
 }
-// appending filtered bars
-filteredBars.forEach((bar) => barList.appendChild(createCardMobile(bar)));
