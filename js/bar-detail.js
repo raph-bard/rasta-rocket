@@ -212,8 +212,8 @@ let createBarDetailPage = (bar) => {
 
         <div class="icons-bar">
           <div class="icon1">
-            <img src="/assets/dollar.png" alt="" />
-            <span>Dansant</span>
+          <i class="fa-solid fa-mountain-sun"></i>
+            <span>${bar.type}</span>
           </div>
           <div class="icon2">
             <img src="/assets/dollar.png" alt="" />
@@ -277,7 +277,52 @@ let createBarDetailPage = (bar) => {
   console.log(newBar);
   return newBar;
 };
+let searchLink = new URLSearchParams(window.location.search);
+let id = searchLink.get("id");
 
-const barHtml = createBarDetailPage(bars[0]);
+const barHtml = createBarDetailPage(bars.filter((bar) => bar.id == id)[0]);
 const barDiv = document.querySelector(".bar");
 barDiv.appendChild(barHtml);
+
+// --------------- Dynamisation de pages --------------- //
+
+// ajouter la class body //
+
+// Obtenir le nom de la page actuelle
+const currentPage = window.location.pathname
+  .split("/")
+  .pop()
+  .replace(".html", "");
+
+// Ici il était possible que currentPage soit égal à '', ce qui causait un bug
+if (!currentPage) {
+  currentPage = "index";
+}
+// Ajouter le nom de la page en tant que classe à l'élément body
+document.body.classList.add(currentPage);
+
+// HEADER //
+
+const header = document.querySelector("header");
+header.innerHTML = `
+      <div class="logo">
+        <a href="index.html"> <img src="media/logo-rastarockett.jpg" alt="logo"> </a>
+      </div>
+      <div class="burger">
+          <span></span>
+      </div>
+      <div class="menu">
+          <nav>
+              <ul>
+                  <li><a href="index.html">Accueil</a></li>
+                  <li><a href="aboutus.html">A propos</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+              </ul>
+          </nav>
+      </div>
+  `;
+
+// FOOTER //
+
+const footer = document.querySelector("footer");
+footer.innerHTML = `<p>&copy 2023 - Tous les droits sont réservés</p><span>Rasta rockett</span>`;
