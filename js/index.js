@@ -293,7 +293,6 @@ popButs.forEach(function (popBut) {
 
     const moreInfo = document.querySelector(".option-supplementaires span");
     moreInfo.innerHTML = barSelectionne.infos;
-
   });
 });
 
@@ -386,6 +385,9 @@ function createPopUp() {
       const contenuPopUp = document.querySelector(".popup-bar-container");
       const popUpTitre = contenuPopUp.querySelector("h2");
       popUpTitre.innerHTML = barSelectionne.name;
+
+      const photoBar = contenuPopUp.querySelector("img");
+      photoBar.src = barSelectionne.img;
 
       const descriptionLongue = contenuPopUp.querySelector("p");
       descriptionLongue.innerHTML = barSelectionne.shortDescription;
