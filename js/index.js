@@ -39,7 +39,6 @@ let options = (bar) => {
     }
         <h4>${bar.type}</h4>
         </div>`;
-
   return optionsHTML;
 };
 
