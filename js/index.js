@@ -14,7 +14,7 @@ let bars = [
     price: "expensive",
     type: "biere",
     location: "Bordeaux",
-    coupDeCoeur: true,
+    coupDeCoeur: false,
     adress: "30 Quai Virginie Hériot, 33300 Bordeaux",
     openTime: "16h-2h",
     infos: "Bar à bières belges",
@@ -315,7 +315,12 @@ popupBar.addEventListener("click", function (e) {
 
 const coupDeCoeurContainer = document.querySelector(".coeur-container");
 
+
 let barPrivilige = bars.filter((bar) => bar.coupDeCoeur === true)[0];
+if (bars.filter((bar) => bar.coupDeCoeur === true).length === 0){
+coupDeCoeurContainer.style.display = `none`;}
+
+else {
 
 const overlayContainer = document.createElement("div");
 overlayContainer.classList.add("overlay-container");
@@ -334,6 +339,7 @@ link.appendChild(div);
 overlayContainer.appendChild(h3);
 overlayContainer.appendChild(link);
 coupDeCoeurContainer.appendChild(overlayContainer);
+}
 
 /****** filtering ******/
 
@@ -399,3 +405,5 @@ function createPopUp() {
     });
   });
 }
+// appending filtered bars
+filteredBars.forEach((bar) => barList.appendChild(createCardMobile(bar)));
