@@ -33,7 +33,7 @@ let bars = [
     price: "cheap",
     type: "biere",
     location: "Bordeaux",
-    coupDeCoeur: false,
+    coupDeCoeur: true,
     adress: "63 Quai Virginie Hériot, 33300 Bordeaux",
     openTime: "11h-22h",
     infos: "Réduction de -20% pour tous les wilders",
