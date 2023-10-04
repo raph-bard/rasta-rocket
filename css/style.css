@@ -549,18 +549,36 @@ a.card:hover {
   text-align: left;
   width: 100%;
 }
-.imagecoeur-container {
-  /* background-image: url(https://images.unsplash.com/photo-1543007630-9710e4a00a20?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60); */
-
-  width: 100%;
-  height: 230px;
-  margin-top: 0.7em;
-  background-size: cover;
-  border-radius: 5px;
-  background-position: center;
-  display: flex;
+.overlay-container {
+    position: relative; /* Position relative pour que les éléments enfants soient positionnés par rapport à ce conteneur */
+  }
+  
+  .overlay-container h3 {
+    position: absolute; /* Position absolue pour le titre */
+    bottom: 23px; /* Positionnez le titre 10px en bas du conteneur */
+    right: 0; 
+    margin: 0; 
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: var(--second-color);
+    border-radius: 4px;
+    padding: 0 20px;
+    color: white;
+    padding-right: 90px;
 }
 
+.imagecoeur-container {
+    width: 100%;
+    height: 230px;
+    margin-top: .7em;
+    background-size: cover;
+    border-radius: 5px;
+    background-position: center;
+    display: flex;
+  }
+  
 /* --- About Us --- */
 
 .aboutus h2 {
@@ -1118,5 +1136,5 @@ iframe {
 
 @media screen and (max-width: 1200px) {
   /* ------- main -------- */
-  
+
 }
