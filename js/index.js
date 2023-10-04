@@ -308,33 +308,29 @@ popupBar.addEventListener("click", function (e) {
   }
 });
 
-
 /****      SLIDER COUP DE COEUR             */
 
 const coupDeCoeurContainer = document.querySelector(".coeur-container");
 
-let barPrivilige = bars
-  .filter((bar) => bar.coupDeCoeur === true)[0]; 
-  
-    const overlayContainer = document.createElement("div");
-    overlayContainer.classList.add("overlay-container");
+let barPrivilige = bars.filter((bar) => bar.coupDeCoeur === true)[0];
 
-    const h3 = document.createElement("h3");
-    h3.textContent = `${barPrivilige.name}`
-    
-    const link = document.createElement("a");
-    link.href = `bar-detail.html?id=${barPrivilige.id}` ; 
-    
-    const div = document.createElement("div");
-    div.classList.add("imagecoeur-container");
-    div.style.background = `url(${barPrivilige.img}) no-repeat center/cover`;
-    
-   
-    link.appendChild(div)
-    overlayContainer.appendChild(h3);
-    overlayContainer.appendChild(link);
-    coupDeCoeurContainer.appendChild(overlayContainer);
+const overlayContainer = document.createElement("div");
+overlayContainer.classList.add("overlay-container");
 
+const h3 = document.createElement("h3");
+h3.textContent = `${barPrivilige.name}`;
+
+const link = document.createElement("a");
+link.href = `bar-detail.html?id=${barPrivilige.id}`;
+
+const div = document.createElement("div");
+div.classList.add("imagecoeur-container");
+div.style.background = `url(${barPrivilige.img}) no-repeat center/cover`;
+
+link.appendChild(div);
+overlayContainer.appendChild(h3);
+overlayContainer.appendChild(link);
+coupDeCoeurContainer.appendChild(overlayContainer);
 
 /****** filtering ******/
 
