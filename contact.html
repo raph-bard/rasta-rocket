@@ -1,55 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
     <title>About Us</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header class="bg-main"></header>
     <main>
-        <div class="bandeau-container">
-            <div class="bandeau" style="background-image: url('media/cafe-neon.jpg')">
-                <h1 class="h1contact">Contact</h1>
-            </div>
+      <div class="bandeau-container">
+        <div
+          class="bandeau"
+          style="background-image: url('media/cafe-neon.jpg')"
+        >
+          <h1 class="h1contact">Contact</h1>
         </div>
-       <div class="container">
-          <div class="container-contact">
-
-
-            <div class="contact-form">
-                <form action="https://formspree.io/EMAIL>" method="POST">
-                    <label for="name">Nom :</label>
-                    <input type="text" name="nom" id="nom" placeholder="Entrer votre noms" required>
-                    <label for="surname">Prénom :</label>
-                    <input type="text" name="surname" id="surname" placeholder="Entrer votre prénom" required>
-                    <label for="email">Email :</label>
-                    <input type="email" name="email" id="email" placeholder="entrer votre email" required>
-                    <label for="message">Message :</label>
-                    <textarea name="message" id="message" cols="50" rows="10" placeholder="Entrer votre message" required></textarea>
-                    <div class="rating">
-                        <input value="5" name="rating" id="star5" type="radio">
-                        <label for="star5"></label>
-                        <input value="4" name="rating" id="star4" type="radio">
-                        <label for="star4"></label>
-                        <input value="3" name="rating" id="star3" type="radio">
-                        <label for="star3"></label>
-                        <input value="2" name="rating" id="star2" type="radio">
-                        <label for="star2"></label>
-                        <input value="1" name="rating" id="star1" type="radio">
-                        <label for="star1"></label>
-                      </div>
-                    <button type="button" id="btn-submit">Envoyer</button>
-                    <input type="reset" value="Annuler">  
-            </div>        
-        </div>             
- 
+      </div>
+      <div class="container">
+        <div class="container-contact">
+          <div class="contact-form">
+            <form action="https://formspree.io/EMAIL>" method="POST">
+              <label for="name">Nom :</label>
+              <input
+                type="text"
+                name="nom"
+                id="nom"
+                placeholder="Entrer votre noms"
+                required
+              />
+              <label for="surname">Prénom :</label>
+              <input
+                type="text"
+                name="surname"
+                id="surname"
+                placeholder="Entrer votre prénom"
+                required
+              />
+              <label for="email">Email :</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="entrer votre email"
+                required
+              />
+              <label for="message">Message :</label>
+              <textarea
+                name="message"
+                id="message"
+                cols="50"
+                rows="10"
+                placeholder="Entrer votre message"
+                required
+              ></textarea>
+              <div class="rating">
+                <input value="5" name="rating" id="star5" type="radio" />
+                <label for="star5"></label>
+                <input value="4" name="rating" id="star4" type="radio" />
+                <label for="star4"></label>
+                <input value="3" name="rating" id="star3" type="radio" />
+                <label for="star3"></label>
+                <input value="2" name="rating" id="star2" type="radio" />
+                <label for="star2"></label>
+                <input value="1" name="rating" id="star1" type="radio" />
+                <label for="star1"></label>
+              </div>
+              <button type="button" id="btn-submit">Envoyer</button>
+              <input type="reset" value="Annuler" />
+            </form>
+          </div>
+        </div>
+      </div>
     </main>
     <footer class="footer"></footer>
     <script src="js/contact.js"></script>
-</body>
-
+  </body>
 </html>
