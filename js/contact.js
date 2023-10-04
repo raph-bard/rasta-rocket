@@ -59,7 +59,7 @@ const nom = document.querySelector("#nom");
 
 const btnSubmit = document.querySelector("#btn-submit");
 btnSubmit.addEventListener("click", () => {
-  console.log(nom);
+ 
   const alertMessage = `Votre message a demande de contact a bien été envoyée`;
   alert(alertMessage);
 });
