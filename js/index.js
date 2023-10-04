@@ -12,7 +12,7 @@ let bars = [
       "Plonge dans 800m2 de folie, de fête et de bonne humeur ! 🍻 Avec plus de 30 bières à la pression, des tapas à savourer en terrasse, des matchs en direct et des soirées inoubliables, le Délirium Café promet de devenir ton nouveau lieu de prédilection ! 🎶 ",
     ambianceDescription: "",
     price: "expensive",
-    type: "biere",
+    type: "Bières",
     location: "Bordeaux",
     coupDeCoeur: false,
     adress: "30 Quai Virginie Hériot, 33300 Bordeaux",
@@ -31,9 +31,9 @@ let bars = [
       "Notre engagement envers la qualité et la diversité se reflète également dans nos dix tirages pression en constante évolution. Nous renouvelons souvent notre sélection, offrant ainsi à nos clients la possibilité de déguster les dernières pépites de la bière artisanale. Chaque visite au bar est une opportunité de découvrir de nouvelles saveurs, de partager vos découvertes avec des amis et d'explorer l'univers riche et varié de la bière. Bien entendu, notre offre ne se limite pas qu'à la bière. Pour satisfaire tous les goûts, nous proposons également une gamme de boissons non alcoolisées rafraîchissantes, ainsi que des planches de fromages et de saucissons pour accompagner parfaitement vos boissons préférées. Chez nous, il y en a pour tous les palais, que vous soyez passionné de bière, ou simplement à la recherche d'un endroit convivial pour vous détendre et savourer de délicieuses bouchées.",
     ambianceDescription: "",
     price: "cheap",
-    type: "biere",
+    type: "Bières",
     location: "Bordeaux",
-    coupDeCoeur: false,
+    coupDeCoeur: true,
     adress: "63 Quai Virginie Hériot, 33300 Bordeaux",
     openTime: "11h-22h",
     infos: "Réduction de -20% pour tous les wilders",
@@ -50,7 +50,7 @@ let bars = [
       "En bouteille ou en fût. Avec ou sans saucisson. Avec ou sans copains, mais surtout avec. Parce que pour nous, la bière n’est pas quelque chose que l’on boit, mais que l’on partage. Physiquement, c’est bel et bien une cave à bière : on y trouve plus de 500 références de marques parmi les plus savoureuses et les plus étonnantes. Artisanales, d’Abbaye ou de spécialité, blondes, brunes ou ambrées, fortes ou légères, de France, de Belgique ou d’ailleurs, en bouteille ou en fût, à l’unité ou à la caisse, elles sont toutes différentes et toutes méritent qu’on les découvre.",
     ambianceDescription: "",
     price: "affordable",
-    type: "biere",
+    type: "Bières et Cocktails",
     location: "Bordeaux",
     coupDeCoeur: false,
     adress: "10 Quai Lawton, 33300 Bordeaux",
@@ -70,7 +70,7 @@ let bars = [
       "L’originalité du concept se dessine autour d’une idée forte : anoblir la bière et démocratiser le vin. Cet ADN s’exprime en magasin par un espace de vente composé d’une cave à vins, à bières, et spiritueux, doublé d’un espace bar dédié à la découverte et à la dégustation. Le concept est renforcé par l’after-work, cette tendance qui plaît et qui rassemble toutes les générations en fin de journée après le travail autour d’un verre. Nos magasins ferment donc entre 20h et 20h30. Dans cette ambiance chaleureuse, une place importante est donnée au choix et au conseil. Nous veillons à maintenir de la convivialité dans nos magasins en proposant à nos clients de nombreuses animations : soirées thématiques, retransmissions sportives, concerts… V and B, ce n’est pas vraiment un bar et pas vraiment un magasin, c’est un lieu de vie qui permet de découvrir des produits minutieusement sélectionnés,",
     ambianceDescription: "",
     price: "cheap",
-    type: "vin biere",
+    type: "Vins et Bières",
     location: "Bordeaux",
     coupDeCoeur: false,
     adress: "5 Rue la Motte Picquet, 33300 Bordeaux",
@@ -89,7 +89,7 @@ let bars = [
       "Imaginez un lieu convivial au cœur des Halles de Bacalan, un endroit idéal pour les amateurs de boissons. Notre bar offre bien plus qu'une simple expérience, c'est un lieu où se retrouvent les passionnés et les curieux en quête de découvertes gustatives. Lorsque vous franchirez notre porte, vous ressentirez immédiatement l'ambiance détendue qui règne ici. Que vous soyez un passionné ou un novice en matière de boissons, notre bar à vins, cocktails, spiritueux et bières vous attend pour une expérience gustative mémorable. Laissez-vous tenter par l'appel de Bacalan et plongez dans une expérience qui éveillera vos sens et vous donnera envie de revenir.",
     ambianceDescription: "",
     price: "affordable",
-    type: "vin",
+    type: "Vins",
     location: "Bordeaux",
     coupDeCoeur: false,
     adress: "Les Halles de Bacalan, 10 Quai de Bacalan, 33300 Bordeaux",
@@ -108,7 +108,7 @@ let bars = [
       "Situé au cœur de Bacalan à Bordeaux et ouvert depuis 1923, le restaurant bar et cave de Bacalan vous accueille dans une ambiance chaleureuse et conviviale. Christian Gerardi vous propose des plats traditionnels, des menus du jour préparés avec des produits du moment. Le Bar Cave de Bacalan vous propose ses prestations : <ul><li>Bar</li><li>Restaurant</li><li>Cave</li><li>Epicerie</li> Notre établissement vous accueillera tout au long de la journée pour déguster un repas ou un apéritif entre amis ou en famille. Christian vous accueille du lundi au samedi dans un cadre traditionnel aux teintes chaleureuses. Le service soigné et attentif, sait se faire discret pour un repas d’affaire ou un tête à tête, n’hésitez pas à venir nous découvrir au 180 rue de Blanqui à Bacalan sur Bordeaux.",
     ambianceDescription: "",
     price: "cheap",
-    type: "vin",
+    type: "Vins",
     location: "Bordeaux",
     coupDeCoeur: false,
     adress: "180 Rue Blanqui, 33300 Bordeaux",
@@ -127,7 +127,7 @@ let bars = [
       "Le Carrelet, un bar où la magie des cocktails rencontre l'ambiance envoûtante d'un lieu où l'on se sent chez soi,</br> Que vous soyez un habitué du Carrelet ou que ce soit votre première visite, vous serez toujours accueilli avec chaleur et un service attentionné. Notre bar est un lieu de rencontre, de célébration et de découverte, où chaque verre raconte une histoire et chaque visite est une expérience à part entière.</br> Au Carrelet, vous pourrez déguster des cocktails raffinés et savoureux, élaborés à partir de produits frais et de saison par une équipe de barmans passionnés. Notre carte propose un large choix de cocktails classiques et originaux, ainsi que des créations exclusives.</br>  Le Carrelet est également un lieu idéal pour se retrouver entre amis ou en famille. L'ambiance est chaleureuse et conviviale, et l'équipe est toujours prête à partager sa passion des cocktails avec vous. Nous organisons régulièrement des soirées à thème, des cours de mixologie et des dégustations de cocktails, afin de vous faire découvrir de nouvelles saveurs et de nouveaux horizons.</br> Que vous soyez à la recherche d'une soirée festive ou d'un moment de détente entre amis, le Carrelet est le lieu idéal pour vous. Venez nous rejoindre pour une expérience inoubliable, où la magie des cocktails rencontre l'ambiance envoûtante d'un lieu où l'on se sent chez soi.",
     ambianceDescription: "",
     price: "affordable",
-    type: "vin",
+    type: "Cocktails",
     location: "Bordeaux",
     coupDeCoeur: false,
     adress: "64bis Rue Lucien Faure, 33300 Bordeaux",
@@ -146,7 +146,7 @@ let bars = [
       "Le Home Run Bar, un lieu de vie où toutes les générations se rencontrent Le est un bar situé à Bordeaux et est ouvert depuis 2022. Il est rapidement devenu un lieu de rendez-vous incontournable pour les habitants de la ville. Le bar est conçu comme un lieu de vie, avec une ambiance chaleureuse et animée. Il accueille toutes les générations, des jeunes aux moins jeunes, des couples aux célibataires, des supporters aux amateurs de sport.</br> Le Home Run Bar propose une large gamme de services et d'activités pour répondre à toutes les envies. Il dispose d'une tribune pour regarder les matchs sportifs, de tables de beer-pong pour les amateurs de ce jeu, d'un coin canapé pour se détendre et d'une grande terrasse avec vue sur les Bassins à Flot. Le Home Run Bar est un lieu où il fait bon vivre. L'ambiance est chaleureuse et animée, grâce à une équipe de barmans accueillants et à une programmation musicale variée.</br> Le bar propose des concerts, des soirées à thème et des événements sportifs pour animer ses soirées. Il est également possible de privatiser le bar pour des événements privés.</br> Des services et des activités pour tous, </br> Le Home Run Bar propose une large gamme de services et d'activités pour répondre à toutes les envies. </br> Les amateurs de sport peuvent regarder les matchs en direct sur la tribune, tandis que les amateurs de beer-pong peuvent s'affronter sur les tables mises à leur disposition. Un coin canapé permet de se détendre entre amis, et la grande terrasse offre une vue imprenable sur les Bassins à Flot.</br> Un lieu incontournable à Bordeaux </br> Le Home Run Bar est un lieu incontournable à Bordeaux. Il est le rendez-vous idéal pour passer une bonne soirée, que vous soyez seul, en couple, entre amis ou en famille.",
     ambianceDescription: "",
     price: "affordable",
-    type: "vin",
+    type: "Cocktails",
     location: "Bordeaux",
     coupDeCoeur: false,
     adress: "106 Quai Lawton, 33300 Bordeaux",
@@ -165,7 +165,7 @@ let bars = [
       "Le Café Oz Bordeaux, un lieu où l'esprit australien règne Il est le premier Café Oz à ouvrir ses portes en France, et il est rapidement devenu un lieu incontournable de la vie nocturne bordelaise. Le Café Oz Bordeaux incarne l'authenticité de l'esprit australien, où la philosophie 'no worries' règne en maître. L'ambiance est décontractée et conviviale, et l'équipe est toujours prête à faire passer un bon moment aux clients. Le Café Oz Bordeaux est un lieu pour tous. Que vous soyez un amateur de sports, un mélomane ou un épicurien, vous trouverez votre bonheur.</br> Pour les amateurs de sports, le Café Oz Bordeaux dispose d'écrans géants pour suivre les derniers matchs de rugby, de football et d'autres sports. L'atmosphère est festive et animée.</br> Pour les mélomanes il organise régulièrement des soirées animées par des DJs locaux. L'ambiance est chaleureuse et festive et le menu est varié et gourmand.</br> En journée, le Café Oz Bordeaux est un lieu idéal pour se détendre et profiter d'une cuisine délicieuse. Le soir, l'ambiance se transforme et devient plus festive. C'est l'endroit idéal pour passer une bonne soirée entre amis ou en famille. Ce qui rend le Café Oz Bordeaux si spécial, c'est son atmosphère unique. Dès que vous franchissez les portes du bar, vous êtes transporté en Australie. La décoration, la musique et l'ambiance générale vous font sentir comme si vous étiez à l'autre bout du monde. C'est un lieu où l'on peut se détendre et s'amuser dans un cadre convivial et décontracté. C'est l'endroit idéal pour passer une soirée inoubliable entre amis ou en famille.",
     ambianceDescription: "",
     price: "affordable",
-    type: "cocktails vin biere",
+    type: "Cocktails, Vins et Bières",
     location: "Bordeaux",
     coupDeCoeur: false,
     adress: "1 Quai Armand Lalande Hangar G2, 33300 Bordeaux",
@@ -201,26 +201,18 @@ let options = (bar) => {
         </div>`;
       break;
   }
-  switch (bar.type) {
-    case "biere":
-      optionsHTML += `<div class="card-option">
-      <i class="fa-solid fa-beer-mug-empty"></i>
-        <h4>Bières</h4>
+
+  optionsHTML += `<div class="card-option">
+    ${
+      bar.type.includes("Bières")
+        ? `<i class="fa-solid fa-beer-mug-empty"></i>`
+        : bar.type.includes("Vins")
+        ? `<i class="fa-solid fa-wine-bottle"></i>`
+        : `<i class="fa-solid fa-martini-glass"></i>`
+    }
+        <h4>${bar.type}</h4>
         </div>`;
-      break;
-    case "cocktail":
-      optionsHTML += `<div class="card-option">
-      <i class="fa-solid fa-martini-glass"></i>
-        <h4>Cocktails</h4>
-        </div>`;
-      break;
-    case "vin":
-      optionsHTML += `<div class="card-option">
-      <i class="fa-solid fa-wine-bottle"></i>
-        <h4>Vins</h4>
-        </div>`;
-      break;
-  }
+
   return optionsHTML;
 };
 
@@ -275,8 +267,8 @@ popButs.forEach(function (popBut) {
     const popUpTitre = contenuPopUp.querySelector("h2");
     popUpTitre.innerHTML = barSelectionne.name;
 
-    const photoBar = contenuPopUp.querySelector("img");
-    photoBar.src = barSelectionne.img;
+    const photoBar = contenuPopUp.querySelector(".pop-up-img");
+    photoBar.style.backgroundImage = `url(${barSelectionne.img}) `;
 
     const descriptionLongue = contenuPopUp.querySelector("p");
     descriptionLongue.classList.add("ellipsis-6");
@@ -386,8 +378,8 @@ function createPopUp() {
       const popUpTitre = contenuPopUp.querySelector("h2");
       popUpTitre.innerHTML = barSelectionne.name;
 
-      const photoBar = contenuPopUp.querySelector("img");
-      photoBar.src = barSelectionne.img;
+      const photoBar = contenuPopUp.querySelector(".pop-up-img");
+      photoBar.style.backgroundImage = `url(${barSelectionne.img}) `;
 
       const descriptionLongue = contenuPopUp.querySelector("p");
       descriptionLongue.innerHTML = barSelectionne.shortDescription;
