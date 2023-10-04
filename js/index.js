@@ -213,22 +213,6 @@ let options = (bar) => {
         <h4>${bar.type}</h4>
         </div>`;
 
- /* if (bar.type.includes("Bières")) {
-    optionsHTML += `<div class="card-option">
-      <i class="fa-solid fa-beer-mug-empty"></i>
-        <h4>Bières</h4>
-        </div>`;
-  }
-  else if (bar.type.includes("Cocktails"))
-    optionsHTML += `<div class="card-option">
-      <i class="fa-solid fa-martini-glass"></i>
-        <h4>Cocktailss</h4>
-        </div>`;
-  else
-    optionsHTML += `<div class="card-option">
-      <i class="fa-solid fa-wine-bottle"></i>
-        <h4>Vinss</h4>
-        </div>`;*/
   return optionsHTML;
 };
 
@@ -393,6 +377,9 @@ function createPopUp() {
       const contenuPopUp = document.querySelector(".popup-bar-container");
       const popUpTitre = contenuPopUp.querySelector("h2");
       popUpTitre.innerHTML = barSelectionne.name;
+
+      const photoBar = contenuPopUp.querySelector("img");
+      photoBar.src = barSelectionne.img;
 
       const descriptionLongue = contenuPopUp.querySelector("p");
       descriptionLongue.innerHTML = barSelectionne.shortDescription;
