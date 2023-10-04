@@ -284,10 +284,8 @@ a.card:hover {
 }
 .card-image {
   width: 100%;
-  min-height: 200px;
+  min-height: 220px;
   border-radius: 3px;
-  background: url("https://media.timeout.com/images/105922006/750/422/image.jpg")
-    no-repeat center/cover;
 }
 .card-details {
   display: flex;
@@ -373,7 +371,6 @@ a.card:hover {
   margin-top: 50px;
   width: 100%;
   height: 300px;
-  background: url("/media/cafe-neon.jpg") no-repeat center/cover;
 }
 .container-infos-bar h1 {
   font-size: 26px;
@@ -471,6 +468,7 @@ a.card:hover {
   background-color: white;
   border-radius: 15px;
   font-size: 16px;
+  overflow-x: auto;
 }
 
 .popup-bar p {
@@ -551,18 +549,36 @@ a.card:hover {
   text-align: left;
   width: 100%;
 }
-.imagecoeur-container {
-  /* background-image: url(https://images.unsplash.com/photo-1543007630-9710e4a00a20?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60); */
-
-  width: 100%;
-  height: 230px;
-  margin-top: 0.7em;
-  background-size: cover;
-  border-radius: 5px;
-  background-position: center;
-  display: flex;
+.overlay-container {
+    position: relative; /* Position relative pour que les éléments enfants soient positionnés par rapport à ce conteneur */
+  }
+  
+  .overlay-container h3 {
+    position: absolute; /* Position absolue pour le titre */
+    bottom: 23px; /* Positionnez le titre 10px en bas du conteneur */
+    right: 0; 
+    margin: 0; 
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: var(--second-color);
+    border-radius: 4px;
+    padding: 0 20px;
+    color: white;
+    padding-right: 90px;
 }
 
+.imagecoeur-container {
+    width: 100%;
+    height: 230px;
+    margin-top: .7em;
+    background-size: cover;
+    border-radius: 5px;
+    background-position: center;
+    display: flex;
+  }
+  
 /* --- About Us --- */
 
 .aboutus h2 {
@@ -593,6 +609,7 @@ a.card:hover {
   position: relative;
   overflow: hidden;
   margin-bottom: 50px;
+  color: white;
 }
 .aboutus .team-card div {
   position: absolute;
@@ -617,15 +634,17 @@ a.card:hover {
 .aboutus .team-card div,
 .aboutus .team-card img,
 .aboutus .team-card:hover img {
-  transition: all 0.3s;
+  transition: transform 0.3s;
 }
 .aboutus .team-card img {
   float: left;
   width: 100%;
   height: auto;
+  filter: grayscale(100%);
 }
 .aboutus .team-card:hover img {
   transform: scale(1.08);
+  filter: none;
 }
 .aboutus .team-card strong {
   display: block;
@@ -1059,6 +1078,9 @@ iframe {
 @media screen and (min-width: 992px) {
   /* ------- main -------- */
 
+  .popup-bar .container {
+    padding: 0 1.5em;
+  }
   .bandeau {
     padding: 15vh 10%;
   }
@@ -1068,12 +1090,6 @@ iframe {
 
   .card {
     width: 49%;
-    flex-direction: row;
-    padding: 1.3rem;
-  }
-
-  .card-details {
-    padding: 0;
   }
 
   .card h2 {
@@ -1086,18 +1102,9 @@ iframe {
     width: 100%;
     justify-content: space-between;
   }
-
-  .card-image {
-    min-width: 100px;
-    max-width: 130px;
-    margin-right: 1.3rem;
-    min-height: auto;
-  }
 }
 
-.card-details {
-  padding: 0;
-}
+
 
 .card h2 {
   margin-top: 0;
@@ -1111,10 +1118,7 @@ iframe {
 }
 
 .card-image {
-  min-width: 100px;
-  max-width: 130px;
   margin-right: 1.3rem;
-  min-height: auto;
 }
 
 @media screen and (max-width: 992px) {
@@ -1125,9 +1129,6 @@ iframe {
 
 @media screen and (min-width: 1200px) {
   /* bandeau */
-  .popup-bar .container {
-    padding: 0 1.5em;
-  }
   .popup-bar .container-horaires {
     padding: 30px 15px 30px 15px;
   }
@@ -1135,7 +1136,5 @@ iframe {
 
 @media screen and (max-width: 1200px) {
   /* ------- main -------- */
-  .container {
-    padding: 0 1.5em;
-  }
+
 }
