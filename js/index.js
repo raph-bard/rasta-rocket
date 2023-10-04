@@ -275,6 +275,9 @@ popButs.forEach(function (popBut) {
     const popUpTitre = contenuPopUp.querySelector("h2");
     popUpTitre.innerHTML = barSelectionne.name;
 
+    const photoBar = contenuPopUp.querySelector("img");
+    photoBar.src = barSelectionne.img;
+
     const descriptionLongue = contenuPopUp.querySelector("p");
     descriptionLongue.innerHTML = barSelectionne.shortDescription;
 
@@ -282,10 +285,10 @@ popButs.forEach(function (popBut) {
     adresseInfo.innerHTML = barSelectionne.location;
 
     const horairesInfo = document.querySelector(".horaires span");
-    horairesInfo.innerHTML = barSelectionne.openTime; // todo
+    horairesInfo.innerHTML = barSelectionne.openTime;
 
     const moreInfo = document.querySelector(".option-supplementaires span");
-    moreInfo.innerHTML = barSelectionne.infos; // todo
+    moreInfo.innerHTML = barSelectionne.infos;
 
     const btnLink = document.querySelector(".pop-up-button");
     btnLink.href = `bar-detail.html?id=${barId}`;
