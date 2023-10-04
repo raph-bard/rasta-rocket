@@ -433,12 +433,16 @@ a.card:hover {
 .container-horaires .adresse {
   margin-top: 10px;
 }
-
-.infos-genriques .horaires,
-.infos-genriques .adresse,
-.infos-genriques .option-supplementaires {
-  margin-top: 10px;
+.adresse span ,.horaires span, .infos-genriques span{
+  display: inline-block;
+  padding-left: 10px;
 }
+
+i{
+  min-width: 1rem;
+  color: var(--second-color);
+}
+
 
 /*************** popup bar detail **************/
 
