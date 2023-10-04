@@ -220,12 +220,12 @@ main {
   font-size: 1rem;
 }
 
-.categories-container span.category.active,
-.categories-container span.category:hover {
+.categories-container select.category.active,
+.categories-container select.category:hover {
   color: black;
 }
 
-.categories-container span.category::after {
+.categories-container select.category::after {
   content: "";
   height: 8px;
   background-color: var(--second-color);
@@ -545,7 +545,6 @@ a.card:hover {
   width: 100%;
 }
 
-
 .coeur-container h2 {
   text-align: left;
   width: 100%;
@@ -573,7 +572,6 @@ a.card:hover {
 
   
 .imagecoeur-container {
-
     width: 100%;
     height: 230px;
     margin-top: .7em;
@@ -583,9 +581,6 @@ a.card:hover {
     display: flex;
   }
   
-
-
-
 /* --- About Us --- */
 
 .aboutus h2 {
@@ -1109,14 +1104,6 @@ iframe {
     width: 100%;
     justify-content: space-between;
   }
-
-  .card-image {
-    min-width: 100px;
-    max-width: 130px;
-    margin-right: 1.3rem;
-    min-height: auto;
-  }
-
 }
 
 
