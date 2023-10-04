@@ -275,8 +275,8 @@ popButs.forEach(function (popBut) {
     const popUpTitre = contenuPopUp.querySelector("h2");
     popUpTitre.innerHTML = barSelectionne.name;
 
-    const photoBar = contenuPopUp.querySelector("img");
-    photoBar.src = barSelectionne.img;
+    const photoBar = contenuPopUp.querySelector(".pop-up-img");
+    photoBar.style.backgroundImage = `url(${barSelectionne.img}) `;
 
     const descriptionLongue = contenuPopUp.querySelector("p");
     descriptionLongue.classList.add("ellipsis-6");
@@ -293,7 +293,6 @@ popButs.forEach(function (popBut) {
 
     const moreInfo = document.querySelector(".option-supplementaires span");
     moreInfo.innerHTML = barSelectionne.infos;
-
   });
 });
 
@@ -317,30 +316,27 @@ popupBar.addEventListener("click", function (e) {
 
 const coupDeCoeurContainer = document.querySelector(".coeur-container");
 
-
 let barPrivilige = bars.filter((bar) => bar.coupDeCoeur === true)[0];
-if (bars.filter((bar) => bar.coupDeCoeur === true).length === 0){
-coupDeCoeurContainer.style.display = `none`;}
+if (bars.filter((bar) => bar.coupDeCoeur === true).length === 0) {
+  coupDeCoeurContainer.style.display = `none`;
+} else {
+  const overlayContainer = document.createElement("div");
+  overlayContainer.classList.add("overlay-container");
 
-else {
+  const h3 = document.createElement("h3");
+  h3.textContent = `${barPrivilige.name}`;
 
-const overlayContainer = document.createElement("div");
-overlayContainer.classList.add("overlay-container");
+  const link = document.createElement("a");
+  link.href = `bar-detail.html?id=${barPrivilige.id}`;
 
-const h3 = document.createElement("h3");
-h3.textContent = `${barPrivilige.name}`;
+  const div = document.createElement("div");
+  div.classList.add("imagecoeur-container");
+  div.style.background = `url(${barPrivilige.img}) no-repeat center/cover`;
 
-const link = document.createElement("a");
-link.href = `bar-detail.html?id=${barPrivilige.id}`;
-
-const div = document.createElement("div");
-div.classList.add("imagecoeur-container");
-div.style.background = `url(${barPrivilige.img}) no-repeat center/cover`;
-
-link.appendChild(div);
-overlayContainer.appendChild(h3);
-overlayContainer.appendChild(link);
-coupDeCoeurContainer.appendChild(overlayContainer);
+  link.appendChild(div);
+  overlayContainer.appendChild(h3);
+  overlayContainer.appendChild(link);
+  coupDeCoeurContainer.appendChild(overlayContainer);
 }
 
 /****** filtering ******/
@@ -407,5 +403,3 @@ function createPopUp() {
     });
   });
 }
-// appending filtered bars
-filteredBars.forEach((bar) => barList.appendChild(createCardMobile(bar)));
