@@ -115,8 +115,7 @@ let bars = [
     imgBar: "media/cave-bacalan-2.jpeg",
     shortDescription:
       "Restauration traditionnelle au juste prix à Bacalan sur Bordeaux, Profitez de notre bar à l’ambiance chaleureuse et conviviale entre amis, famille ou rendez-vous d’affaires, Christian vous fera découvrir sa passion et sa meilleure sélection de vins de Bordeaux et de France",
-    longDescription:
-      `Situé au cœur de Bacalan à Bordeaux et ouvert depuis 1923, le restaurant bar et cave de Bacalan vous accueille dans une ambiance chaleureuse et conviviale. Christian Gerardi vous propose des plats traditionnels, des menus du jour préparés avec des produits du moment. Le Bar Cave de Bacalan vous propose ses prestations : Restaurant, Cave et Epicerie.</br>
+    longDescription: `Situé au cœur de Bacalan à Bordeaux et ouvert depuis 1923, le restaurant bar et cave de Bacalan vous accueille dans une ambiance chaleureuse et conviviale. Christian Gerardi vous propose des plats traditionnels, des menus du jour préparés avec des produits du moment. Le Bar Cave de Bacalan vous propose ses prestations : Restaurant, Cave et Epicerie.</br>
       </br>
       Notre établissement vous accueillera tout au long de la journée pour déguster un repas ou un apéritif entre amis ou en famille. Christian vous accueille du lundi au samedi dans un cadre traditionnel aux teintes chaleureuses. Le service soigné et attentif, sait se faire discret pour un repas d’affaire ou un tête à tête, n’hésitez pas à venir nous découvrir au 180 rue de Blanqui à Bacalan sur Bordeaux.`,
     ambianceDescription: `Le bar "Cav de Bacalan" à Bordeaux offre une ambiance unique qui marie l'élégance du vin avec l'effervescence d'un bar à vin moderne. En pénétrant dans cet établissement, vous serez immédiatement enveloppé par une atmosphère chaleureuse et conviviale.</br> 
@@ -129,7 +128,7 @@ let bars = [
     adress: "180 Rue Blanqui, 33300 Bordeaux",
     openTime: "Undefined",
     infos: "Lieu pittoresque à découvrir",
-    linkMap: `https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d45239.20383490056!2d-0.6213514!3d44.8734856!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5528e94c7eebd7%3A0x2cf6a9d8989751a4!2sBar%20Cave%20De%20bacalan!5e0!3m2!1sfr!2sfr!4v1696344998324!5m2!1sfr!2sfr`,
+    linkMap: `https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11311.615042162102!2d-0.5582571937011751!3d44.86425397817153!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5528917c6cbfbd%3A0xaef9fdc00d5072a4!2sLes%20Halles%20Bacalan!5e0!3m2!1sen!2sfr!4v1696516623492!5m2!1sen!2sfr`,
   },
   {
     id: 7,
