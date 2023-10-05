@@ -526,10 +526,7 @@ main {
 .popup-bar p {
   margin-top: 15px;
   margin-bottom: 15px;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
+  overflow-y: scroll;
 }
 .popup-bar .container {
   overflow-x: auto;
