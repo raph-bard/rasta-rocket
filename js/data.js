@@ -2,7 +2,7 @@ let bars = [
   {
     id: 1,
     name: "Delirium Café",
-    img: "media/delerium-bandeau.jpeg",
+    img: "media/delirium-bandeau.jpeg",
     imgBar: "media/delirium-cafe-2.jpg",
     shortDescription:
       "Découvrez le Délirium Café, un bar à bières convivial de 800m2. Avec plus de 30 bières à la pression, des tapas en terrasse, des matchs en direct et des soirées animées, c'est l'endroit idéal pour passer un moment agréable entre amis. Profitez de l'ambiance festive et décontractée !",
@@ -16,7 +16,7 @@ let bars = [
     price: "expensive",
     type: "Bières",
     location: "Bordeaux",
-    coupDeCoeur: true,
+    coupDeCoeur: false,
     adress: "30 Quai Virginie Hériot, 33300 Bordeaux",
     openTime: "16h-2h",
     infos: "Bar à bières belges",
@@ -132,7 +132,7 @@ let bars = [
   {
     id: 7,
     name: "Le Carrelet",
-    img: "media/carrelet-bandeau.jpg",
+    img: "media/bandeau-carlet.jpeg",
     imgBar: "media/carrelet.jpg",
     shortDescription:
       "Le Carrelet est bien plus qu'un simple bar à cocktails, c'est un havre de convivialité et de créativité, Notre établissement vous invite à un voyage gustatif à travers l'art de la mixologie, où les classiques intemporels et les créations audacieuses cohabitent harmonieusement.",
@@ -144,7 +144,7 @@ let bars = [
     price: "affordable",
     type: "Cocktails",
     location: "Bordeaux",
-    coupDeCoeur: false,
+    coupDeCoeur: true,
     adress: "64bis Rue Lucien Faure, 33300 Bordeaux",
     openTime: "17h-02h",
     infos: "Chaleureux et décontracté",
