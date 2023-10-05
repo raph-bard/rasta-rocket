@@ -2,20 +2,25 @@
 
 // s'active aussi après 4.5s
 /******* handling animations *******/
+let containerIndex = document.querySelector(".transition-div");
 if (!!sessionStorage.getItem("visited")) {
-  document.querySelector(".shaker-container").remove();
   let bandeauP = document
     .querySelector(".bandeau p")
     .classList.remove("opacity-delayed-index");
   let bandeauH = document
     .querySelector(".bandeau h1")
     .classList.remove("opacity-delayed-index");
-  let containerIndex = document.querySelector(".container");
+
   containerIndex.classList.remove("opacity-delayed2-index");
   containerIndex.classList.add("opacity-delayed");
   document.documentElement.classList.remove("noscroll");
+  document
+    .querySelector(".container")
+    .classList.remove("opacity-delayed2-index");
 } else {
   sessionStorage.setItem("visited", true);
+  var deleteShaker = createTransition(); //document.querySelector(".shaker-container");
+  containerIndex.appendChild(deleteShaker);
   if (window.location.pathname === "/index.html") {
     // Ajoute la classe "no-scroll" à la balise HTML dès le début, la condition sert à vérifier si on est bien sur la page index.
     document.documentElement.classList.add("noscroll");
@@ -26,15 +31,32 @@ if (!!sessionStorage.getItem("visited")) {
     }, 4500); // s'active après 4.5s
   }
 
-  var deleteShaker = document.querySelector(".shaker-container");
-
   // setTimeout sert à définir un délai
   setTimeout(function () {
     if (deleteShaker) {
       // Supprime l'html de l'animation pour ne pas créer de bugs de z-index une fois qu'il disparait
-      deleteShaker.parentNode.removeChild(deleteShaker);
+      //deleteShaker.parentNode.removeChild(deleteShaker);
+      deleteShaker.remove();
     }
   }, 4500);
+}
+
+function createTransition() {
+  const transtion = document.createElement("div");
+  transtion.classList.add("shaker-container");
+  transtion.innerHTML = `
+  <div class="shaker-animation-container">
+        <div class="shaker-animation">
+          <div class="shaker-item"></div>
+          <div class="glass-item"></div>
+          <div class="straw-item"></div>
+          <div class="loader-container">
+            <div class="loader"></div>
+          </div>
+        </div>
+  </div>
+  `;
+  return transtion;
 }
 /*      Creation Tableau d'objets bars         */
 
