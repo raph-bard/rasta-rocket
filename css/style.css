@@ -171,8 +171,9 @@ main {
   padding: 20px 0px;
   margin-top: 20px;
 }
-.container p {
+.contact p {
   margin-bottom: 40px;
+  text-align: center;
   
 }
 
