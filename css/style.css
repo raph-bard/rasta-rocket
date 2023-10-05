@@ -229,8 +229,12 @@ main {
   font-size: 17px;
 }
 
+.categories-hero h3 {
+  font-size: 25px;
+}
+
 .categories-container h3 {
-  margin-bottom: 15px;
+  margin-bottom: 17px;
 }
 
 .categories-container .categories-hero .btn.active {
