@@ -63,7 +63,7 @@ a:hover {
   overflow: hidden; /* Masque le contenu supplémentaire */
 }
 .ellipsis-6 {
-  max-height: 150px;
+  max-height: 149px;
   overflow: hidden;
 }
 
@@ -71,28 +71,39 @@ a:hover {
 .scale01:hover {
   transform: scale(1.01);
 }
-.scale01, .scale01:hover {
+.scale01,
+.scale01:hover {
   transition: all 0.3s ease;
 }
 
 /* animation d'apparition */
 
 @keyframes opacityDelayed {
-  0% {opacity: 0;} 100% {opacity: 1;} 
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .opacity-delayed {
-  animation: opacityDelayed 1.5s ease 0.5s; 
+  animation: opacityDelayed 1.5s ease 0.5s;
 }
 .opacity-delayed2 {
-  animation: opacityDelayed 1.5s ease 0.9s; 
+  animation: opacityDelayed 1.5s ease 0.9s;
 }
-.index .bandeau h1, .index .bandeau p {
-  animation: opacityDelayed 1.75s ease 4s; 
+.index .bandeau h1,
+.index .bandeau p {
+  animation: opacityDelayed 1.75s ease 4s;
 }
 .index .container {
-  animation: opacityDelayed 1.75s ease 4.7s; 
+  animation: opacityDelayed 1.75s ease 4.7s;
 }
-.opacity-delayed, .opacity-delayed2, .index .container, .index .bandeau h1, .index .bandeau p {
+.opacity-delayed,
+.opacity-delayed2,
+.index .container,
+.index .bandeau h1,
+.index .bandeau p {
   animation-fill-mode: forwards;
   opacity: 0;
 }
@@ -218,8 +229,12 @@ main {
   font-size: 17px;
 }
 
+.categories-hero h3 {
+  font-size: 25px;
+}
+
 .categories-container h3 {
-  margin-bottom: 15px;
+  margin-bottom: 17px;
 }
 
 .categories-container .categories-hero .btn.active {
@@ -236,7 +251,7 @@ main {
 
 .categories-container {
   margin-top: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 }
 
 .categories-container .categories-list {
@@ -299,8 +314,6 @@ main {
   width: 70%;
   left: 0%;
 }
-
-
 
 .card .pop-but {
   position: absolute;
@@ -471,7 +484,6 @@ main {
   margin-top: 10px;
 }
 
-
 /*************** popup bar detail **************/
 
 .popup-bar-container {
@@ -582,12 +594,12 @@ main {
   background-color: var(--main-color);
 }
 /****** icons popup color and style *******/
-.infos-genriques span{
+.infos-genriques span {
   padding-left: 5px;
 }
 
-i{
-  color: var( --second-color);
+i {
+  color: var(--second-color);
   min-width: 1rem;
 }
 
@@ -625,7 +637,8 @@ i{
 .overlay-container:hover h3 {
   padding-right: 80px;
 }
-.overlay-container h3, .overlay-container:hover h3 {
+.overlay-container h3,
+.overlay-container:hover h3 {
   transition: all 0.3s ease;
 }
 
@@ -638,8 +651,6 @@ i{
   background-position: center;
   display: flex;
 }
-
-
 
 /* --- About Us --- */
 
@@ -793,15 +804,6 @@ button {
   border-radius: 7px;
 }
 
-
-
-
-
-
-
-
-
-
 /************* SHAKER ANIMATION *****************/
 
 @keyframes shaker-disapear {
@@ -812,7 +814,6 @@ button {
     opacity: 0;
   }
 }
-
 
 .shaker-container {
   background-color: var(--main-color);
@@ -826,7 +827,8 @@ button {
   animation-fill-mode: forwards;
 }
 
-.shaker-container, .shaker-animation-container {
+.shaker-container,
+.shaker-animation-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -946,7 +948,6 @@ button {
   animation-fill-mode: forwards;
 }
 
-
 /* barre de chargement */
 .loader-container {
   width: 100%;
@@ -974,12 +975,6 @@ button {
     width: 100%;
   }
 }
-
-
-
-
-
-
 
 /* ------------- RESPONSIVE -------------- */
 
@@ -1109,7 +1104,6 @@ button {
     transition: all 0.3s;
   }
 
-
   /* ------- pages -------- */
 }
 /*      map     */
@@ -1223,10 +1217,6 @@ iframe {
     margin-top: 2em;
   }
 }
-
-
-
-
 
 /* RESPONSIVE 992 */
 
