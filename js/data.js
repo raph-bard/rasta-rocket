@@ -2,7 +2,7 @@ let bars = [
   {
     id: 1,
     name: "Delirium Café",
-    img: "media/delerium-bandeau.jpeg",
+    img: "media/delirium-bandeau.jpeg",
     imgBar: "media/delirium-cafe-2.jpg",
     shortDescription:
       "Découvrez le Délirium Café, un bar à bières convivial de 800m2. Avec plus de 30 bières à la pression, des tapas en terrasse, des matchs en direct et des soirées animées, c'est l'endroit idéal pour passer un moment agréable entre amis. Profitez de l'ambiance festive et décontractée !",
@@ -16,7 +16,7 @@ let bars = [
     price: "expensive",
     type: "Bières",
     location: "Bordeaux",
-    coupDeCoeur: true,
+    coupDeCoeur: false,
     adress: "30 Quai Virginie Hériot, 33300 Bordeaux",
     openTime: "16h-2h",
     infos: "Bar à bières belges",
@@ -69,7 +69,7 @@ let bars = [
   {
     id: 4,
     name: "V&B",
-    img: "https://www.rejoinsvandb.fr/wp-content/uploads/2020/09/VandBLeHaillan-5711.jpg",
+    img: "media/v-b-bandeau.jpeg",
     imgBar: "media/v-and-b-bar.jpeg",
     shortDescription:
       "V and B s’inscrit dans l’ère de l’after-work, cette tendance qui plaît et qui rassemble toutes les générations en fin de journée, après le travail, autour d’un verre.",
@@ -91,7 +91,7 @@ let bars = [
     id: 5,
     name: "Vinimarché",
     img: "media/vinimarche.jpg",
-    imgBar: "media/bar-tonneaux.jpg",
+    imgBar: "media/vinimarche-1.jpeg",
     shortDescription:
       "Niché au cœur des Halles de Bacalan, notre bar vous offre une expérience sensorielle incomparable. Que vous soyez amateur de vins raffinés, de cocktails créatifs, de spiritueux exceptionnels ou de bières artisanales, notre établissement vous promet un voyage gustatif inoubliable.",
     longDescription: `Dans cet écrin chaleureux, niché au cœur des Halles de Bacalan, s'écrit une histoire d'échanges et de plaisirs gustatifs. Notre bar transcende l'ordinaire, devenant le point de convergence des passionnés et des curieux, assoiffés de nouvelles expériences sensorielles. Dès que vous franchissez notre seuil, une atmosphère décontractée vous enveloppe, vous invite à vous abandonner à ce lieu d'exception. Que vous soyez un fin connaisseur ou un néophyte dans l'art des libations, notre bar dédié aux vins, aux cocktails, aux spiritueux et aux bières vous tend les bras, prêt à vous guider vers une épopée gustative inoubliable. Laissez-vous envoûter par l'appel envoûtant de Bacalan, plongez dans un univers où vos sens s'éveilleront, où chaque gorgée raconte une histoire, où chaque saveur est une promesse de découverte. Ici, les verres tintent comme des notes de musique, les rires résonnent comme une symphonie de joie. C'est un lieu où les papilles s'éduquent, où les palais s'ouvrent à de nouvelles perspectives, où chaque rencontre est une aventure aromatique.`,
@@ -132,7 +132,7 @@ let bars = [
   {
     id: 7,
     name: "Le Carrelet",
-    img: "media/carrelet-bandeau.jpg",
+    img: "media/bandeau-carlet.jpeg",
     imgBar: "media/carrelet.jpg",
     shortDescription:
       "Le Carrelet est bien plus qu'un simple bar à cocktails, c'est un havre de convivialité et de créativité, Notre établissement vous invite à un voyage gustatif à travers l'art de la mixologie, où les classiques intemporels et les créations audacieuses cohabitent harmonieusement.",
@@ -144,7 +144,7 @@ let bars = [
     price: "affordable",
     type: "Cocktails",
     location: "Bordeaux",
-    coupDeCoeur: false,
+    coupDeCoeur: true,
     adress: "64bis Rue Lucien Faure, 33300 Bordeaux",
     openTime: "17h-02h",
     infos: "Chaleureux et décontracté",
@@ -153,7 +153,7 @@ let bars = [
   {
     id: 8,
     name: "Home Run Café",
-    img: "http://www.homerunbar.fr/wp-content/uploads/2021/10/Photo-concept-1.jpg",
+    img: "media/bandeau-home-run.jpeg",
     imgBar: "media/bar-tonneaux.jpg",
     shortDescription:
       "Viens supporter tes équipes préférées et assister à tous les matchs de légende en t’installant sur notre tribune pour vivre un moment de partage comme au stade. Avec nos 4 TV centrales suspendues, tu ne manqueras rien des petits ponts, chisteras et des plus beaux dunks où que tu sois installé.",
@@ -175,8 +175,8 @@ let bars = [
   {
     id: 9,
     name: "Café Oz Bordeaux",
-    img: "https://cafe-oz.com/image/front/pics/drinks-food/drinks_food.jpg",
-    imgBar: "https://cafe-oz.com/upload/establishment/visual/10.jpg",
+    img: "media/oz-bandeau.jpeg",
+    imgBar: "media/oz-photo-1.jpeg",
     shortDescription:
       "Pub, bar à ambiance musicale, restauration le midi, snacking le soir, retransmission d'événements sportifs sur écrans géants, soirées DJs... toute l'atmosphère 'no worries' caractéristique des bars australiens vient animer les quais de la Garonne. Avec une surface commerciale de 650 m² et d'une terrasse de 200 m², le Café Oz Bordeaux deviendra très vite le rendez-vous incontournable des bordelais.",
     longDescription:
