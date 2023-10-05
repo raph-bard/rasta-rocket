@@ -80,13 +80,13 @@ let options = (bar) => {
     case "affordable":
       optionsHTML += `<div class="card-option">
         <i class="fa-solid fa-euro-sign"></i>
-        <h4>Abordable</h4>
+        <h4>Moyen</h4>
         </div>`;
       break;
     case "expensive":
       optionsHTML += `<div class="card-option">
         <i class="fa-solid fa-euro-sign"></i>
-        <h4>Chic</h4>
+        <h4>Elevé</h4>
         </div>`;
       break;
   }

@@ -49,8 +49,8 @@ let createBarDetailPage = (bar) => {
               bar.price.includes("cheap")
                 ? `Économique`
                 : bar.price.includes("affordable")
-                ? `Abordable`
-                : `Chic`
+                ? `Moyen`
+                : `Elevé`
             }</span>
           </div>
         </div>
