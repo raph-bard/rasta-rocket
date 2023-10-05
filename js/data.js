@@ -126,7 +126,7 @@ let bars = [
     location: "Bordeaux",
     coupDeCoeur: false,
     adress: "180 Rue Blanqui, 33300 Bordeaux",
-    openTime: "Undefined",
+    openTime: "17h-02h",
     infos: "Lieu pittoresque à découvrir",
     linkMap: `https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11311.615042162102!2d-0.5582571937011751!3d44.86425397817153!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5528917c6cbfbd%3A0xaef9fdc00d5072a4!2sLes%20Halles%20Bacalan!5e0!3m2!1sen!2sfr!4v1696516623492!5m2!1sen!2sfr`,
   },
