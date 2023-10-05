@@ -1,25 +1,66 @@
 //******************** Introduction Shaker Animé ********************//
 
-if (window.location.pathname === "/index.html") {
-  // Ajoute la classe "no-scroll" à la balise HTML dès le début, la condition sert à vérifier si on est bien sur la page index.
-  document.documentElement.classList.add("noscroll");
+// s'active aussi après 4.5s
+/******* handling animations *******/
+let containerIndex = document.querySelector(".transition-div");
+if (!!sessionStorage.getItem("visited")) {
+  let bandeauP = document.querySelector(".bandeau p");
+  bandeauP.classList.remove("opacity-delayed-index");
+  bandeauP.classList.add("opacity-delayed");
+  let bandeauH = document.querySelector(".bandeau h1");
+  bandeauH.classList.remove("opacity-delayed-index");
+  bandeauH.classList.add("opacity-delayed");
 
-  // Retire la classe "noscroll" de la balise HTML après 4,5 secondes
+  //containerIndex.classList.remove("opacity-delayed2-index");
+  //containerIndex.classList.add("opacity-delayed2");
+  //containerIndex.classList.add("opacity-delayed");
+  document.documentElement.classList.remove("noscroll");
+  document.querySelector(".container").classList.add("opacity-delayed2");
+  document
+    .querySelector(".container")
+    .classList.remove("opacity-delayed2-index");
+} else {
+  document.querySelector(".container").classList.add("opacity-delayed2-index");
+  sessionStorage.setItem("visited", true);
+  var deleteShaker = createTransition(); //document.querySelector(".shaker-container");
+  containerIndex.appendChild(deleteShaker);
+  if (window.location.pathname === "/index.html") {
+    // Ajoute la classe "no-scroll" à la balise HTML dès le début, la condition sert à vérifier si on est bien sur la page index.
+    document.documentElement.classList.add("noscroll");
+
+    // Retire la classe "noscroll" de la balise HTML après 4,5 secondes
+    setTimeout(function () {
+      document.documentElement.classList.remove("noscroll");
+    }, 4500); // s'active après 4.5s
+  }
+
+  // setTimeout sert à définir un délai
   setTimeout(function () {
-    document.documentElement.classList.remove("noscroll");
-  }, 4500); // s'active après 4.5s
+    if (deleteShaker) {
+      // Supprime l'html de l'animation pour ne pas créer de bugs de z-index une fois qu'il disparait
+      //deleteShaker.parentNode.removeChild(deleteShaker);
+      deleteShaker.remove();
+    }
+  }, 4500);
 }
 
-var deleteShaker = document.querySelector(".shaker-container");
-
-// setTimeout sert à définir un délai
-setTimeout(function () {
-  if (deleteShaker) {
-    // Supprime l'html de l'animation pour ne pas créer de bugs de z-index une fois qu'il disparait
-    deleteShaker.parentNode.removeChild(deleteShaker);
-  }
-}, 4500); // s'active aussi après 4.5s
-
+function createTransition() {
+  const transtion = document.createElement("div");
+  transtion.classList.add("shaker-container");
+  transtion.innerHTML = `
+  <div class="shaker-animation-container">
+        <div class="shaker-animation">
+          <div class="shaker-item"></div>
+          <div class="glass-item"></div>
+          <div class="straw-item"></div>
+          <div class="loader-container">
+            <div class="loader"></div>
+          </div>
+        </div>
+  </div>
+  `;
+  return transtion;
+}
 /*      Creation Tableau d'objets bars         */
 
 import bars from "./data.js";
