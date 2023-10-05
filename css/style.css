@@ -261,7 +261,7 @@ main {
 }
 
 .categories-container .category {
-  color: var(--grey-color);
+  color: var(--main-color);
   font-weight: 600;
   margin-right: 30px;
   position: relative;
@@ -269,12 +269,12 @@ main {
   border: none;
   border: 0px;
   outline: 0px;
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 .categories-container select.category.active,
 .categories-container select.category:hover {
-  color: black;
+  color: var(--second-color);
 }
 
 .categories-container select.category::after {
