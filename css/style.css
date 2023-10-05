@@ -86,13 +86,13 @@ a:hover {
 .opacity-delayed2 {
   animation: opacityDelayed 1.5s ease 0.9s; 
 }
-.index .bandeau h1, .index .bandeau p {
+.opacity-delayed-index {
   animation: opacityDelayed 1.75s ease 4s; 
 }
-.index .container {
+.opacity-delayed2-index {
   animation: opacityDelayed 1.75s ease 4.7s; 
 }
-.opacity-delayed, .opacity-delayed2, .index .container, .index .bandeau h1, .index .bandeau p {
+.opacity-delayed, .opacity-delayed2, .opacity-delayed-index, .opacity-delayed2-index {
   animation-fill-mode: forwards;
   opacity: 0;
 }
