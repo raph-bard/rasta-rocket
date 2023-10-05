@@ -4,20 +4,23 @@
 /******* handling animations *******/
 let containerIndex = document.querySelector(".transition-div");
 if (!!sessionStorage.getItem("visited")) {
-  let bandeauP = document
-    .querySelector(".bandeau p")
-    .classList.remove("opacity-delayed-index");
-  let bandeauH = document
-    .querySelector(".bandeau h1")
-    .classList.remove("opacity-delayed-index");
+  let bandeauP = document.querySelector(".bandeau p");
+  bandeauP.classList.remove("opacity-delayed-index");
+  bandeauP.classList.add("opacity-delayed");
+  let bandeauH = document.querySelector(".bandeau h1");
+  bandeauH.classList.remove("opacity-delayed-index");
+  bandeauH.classList.add("opacity-delayed");
 
-  containerIndex.classList.remove("opacity-delayed2-index");
-  containerIndex.classList.add("opacity-delayed");
+  //containerIndex.classList.remove("opacity-delayed2-index");
+  //containerIndex.classList.add("opacity-delayed2");
+  //containerIndex.classList.add("opacity-delayed");
   document.documentElement.classList.remove("noscroll");
+  document.querySelector(".container").classList.add("opacity-delayed2");
   document
     .querySelector(".container")
     .classList.remove("opacity-delayed2-index");
 } else {
+  document.querySelector(".container").classList.add("opacity-delayed2-index");
   sessionStorage.setItem("visited", true);
   var deleteShaker = createTransition(); //document.querySelector(".shaker-container");
   containerIndex.appendChild(deleteShaker);
