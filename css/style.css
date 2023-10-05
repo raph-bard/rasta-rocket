@@ -92,18 +92,13 @@ a:hover {
 .opacity-delayed2 {
   animation: opacityDelayed 1.5s ease 0.9s;
 }
-.index .bandeau h1,
-.index .bandeau p {
-  animation: opacityDelayed 1.75s ease 4s;
+.opacity-delayed-index {
+  animation: opacityDelayed 1.75s ease 4s; 
 }
-.index .container {
-  animation: opacityDelayed 1.75s ease 4.7s;
+.opacity-delayed2-index {
+  animation: opacityDelayed 1.75s ease 4.7s; 
 }
-.opacity-delayed,
-.opacity-delayed2,
-.index .container,
-.index .bandeau h1,
-.index .bandeau p {
+.opacity-delayed, .opacity-delayed2, .opacity-delayed-index, .opacity-delayed2-index {
   animation-fill-mode: forwards;
   opacity: 0;
 }
@@ -1024,8 +1019,8 @@ button {
     justify-content: center;
     z-index: 9;
     position: absolute;
-    width: 102%;
-    height: 100vh;
+    width: calc(100% + 4px);
+    height: calc(100vh + 1px);
     background-color: var(--main-color);
     text-align: center;
     transform: translateX(100%);
