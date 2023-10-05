@@ -123,7 +123,6 @@ let createCardMobile = (bar) => {
       </div>   
       <div class="pop-but" data-id="${bar.id}"></div>
     `;
-  console.log(newBar);
   return newBar;
 };
 // append all bars in the main  barList
