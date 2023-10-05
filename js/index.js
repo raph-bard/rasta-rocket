@@ -24,15 +24,14 @@ if (!!sessionStorage.getItem("visited")) {
   sessionStorage.setItem("visited", true);
   var deleteShaker = createTransition(); //document.querySelector(".shaker-container");
   containerIndex.appendChild(deleteShaker);
-  if (window.location.pathname === "/index.html") {
-    // Ajoute la classe "no-scroll" à la balise HTML dès le début, la condition sert à vérifier si on est bien sur la page index.
-    document.documentElement.classList.add("noscroll");
 
-    // Retire la classe "noscroll" de la balise HTML après 4,5 secondes
-    setTimeout(function () {
-      document.documentElement.classList.remove("noscroll");
-    }, 4500); // s'active après 4.5s
-  }
+  // Ajoute la classe "no-scroll" à la balise HTML dès le début, la condition sert à vérifier si on est bien sur la page index.
+  document.documentElement.classList.add("noscroll");
+
+  // Retire la classe "noscroll" de la balise HTML après 4,5 secondes
+  setTimeout(function () {
+    document.documentElement.classList.remove("noscroll");
+  }, 4500); // s'active après 4.5s
 
   // setTimeout sert à définir un délai
   setTimeout(function () {
