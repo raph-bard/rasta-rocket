@@ -110,7 +110,6 @@ let createBarDetailPage = (bar) => {
     </div>
   </main>
     `;
-  console.log(newBar);
   return newBar;
 };
 let searchLink = new URLSearchParams(window.location.search);
