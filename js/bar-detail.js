@@ -11,12 +11,12 @@ let createBarDetailPage = (bar) => {
     <div class="bandeau-container">
       <div
         class="bandeau"
-        style="background-image: url(../${bar.img})"
+        style="background-image: url(${bar.img})"
       ></div>
     </div>
 
     <div class="container container-modele-bar">
-      <div class="container-infos-bar">
+      <div class="container-infos-bar opacity-delayed">
         <h1>${bar.name}</h1>
         <span class="bar-name"> Catégorie : Bar à ${
           bar.type.includes("Bières")
@@ -56,20 +56,20 @@ let createBarDetailPage = (bar) => {
         </div>
       </div>
 
-      <div class="container-title-info">
+      <div class="container-title-info opacity-delayed2">
         <h3>Quelques infos</h3>
       </div>
 
-      <div class="container-full-description" ->
+      <div class="container-full-description opacity-delayed2" ->
         <p>
          ${bar.longDescription}
         </p>
-        <div class="container img-quelques-infos" style="background: url(${
+        <div class="container img-quelques-infos" style="background-image: url(${
           bar.imgBar
         }"></div>
       </div>
     </div>
-    <div class="container-max bg-pink">
+    <div class="container-max bg-pink opacity-delayed2">
       <div class="container container-ambiance" ->
         <h3>L'ambiance et l'univers</h3>
         <p>

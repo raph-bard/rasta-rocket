@@ -67,6 +67,36 @@ a:hover {
   overflow: hidden;
 }
 
+/* animation de zoom au hover */
+.scale01:hover {
+  transform: scale(1.01);
+}
+.scale01, .scale01:hover {
+  transition: all 0.3s ease;
+}
+
+/* animation d'apparition */
+
+@keyframes opacityDelayed {
+  0% {opacity: 0;} 100% {opacity: 1;} 
+}
+.opacity-delayed {
+  animation: opacityDelayed 1.5s ease 0.5s; 
+}
+.opacity-delayed2 {
+  animation: opacityDelayed 1.5s ease 0.9s; 
+}
+.index .bandeau h1, .index .bandeau p {
+  animation: opacityDelayed 1.75s ease 4s; 
+}
+.index .container {
+  animation: opacityDelayed 1.75s ease 4.7s; 
+}
+.opacity-delayed, .opacity-delayed2, .index .container, .index .bandeau h1, .index .bandeau p {
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
 /* ------ nav + footer ------- */
 
 header,
@@ -128,7 +158,7 @@ main {
 .container {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 12px;
+  padding: 0 1em;
 }
 .container-max {
   width: 100%;
@@ -270,9 +300,8 @@ main {
   left: 0%;
 }
 
-a.card:hover {
-  color: initial;
-}
+
+
 .card .pop-but {
   position: absolute;
   top: 0;
@@ -373,6 +402,8 @@ a.card:hover {
   margin-top: 50px;
   width: 100%;
   height: 300px;
+  background-size: cover;
+  background-position: center center;
 }
 .container-infos-bar h1 {
   font-size: 26px;
@@ -440,6 +471,7 @@ a.card:hover {
   margin-top: 10px;
 }
 
+
 /*************** popup bar detail **************/
 
 .popup-bar-container {
@@ -458,7 +490,7 @@ a.card:hover {
 .popup-bar-container.active {
   opacity: 1;
   z-index: 11;
-  transition: opacity 0.3s;
+  transition: opacity 0.5s;
 }
 .popup-bar {
   position: relative;
@@ -549,6 +581,15 @@ a.card:hover {
   color: white;
   background-color: var(--main-color);
 }
+/****** icons popup color and style *******/
+.infos-genriques span{
+  padding-left: 5px;
+}
+
+i{
+  color: var( --second-color);
+  min-width: 1rem;
+}
 
 /*************** Coup de coeur **************/
 
@@ -581,6 +622,12 @@ a.card:hover {
   color: white;
   padding-right: 90px;
 }
+.overlay-container:hover h3 {
+  padding-right: 80px;
+}
+.overlay-container h3, .overlay-container:hover h3 {
+  transition: all 0.3s ease;
+}
 
 .imagecoeur-container {
   width: 100%;
@@ -591,6 +638,8 @@ a.card:hover {
   background-position: center;
   display: flex;
 }
+
+
 
 /* --- About Us --- */
 
@@ -744,6 +793,194 @@ button {
   border-radius: 7px;
 }
 
+
+
+
+
+
+
+
+
+
+/************* SHAKER ANIMATION *****************/
+
+@keyframes shaker-disapear {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+.shaker-container {
+  background-color: var(--main-color);
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 12;
+  animation: shaker-disapear 1s ease 3.5s;
+  animation-fill-mode: forwards;
+}
+
+.shaker-container, .shaker-animation-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shaker-animation {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  border-radius: 100%;
+  background-color: white;
+}
+
+@keyframes shaker-shaking {
+  0% {
+    top: 35px;
+    right: 140px;
+  }
+
+  50% {
+    top: 55px;
+    right: 160px;
+  }
+
+  100% {
+    top: 35px;
+    right: 140px;
+  }
+}
+@keyframes rotate-shaker {
+  0% {
+    rotate: 35deg;
+  }
+  100% {
+    transform: rotate(80deg);
+  }
+}
+
+.shaker-item {
+  width: 100px;
+  height: 100px;
+  background-image: url("../media/shaker-item.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  rotate: 35deg;
+  animation: shaker-shaking 0.4s ease 4, rotate-shaker 0.4s linear 1.6s;
+  animation-fill-mode: forwards;
+  position: absolute;
+  top: 35px;
+  right: 140px;
+}
+
+.glass-item {
+  position: absolute;
+  right: 100px;
+  bottom: 90px;
+  background-image: url("../media/glass-item.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 70px;
+  height: 70px;
+}
+
+/* Animation du triangle (alcool qui va dans le verre)  */
+@keyframes drink-in {
+  0% {
+    opacity: 0;
+    border-top: 0px solid var(--second-color);
+    bottom: 33px;
+  }
+  100% {
+    opacity: 0.8;
+    border-top: 15px solid var(--second-color);
+  }
+}
+
+.glass-item:before {
+  content: "";
+  width: 0;
+  height: 0;
+  opacity: 0;
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-top: 0 solid orange;
+  position: absolute;
+  bottom: 33px;
+  left: 21px;
+  animation: drink-in 1s linear 1.7s;
+  animation-fill-mode: forwards;
+}
+
+/* animation de la paille */
+@keyframes straw-up {
+  0% {
+    opacity: 0;
+    top: 100px;
+  }
+  100% {
+    opacity: 1;
+    top: 123px;
+  }
+}
+
+.straw-item {
+  position: absolute;
+  right: 95px;
+  top: 123px;
+  rotate: 16deg;
+  opacity: 0;
+  background-image: url("../media/straw.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 38px;
+  height: 40px;
+  z-index: 9;
+  animation: straw-up 0.4s linear 2.55s;
+  animation-fill-mode: forwards;
+}
+
+
+/* barre de chargement */
+.loader-container {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #ccc;
+  border-radius: 20px;
+  position: absolute;
+  bottom: -80px;
+}
+
+.loader {
+  width: 100%;
+  height: 30px;
+  background-color: var(--second-color);
+  animation: loading 3s linear 1;
+  border-radius: 20px;
+}
+
+/* Animation de la barre de chargement */
+@keyframes loading {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
 /* ------------- RESPONSIVE -------------- */
 
 /* RESPONSIVE 576 */
@@ -790,23 +1027,19 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
-    position: relative;
     z-index: 9;
+    position: absolute;
+    width: 102%;
+    height: 100vh;
+    background-color: var(--main-color);
+    text-align: center;
+    transform: translateX(100%);
   }
   header nav li {
     padding: 12% 0;
     font-size: 1.3em;
   }
 
-  header .menu {
-    position: absolute;
-    width: 101%;
-    height: 100vh;
-    background-color: var(--main-color);
-    text-align: center;
-    transform: translateX(100%);
-  }
   header .menu.active {
     transform: translateX(-4%);
   }
@@ -876,101 +1109,6 @@ button {
     transition: all 0.3s;
   }
 
-  /* ------- pages -------- */
-
-  /* bandeau */
-
-  /* nav footer */
-
-  header .menu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    position: relative;
-    z-index: 9;
-  }
-  header nav li {
-    padding: 12% 0;
-    font-size: 1.3em;
-  }
-
-  header .menu {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    background-color: var(--main-color);
-    text-align: center;
-    transform: translateX(100%);
-  }
-  header .menu.active {
-    transform: translateX(-3%);
-  }
-  header .menu,
-  header .menu.active {
-    transition: all 0.3s;
-  }
-
-  header {
-    justify-content: space-between;
-  }
-
-  /* burger animation */
-
-  .burger {
-    position: absolute;
-    width: 27px;
-    height: 24px;
-    right: 27px;
-    top: calc(50% - 12px);
-  }
-  .burger span:before,
-  .burger span:after {
-    content: "";
-  }
-  .burger span:before,
-  .burger span,
-  .burger span:after {
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 5px;
-    background-color: white;
-    border-radius: 10px;
-  }
-  .burger span:before {
-    top: -10px;
-  }
-  .burger span {
-    top: calc(50% - 3px);
-  }
-  .burger span:after {
-    top: 10px;
-  }
-
-  .burger.active span {
-    background-color: var(--main-color);
-  }
-  .burger.active span:before {
-    rotate: 45deg;
-    top: -9px;
-  }
-  .burger.active span:after {
-    rotate: -45deg;
-    top: 9px;
-  }
-  .burger.active span:before,
-  .burger.active span:after {
-    background-color: var(--second-color);
-  }
-  .burger span:before,
-  .burger span:after,
-  .burger span,
-  .burger.active span,
-  .burger.active span:before,
-  .burger.active span:after {
-    transition: all 0.3s;
-  }
 
   /* ------- pages -------- */
 }
@@ -1085,6 +1223,10 @@ iframe {
     margin-top: 2em;
   }
 }
+
+
+
+
 
 /* RESPONSIVE 992 */
 

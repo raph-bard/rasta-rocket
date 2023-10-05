@@ -69,7 +69,8 @@ let bars = [
   {
     id: 4,
     name: "V&B",
-    img: "https://www.rejoinsvandb.fr/wp-content/uploads/2020/09/VandBLeHaillan-5711.jpg",
+    img: 
+    "https://www.rejoinsvandb.fr/wp-content/uploads/2020/09/VandBLeHaillan-5711.jpg",
     imgBar:
       "https://www.rejoinsvandb.fr/wp-content/uploads/2023/04/couverture-article.png",
     shortDescription:
@@ -80,7 +81,7 @@ let bars = [
       </br>
        La musique, choisie avec une précision presque magique, accompagne chaque dégustation d'une note harmonieuse. Des mélodies douces en fond sonore créent une atmosphère propice à la conversation, tandis que des morceaux plus vifs viennent ponctuer les moments de partage. L'ambiance est à la fois vivante et apaisante, invitant à la contemplation et à l'appréciation des arômes complexes qui se dévoilent dans chaque verre. Chaque visite au V&B est une invitation à un voyage gustatif et sensoriel, une immersion dans l'art ancestral de la viticulture où le vin devient une expérience à part entière.`,
     price: "cheap",
-    type: "Vins Bières",
+    type: "Vins et Bières",
     location: "Bordeaux",
     coupDeCoeur: false,
     adress: "5 Rue la Motte Picquet, 33300 Bordeaux",
@@ -112,12 +113,12 @@ let bars = [
   {
     id: 6,
     name: "Bar Cave de Bacalan",
-    img: "../media/deliriumcafe.jpeg",
+    img: "media/deliriumcafe2.png",
     imgBar: "media/deliriumcafe2.png",
     shortDescription:
       "Restauration traditionnelle au juste prix à Bacalan sur Bordeaux, Profitez de notre bar à l’ambiance chaleureuse et conviviale entre amis, famille ou rendez-vous d’affaires, Christian vous fera découvrir sa passion et sa meilleure sélection de vins de Bordeaux et de France",
     longDescription:
-      "Situé au cœur de Bacalan à Bordeaux et ouvert depuis 1923, le restaurant bar et cave de Bacalan vous accueille dans une ambiance chaleureuse et conviviale. Christian Gerardi vous propose des plats traditionnels, des menus du jour préparés avec des produits du moment. Le Bar Cave de Bacalan vous propose ses prestations : <ul><li>Bar</li><li>Restaurant</li><li>Cave</li><li>Epicerie</li> Notre établissement vous accueillera tout au long de la journée pour déguster un repas ou un apéritif entre amis ou en famille. Christian vous accueille du lundi au samedi dans un cadre traditionnel aux teintes chaleureuses. Le service soigné et attentif, sait se faire discret pour un repas d’affaire ou un tête à tête, n’hésitez pas à venir nous découvrir au 180 rue de Blanqui à Bacalan sur Bordeaux.",
+      "Situé au cœur de Bacalan à Bordeaux et ouvert depuis 1923, le restaurant bar et cave de Bacalan vous accueille dans une ambiance chaleureuse et conviviale. Christian Gerardi vous propose des plats traditionnels, des menus du jour préparés avec des produits du moment. Le Bar Cave de Bacalan vous propose ses prestations : Bar, Restaurant, Cave, Epicerie. Notre établissement vous accueillera tout au long de la journée pour déguster un repas ou un apéritif entre amis ou en famille. Christian vous accueille du lundi au samedi dans un cadre traditionnel aux teintes chaleureuses. Le service soigné et attentif, sait se faire discret pour un repas d’affaire ou un tête à tête, n’hésitez pas à venir nous découvrir au 180 rue de Blanqui à Bacalan sur Bordeaux.",
     ambianceDescription: `Le bar "Cav de Bacalan" à Bordeaux offre une ambiance unique qui marie l'élégance du vin avec l'effervescence d'un bar à vin moderne. En pénétrant dans cet établissement, vous serez immédiatement enveloppé par une atmosphère chaleureuse et conviviale.</br> 
       </br>
       Les murs en pierre rustique et les étagères remplies de bouteilles de vin créent un cadre authentique qui respire la passion pour le vin. Les clients peuvent s'installer confortablement à de longues tables en bois ou se pelotonner dans des coins plus intimes pour déguster une sélection exceptionnelle de vins locaux et internationaux. L'ambiance est détendue, parfaite pour une soirée entre amis ou un rendez-vous romantique. Les discussions animées et les rires remplissent l'air, créant une véritable expérience de partage autour de la dégustation de vins exquis.`,
