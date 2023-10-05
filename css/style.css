@@ -171,6 +171,11 @@ main {
   padding: 20px 0px;
   margin-top: 20px;
 }
+.container p {
+  margin-bottom: 40px;
+  text-align: center;
+  
+}
 
 /* bandeau */
 
