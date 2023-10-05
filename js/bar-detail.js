@@ -64,7 +64,7 @@ let createBarDetailPage = (bar) => {
         <p>
          ${bar.longDescription}
         </p>
-        <div class="container img-quelques-infos" style="background: url(${
+        <div class="container img-quelques-infos" style="background-image: url(${
           bar.imgBar
         }"></div>
       </div>
