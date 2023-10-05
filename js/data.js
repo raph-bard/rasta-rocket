@@ -2,8 +2,8 @@ let bars = [
   {
     id: 1,
     name: "Delirium Café",
-    img: "media/deliriumcafe2.png",
-    imgBar: "media/deliriumcafe2.png",
+    img: "media/delerium-bandeau.jpeg",
+    imgBar: "media/delirium-cafe-2.jpg",
     shortDescription:
       "Découvrez le Délirium Café, un bar à bières convivial de 800m2. Avec plus de 30 bières à la pression, des tapas en terrasse, des matchs en direct et des soirées animées, c'est l'endroit idéal pour passer un moment agréable entre amis. Profitez de l'ambiance festive et décontractée !",
     longDescription: `Bienvenue dans l'époustouflant univers du Délirium Café, un espace enchanteur s'étalant sur pas moins de 800 mètres carrés, où la joie de vivre, la célébration et l'allégresse se donnent rendez-vous ! 🍻. Plongez-vous dans un océan de divertissements où le rire résonne à l'unisson des conversations animées, où les verres s'entrechoquent dans une symphonie de gaieté. Chacun de ces mètres carrés précieux renferme une atmosphère unique, une pièce de bonheur à explorer. Les murs chargés d'histoire et d'énergie, témoins silencieux de mille et une nuits de festivités, captent l'essence même de l'âme du Délirium Café. Pas seulement un bar, mais un véritable sanctuaire de la convivialité, où les heures filent aussi vite que les rires fusent. L'offre de breuvages est une véritable déclaration d'amour à l'art de la dégustation. Plus de 30 nectars soigneusement sélectionnés attendant patiemment d'émoustiller tes papilles, prêts à te transporter dans un voyage gustatif inoubliable. Que ce soit une bière robuste aux notes torréfiées, ou une légère ale fruitée, chaque gorgée est une invitation au plaisir pur.`,
@@ -16,7 +16,7 @@ let bars = [
     price: "expensive",
     type: "Bières",
     location: "Bordeaux",
-    coupDeCoeur: false,
+    coupDeCoeur: true,
     adress: "30 Quai Virginie Hériot, 33300 Bordeaux",
     openTime: "16h-2h",
     infos: "Bar à bières belges",
@@ -25,7 +25,7 @@ let bars = [
   {
     id: 2,
     name: "My Beers",
-    img: "media/bar-comptoir.jpg",
+    img: "media/my-beers-2.jpeg",
     imgBar: "media/mybeers.jpg",
     shortDescription:
       "Un bar à bières évidemment, mais pas que. Avec un choix impressionnant de bières bouteilles et une dizaine de tirages pression dont les références changent toutes les 3 semaines pour permettre aux clients de goûter à ce qui existe de mieux dans la bière. Nous proposons aussi du vin, du champagne, des soft, des planches de fromages, de saucissons et de chips.",
@@ -69,10 +69,8 @@ let bars = [
   {
     id: 4,
     name: "V&B",
-    img: 
-    "https://www.rejoinsvandb.fr/wp-content/uploads/2020/09/VandBLeHaillan-5711.jpg",
-    imgBar:
-      "https://www.rejoinsvandb.fr/wp-content/uploads/2023/04/couverture-article.png",
+    img: "https://www.rejoinsvandb.fr/wp-content/uploads/2020/09/VandBLeHaillan-5711.jpg",
+    imgBar: "media/v-and-b-bar.jpeg",
     shortDescription:
       "V and B s’inscrit dans l’ère de l’after-work, cette tendance qui plaît et qui rassemble toutes les générations en fin de journée, après le travail, autour d’un verre.",
     longDescription:
@@ -113,8 +111,8 @@ let bars = [
   {
     id: 6,
     name: "Bar Cave de Bacalan",
-    img: "media/deliriumcafe2.png",
-    imgBar: "media/deliriumcafe2.png",
+    img: "media/cave-bacalan-bandeau.jpeg",
+    imgBar: "media/cave-bacalan-2.jpeg",
     shortDescription:
       "Restauration traditionnelle au juste prix à Bacalan sur Bordeaux, Profitez de notre bar à l’ambiance chaleureuse et conviviale entre amis, famille ou rendez-vous d’affaires, Christian vous fera découvrir sa passion et sa meilleure sélection de vins de Bordeaux et de France",
     longDescription:
