@@ -38,7 +38,7 @@ header.innerHTML = `
 // FOOTER //
 
 const footer = document.querySelector("footer");
-footer.innerHTML = `<p>&copy 2023 - Tous les droits sont réservés</p><span>Rasta rockett</span>`;
+footer.innerHTML = `<p>&copy 2023 - Wild Code School Project</p><span>Rasta rockett</span>`;
 
 // animation burger menu //
 

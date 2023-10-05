@@ -69,7 +69,8 @@ let bars = [
   {
     id: 4,
     name: "V&B",
-    img: "https://www.rejoinsvandb.fr/wp-content/uploads/2020/09/VandBLeHaillan-5711.jpg",
+    img: 
+    "https://www.rejoinsvandb.fr/wp-content/uploads/2020/09/VandBLeHaillan-5711.jpg",
     imgBar:
       "https://www.rejoinsvandb.fr/wp-content/uploads/2023/04/couverture-article.png",
     shortDescription:
@@ -80,7 +81,7 @@ let bars = [
       </br>
        La musique, choisie avec une précision presque magique, accompagne chaque dégustation d'une note harmonieuse. Des mélodies douces en fond sonore créent une atmosphère propice à la conversation, tandis que des morceaux plus vifs viennent ponctuer les moments de partage. L'ambiance est à la fois vivante et apaisante, invitant à la contemplation et à l'appréciation des arômes complexes qui se dévoilent dans chaque verre. Chaque visite au V&B est une invitation à un voyage gustatif et sensoriel, une immersion dans l'art ancestral de la viticulture où le vin devient une expérience à part entière.`,
     price: "cheap",
-    type: "Vins Bières",
+    type: "Vins et Bières",
     location: "Bordeaux",
     coupDeCoeur: false,
     adress: "5 Rue la Motte Picquet, 33300 Bordeaux",
@@ -112,7 +113,7 @@ let bars = [
   {
     id: 6,
     name: "Bar Cave de Bacalan",
-    img: "../media/deliriumcafe.jpeg",
+    img: "media/deliriumcafe2.png",
     imgBar: "media/deliriumcafe2.png",
     shortDescription:
       "Restauration traditionnelle au juste prix à Bacalan sur Bordeaux, Profitez de notre bar à l’ambiance chaleureuse et conviviale entre amis, famille ou rendez-vous d’affaires, Christian vous fera découvrir sa passion et sa meilleure sélection de vins de Bordeaux et de France",

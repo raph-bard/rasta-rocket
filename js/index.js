@@ -1,27 +1,25 @@
 
-// Vérifiez si la page actuelle est "index.html"
+//******************** Introduction Shaker Animé ********************//
+
 if (window.location.pathname === "/index.html") {
-  // Ajoutez la classe "no-scroll" à la balise HTML dès le début
+  // Ajoute la classe "no-scroll" à la balise HTML dès le début, la condition sert à vérifier si on est bien sur la page index.
   document.documentElement.classList.add("noscroll");
 
-  // Retirez la classe "no-scroll" de la balise HTML après 4,5 secondes
+  // Retire la classe "noscroll" de la balise HTML après 4,5 secondes
   setTimeout(function() {
       document.documentElement.classList.remove("noscroll");
-  }, 4500); // 4500 millisecondes (4,5 secondes)
+  }, 4500); // s'active après 4.5s
 }
 
-
-// Sélectionnez l'élément HTML que vous souhaitez supprimer
 var deleteShaker = document.querySelector(".shaker-container");
 
-// Utilisez setTimeout pour définir un délai de 4 secondes (4000 millisecondes)
+// setTimeout sert à définir un délai
 setTimeout(function() {
-    // Vérifiez d'abord si l'élément existe encore
     if (deleteShaker) {
-        // Supprimez l'élément du DOM
+        // Supprime l'html de l'animation pour ne pas créer de bugs de z-index une fois qu'il disparait
         deleteShaker.parentNode.removeChild(deleteShaker);
     }
-}, 4500); // 4500 millisecondes (4.5 secondes)
+}, 4500); // s'active aussi après 4.5s
 
 
 
@@ -75,7 +73,7 @@ let createCardMobile = (bar) => {
   para.append("id", bar.id);
   const newBar = document.createElement("div");
   newBar.href = "bar-detail.html?" + para.toString(); // creation du lien, de la balaise <a>, avec le Id inseré à la fin
-  newBar.classList.add("card"); // donc le lien sera de cette forme : bar-detail.html?id=1 par exemple
+  newBar.classList.add("card", "scale01"); // donc le lien sera de cette forme : bar-detail.html?id=1 par exemple
   newBar.innerHTML = `
 <div class="card-image" style="background: url(${
     bar.img
@@ -167,6 +165,7 @@ if (bars.filter((bar) => bar.coupDeCoeur === true).length === 0) {
 } else {
   const overlayContainer = document.createElement("div");
   overlayContainer.classList.add("overlay-container");
+  overlayContainer.classList.add("scale01");
 
   const h3 = document.createElement("h3");
   h3.textContent = `${barPrivilige.name}`;
