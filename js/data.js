@@ -57,7 +57,7 @@ let bars = [
       Chaque bière, soigneusement sélectionnée par notre équipe d'experts, est une invitation au voyage. Des IPA aux arômes explosifs aux stouts veloutés, en passant par les blondes légères et les ambrées aux notes complexes, chaque choix est une promesse de découvertes brassicoles.</br>
       </br>
       En somme, La Cervoisserie va bien au-delà de l'expérience habituelle d'un bar à bières. C'est un voyage sensoriel, une ode à la passion brassicole, un lieu où les connaisseurs et les novices se retrouvent dans une communion de plaisirs gustatifs. Chaque visite est une promesse d'aventures, de partages et de souvenirs inoubliables. Bienvenue dans notre temple de la bière, bienvenue à La Cervoisserie. `,
-    price: "affordable",
+    price: "cheap", // affordable
     type: "Bières et Cocktails",
     location: "Bordeaux",
     coupDeCoeur: false,
@@ -100,7 +100,7 @@ let bars = [
       </br>
       La musique, quant à elle, est le DJ personnel de votre dégustation. Des mélodies douces caressent vos papilles, tandis que des airs plus entraînants vous encouragent à faire la fête avec vos amis de verre en verre ! C'est une ambiance qui marie la dégustation sérieuse avec une touche de folie vinicole. Chez ViniBar, on ne se prend pas trop au sérieux, mais on prend le vin très au sérieux ! Chaque visite est une promesse de découvertes hilarantes et de souvenirs mémorables, où le vin est la star et les convive les spectateurs enchantés`,
     price: "affordable",
-    type: "Vins",
+    type: "Vins et Bières",
     location: "Bordeaux",
     coupDeCoeur: false,
     adress: "Les Halles de Bacalan, 10 Quai de Bacalan, 33300 Bordeaux",
@@ -185,7 +185,7 @@ let bars = [
     ambianceDescription: `Le Café Oz à Bordeaux est un véritable morceau d'Australie au cœur de la ville. L'ambiance y est décontractée et conviviale, avec une touche de style australien qui vous transporte immédiatement de l'autre côté du globe. L'intérieur est décoré de manière chaleureuse avec des éléments rappelant le bush australien, et l'immense écran diffuse des événements sportifs en direct, créant une atmosphère animée et engageante.</br>
       </br>
       Le Café Oz est le lieu idéal pour les amateurs de bières artisanales, de cocktails et de cuisine australienne. Vous pouvez y déguster une sélection de bières australiennes, des plats comme les savoureux hamburgers ou les incontournables frites au fromage et à la sauce barbecue. L'ambiance est joyeuse et diversifiée, avec des événements réguliers tels que des soirées à thème, des concerts en direct et des soirées DJ qui font vibrer les clients jusqu'au bout de la nuit. C'est un lieu incontournable pour passer du bon temps entre amis dans une atmosphère décontractée et internationale.`,
-    price: "affordable",
+    price: "expensive",
     type: "Cocktails, Vins et Bières",
     location: "Bordeaux",
     coupDeCoeur: false,
