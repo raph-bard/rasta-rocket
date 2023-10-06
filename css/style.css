@@ -93,12 +93,15 @@ a:hover {
   animation: opacityDelayed 1.5s ease 0.9s;
 }
 .opacity-delayed-index {
-  animation: opacityDelayed 1.75s ease 4s; 
+  animation: opacityDelayed 1.75s ease 4s;
 }
 .opacity-delayed2-index {
-  animation: opacityDelayed 1.75s ease 4.7s; 
+  animation: opacityDelayed 1.75s ease 4.7s;
 }
-.opacity-delayed, .opacity-delayed2, .opacity-delayed-index, .opacity-delayed2-index {
+.opacity-delayed,
+.opacity-delayed2,
+.opacity-delayed-index,
+.opacity-delayed2-index {
   animation-fill-mode: forwards;
   opacity: 0;
 }
@@ -171,10 +174,17 @@ main {
   padding: 20px 0px;
   margin-top: 20px;
 }
-.contact p {
-  margin-bottom: 40px;
+.contact .container p {
   text-align: center;
-  
+}
+.container-contact {
+  margin-top: 40px;
+}
+.card p {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 /* bandeau */
@@ -518,6 +528,7 @@ main {
 .popup-bar p {
   margin-top: 15px;
   margin-bottom: 15px;
+  overflow-y: auto;
 }
 .popup-bar .container {
   overflow-x: auto;
@@ -802,6 +813,7 @@ button {
 
 button {
   border-radius: 7px;
+  border: 0;
 }
 
 /************* SHAKER ANIMATION *****************/
