@@ -174,9 +174,11 @@ main {
   padding: 20px 0px;
   margin-top: 20px;
 }
-.contact p {
-  margin-bottom: 0px;
+.contact .container p {
   text-align: center;
+}
+.container-contact {
+  margin-top: 40px;
 }
 .card p {
   overflow: hidden;
@@ -526,7 +528,7 @@ main {
 .popup-bar p {
   margin-top: 15px;
   margin-bottom: 15px;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 .popup-bar .container {
   overflow-x: auto;
@@ -811,6 +813,7 @@ button {
 
 button {
   border-radius: 7px;
+  border: 0;
 }
 
 /************* SHAKER ANIMATION *****************/
